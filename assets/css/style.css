@@ -4,4 +4,15 @@ Cores:
 #F4F4F9 - branco creme
 #FF9B71 - laranja suave
 #96ac3f - verde claro
+Fontes:
+Poppins - textos curtos
+Montserrat - titulos
+Open sans - textos longos
 */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F9;
+    margin: 0;
+    padding: 0;
+}
