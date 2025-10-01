@@ -10,9 +10,11 @@ Montserrat - titulos
 Open sans - textos longos
 */
 
+
+
 body {
-    font-family: Arial, sans-serif;
     background-color: #F4F4F9;
     margin: 0;
-    padding: 0;
+    padding: 2rem;
+
 }
