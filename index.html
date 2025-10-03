@@ -13,20 +13,28 @@
         rel="stylesheet">
     <!--Link para integração com CSS-->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!--Link para integração com Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="./index.html" aria-label="Turma do Bem - Página Inicial" class="logo">
-                <img src="./assets/img/Logo.png" alt="Logo da Turma do Bem">
+        <nav class="navbar-section" role="navigation" aria-label="Navegação principal">
+            <a href="./index.html" class="logo" aria-label="Voltar para a página inicial">
+                <img src="./assets/img/logo.svg" alt="Logo do projeto" id="logo-img">
             </a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="#" class="navbar-titles">Home</a></li>
+                <li><a href="#" class="navbar-titles">Quem Somos</a></li>
+                <li><a href="#" class="navbar-titles">Sobre</a></li>
+                <li><a href="#" class="navbar-titles">FAQ</a></li>
             </ul>
+            <form class="search-bar" role="search" aria-label="Pesquisar">
+                <input type="search" placeholder="" aria-label="Pesquisar">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </nav>
     </header>
     <main></main>
