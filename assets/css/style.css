@@ -9,12 +9,123 @@ Poppins - textos curtos
 Montserrat - titulos
 Open sans - textos longos
 */
-
-
-
-body {
+/* Define largura e altura máximas para html e body, além de cor de fundo */
+body,
+html {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
     background-color: #F4F4F9;
+    padding: 0;
     margin: 0;
-    padding: 2rem;
+}
 
+/* Navbar principal: flexível, alinhada ao centro, cor de fundo verde claro */
+.navbar-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Lista de navegação: horizontal, espaçamento entre itens */
+nav ul {
+    display: flex;
+    gap: 6rem;
+    list-style: none;
+    /* Remove marcadores padrão */
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo: tamanho máximo e margem */
+#logo-img {
+    max-width: 110px;
+    margin: 0.5rem 2rem;
+    border-radius: 20px;
+}
+
+/* Links da navbar: sem sublinhado, cor branca, fonte Poppins, animação de cor e linha */
+.navbar-titles {
+    text-decoration: none;
+    /* Remove sublinhado padrão */
+    color: #3A506B;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    transition: color 0.2s;
+    /* Suaviza troca de cor */
+    position: relative;
+    /* Necessário para o ::after */
+    overflow: hidden;
+    /* Garante que a linha não ultrapasse o link */
+    font-size: 1.5rem;
+}
+
+/* Ao passar o mouse, focar ou clicar, muda a cor do texto */
+.navbar-titles:hover,
+.navbar-titles:focus,
+.navbar-titles:active {
+    color: #3A506B;
+}
+
+/* Linha animada que surge sob o link ao interagir */
+.navbar-titles::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    /* Começa do meio */
+    bottom: 0;
+    width: 0;
+    /* Inicialmente sem largura */
+    height: 2px;
+    background: #3A506B;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ao interagir, a linha cresce para os dois lados */
+.navbar-titles:hover::after,
+.navbar-titles:focus::after,
+.navbar-titles:active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Barra de pesquisa: flexível, arredondada, com leve sombra ao focar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #F4F4F9;
+    border-radius: 20px;
+    padding: 2px 8px;
+    margin: 0 1rem 0 0
+}
+
+/* Input da barra de pesquisa: sem borda, arredondado à esquerda */
+.search-bar input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 6px 8px;
+    font-size: 1rem;
+    border-radius: 20px 0 0 20px;
+    background: transparent;
+}
+
+/* Botão da barra de pesquisa: sem fundo, arredondado à direita */
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsividade: ajusta navbar e esconde barra de pesquisa em telas menores */
+@media (max-width: 992px) {
+    .search-bar {
+        display: none;
+        /* Esconde barra de pesquisa em telas pequenas */
+    }
 }
