@@ -5,44 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge</title>
-    <!--Links para integração com Google Fonts-->
+    <!-- Google Fonts para estilização das fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <!--Link para integração com CSS-->
+    <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!--Link para integração com Font Awesome-->
+    <!-- Ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Cabeçalho com navegação principal -->
     <header>
         <nav class="navbar-section">
-            <a href="./index.html" class="logo" aria-label="Voltar para a página inicial">
+            <!-- Logo do projeto -->
+            <a href="./index.html" class="logo">
                 <img src="./assets/img/logo.png" alt="Logo do projeto" id="logo-img">
             </a>
+            <!-- Menu de navegação -->
             <ul>
                 <li><a href="#" class="navbar-titles">Início</a></li>
                 <li><a href="#" class="navbar-titles">Quem Somos</a></li>
                 <li><a href="#" class="navbar-titles">Sobre</a></li>
                 <li><a href="#" class="navbar-titles">FAQ</a></li>
             </ul>
-            <form class="search-bar" role="Barra-de-Pesquisa">
+            <!-- Barra de pesquisa -->
+            <form class="search-bar">
                 <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button type="submit" aria-label="Buscar">
+                <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
         </nav>
     </header>
-    <main></main>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Conteúdo será adicionado aqui futuramente [WIP] -->
+    </main>
+
+    <!-- Rodapé com informações e redes sociais -->
     <footer>
         <section class="footer-container">
-            <div class="footer-logo"><img src="./assets/img/logo.png" alt="Logo">
+            <!-- Logo e breve descrição -->
+            <div class="footer-logo">
+                <img src="./assets/img/logo.png" alt="Logo">
                 <p>Lorem, ipsum.</p>
             </div>
+            <!-- Listas de links do rodapé -->
             <nav class="footer-info">
                 <h1>Lorem</h1>
                 <ul>
@@ -76,23 +89,31 @@
                 </ul>
             </nav>
         </section>
+        <!-- Linha divisória do rodapé -->
         <hr class="footer-line">
         <section class="footer-bottom">
+            <!-- Redes sociais -->
             <nav class="footer-social">
                 <ul class="social-icons">
-                    <li class="social-list"><a href="" class="icons-click" aria-label=""><i
-                                class="fa-brands fa-whatsapp"></i></a></li>
-                    <li class="social-list"><a href="" class="icons-click" aria-label=""><i
-                                class="fa-brands fa-facebook"></i></a></li>
-                    <li class="social-list"><a href="" class="icons-click" aria-label=""><i
-                                class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="social-list"><a href="" class="icons-click" aria-label=""><i
-                                class="fa-brands fa-github"></i></a></li>
-                    <li class="social-list"><a href="" class="icons-click" aria-label=""><i
-                                class="fa-brands fa-instagrams"></i></a></li>
+                    <li class="social-list">
+                        <a href="" class="icons-click"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li class="social-list">
+                        <a href="" class="icons-click"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="social-list">
+                        <a href="" class="icons-click"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li class="social-list">
+                        <a href="" class="icons-click"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li class="social-list">
+                        <a href="" class="icons-click"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
                 </ul>
             </nav>
-            <p>&copy; Copyright. Todos os direitos reservados, 2025.</p>
+            <!-- Direitos autorais -->
+            <p>&copy; Todos os direitos reservados, 2025.</p>
         </section>
     </footer>
 </body>
