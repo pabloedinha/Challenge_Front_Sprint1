@@ -30,7 +30,14 @@ body {
 /* =========================
    NAVBAR (BARRA DE NAVEGAÇÃO)
    ========================= */
-.navbar-section {
+header {
+    position: sticky; /* Fixa a navbar no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que fique acima dos outros elementos */
+    background: #F4F4F9; /* Defina a cor de fundo para evitar sobreposição de conteúdo */
+}
+
+   .navbar-section {
     display: flex; /* Deixa os itens lado a lado */
     align-items: center; /* Centraliza verticalmente */
     justify-content: space-between; /* Espaço entre logo, menu e busca */
