@@ -56,18 +56,12 @@ A consistência visual é fundamental para a experiência do usuário. As seguin
 
 ### Breakpoints e Responsividade (Desktop)
 
-O layout para desktop foi desenvolvido considerando os seguintes breakpoints. A abordagem será **Desktop-First**.
+O layout para desktop foi desenvolvido considerando o seguinte breakpoint. A abordagem será **Desktop-First**.
 
   - **Dispositivos Grandes (Laptops/Desktops):**
     ```css
     @media (min-width: 992px) {
       /* Estilos para telas a partir de 992px */
-    }
-    ```
-  - **Dispositivos Extra-Grandes (Desktops Maiores):**
-    ```css
-    @media (min-width: 1300px) {
-      /* Estilos para telas a partir de 1300px */
     }
     ```
 
