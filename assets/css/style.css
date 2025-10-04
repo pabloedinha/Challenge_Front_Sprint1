@@ -1,5 +1,5 @@
 /* 
-Cores:
+Cores utilizadas:
 #3A506B - azul escuro
 #F4F4F9 - branco creme
 #FF9B71 - laranja suave
@@ -12,8 +12,9 @@ Open Sans - textos longos
 */
 
 /* =========================
-   Reset e configurações gerais
+   RESET E CONFIGURAÇÕES GERAIS
    ========================= */
+/* Remove margens e paddings padrões, define fundo e box-sizing */
 html,
 body {
     width: 100%;
@@ -26,62 +27,53 @@ body {
 }
 
 /* =========================
-   Navbar principal
+   NAVBAR (BARRA DE NAVEGAÇÃO)
    ========================= */
 .navbar-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Deixa os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaço entre logo, menu e busca */
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-/* Logo */
+/* Logo da navbar */
 #logo-img {
     max-width: 110px;
     margin: 0.5rem 2rem;
     border-radius: 20px;
-    -webkit-user-drag: none;
+    -webkit-user-drag: none; /* Impede arrastar imagem no Chrome/Safari */
+    user-select: none; /* Impede seleção da imagem */
 }
 
-/* =========================
-   Lista de navegação
-   ========================= */
+/* Lista de links do menu principal */
 .navbar-section ul {
     display: flex;
-    gap: 6rem;
+    gap: 6rem; /* Espaço entre os itens do menu */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* =========================
-   Links da navbar
-   ========================= */
+/* Links do menu principal */
 .navbar-titles {
-    text-decoration: none;
-    /* Remove sublinhado padrão */
+    text-decoration: none; /* Remove sublinhado */
     color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    transition: color 0.2s;
-    /* Suaviza troca de cor */
-    position: relative;
-    /* Necessário para o ::after */
-    overflow: hidden;
-    /* Garante que a linha não ultrapasse o link */
+    transition: color 0.2s; /* Suaviza troca de cor */
+    position: relative; /* Necessário para animação da linha */
+    overflow: hidden;   /* Garante que a linha não ultrapasse o link */
 }
 
-/* Linha animada sob o link */
+/* Animação de linha que aparece ao passar o mouse */
 .navbar-titles::after {
     content: "";
     position: absolute;
-    left: 50%;
-    /* Começa do meio */
+    left: 50%; /* Começa do meio */
     bottom: 0;
-    width: 0;
-    /* Inicialmente sem largura */
+    width: 0;  /* Inicialmente sem largura */
     height: 2px;
     background: #3A506B;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,7 +85,6 @@ body {
 .navbar-titles:active {
     color: #3A506B;
 }
-
 .navbar-titles:hover::after,
 .navbar-titles:focus::after,
 .navbar-titles:active::after {
@@ -102,7 +93,7 @@ body {
 }
 
 /* =========================
-   Barra de pesquisa
+   BARRA DE PESQUISA
    ========================= */
 .search-bar {
     display: flex;
@@ -140,18 +131,17 @@ body {
     border: none;
     cursor: pointer;
     padding: 4px 8px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     transition: background 0.2s, box-shadow 0.3s;
 }
 
-/* Efeito hover no botão */
+/* Animação de hover no botão de pesquisar */
 .search-bar button:hover {
     background: #3A506B;
     box-shadow: 0 2px 8px rgba(150, 172, 63, 0.15);
 }
-
 .search-bar button:hover i {
     color: #F4F4F9;
     transition: color 0.3s;
@@ -171,12 +161,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* =========================
-   Footer
+   FOOTER (RODAPÉ)
    ========================= */
 footer {
     background-color: #3A506B;
 }
 
+/* Container principal do rodapé */
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -186,6 +177,7 @@ footer {
     color: #F4F4F9;
 }
 
+/* Logo e descrição do rodapé */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -194,12 +186,11 @@ footer {
     font-family: "Poppins", Arial, sans-serif;
     font-size: 1.2rem;
 }
-
 .footer-logo img {
     max-width: 80px;
     border-radius: 50%;
     background: #F4F4F9;
-    padding: 8px 8px;
+    padding: 8px;
     user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -207,12 +198,12 @@ footer {
     -ms-user-select: none;
     pointer-events: auto;
 }
-
 .footer-logo p {
     margin: 0;
     text-align: center;
 }
 
+/* Blocos de links do rodapé */
 .footer-info {
     display: flex;
     flex-direction: column;
@@ -221,7 +212,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 .footer-info ul {
     list-style: none;
     padding: 0;
@@ -230,23 +220,20 @@ footer {
     flex-direction: column;
     gap: 0.7rem;
 }
-
 .footer-info h1 {
     font-size: 1.5rem;
 }
-
 .footer-info a {
     color: #F4F4F9;
     text-decoration: none;
-    transition: color 0.2s;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
-
 .footer-info a:hover {
     color: #96ac3f;
 }
 
+/* Linha divisória do rodapé */
 footer hr {
     border: none;
     display: block;
@@ -255,6 +242,7 @@ footer hr {
     width: 90%;
 }
 
+/* Parte inferior do rodapé: redes sociais e direitos autorais */
 .footer-bottom {
     display: flex;
     flex-direction: column;
@@ -265,46 +253,50 @@ footer hr {
     color: #F4F4F9;
 }
 
+/* Lista de ícones sociais */
 .footer-social ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5rem;
     align-items: center;
-    padding: 0 0 0 1.5rem;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 1rem 0; /* Espaço abaixo dos ícones */
 }
-
+.footer-social ul li {
+    margin-right: 1.5rem;
+}
+.footer-social ul li:last-child {
+    margin-right: 0;
+}
 .footer-social a {
     color: #F4F4F9;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
-
 .footer-social a:hover {
     color: #96ac3f;
 }
 
-
-
-
-
 /* =========================
-   Responsividade
+   RESPONSIVIDADE
    ========================= */
 @media (max-width: 992px) {
+    /* Esconde barra de pesquisa em telas pequenas */
     .search-bar {
         display: none;
-        /* Esconde barra de pesquisa em telas pequenas */
     }
-
+    /* Reduz espaçamento entre itens do menu */
+    .navbar-section ul {
+        gap: 2rem;
+    }
     .navbar-titles {
         margin: 0 2rem;
     }
-
-    nav ul {
+    /* Ajusta layout do rodapé para empilhar colunas */
+    .footer-container {
+        flex-direction: column;
         gap: 2rem;
-        /* Reduz o espaçamento entre itens do menu */
+        padding: 2rem 1rem;
     }
 }
