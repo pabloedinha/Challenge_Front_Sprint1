@@ -33,7 +33,6 @@ html, body {
     justify-content: space-between;
     flex-wrap: wrap;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Adicione se quiser destacar a navbar */
 }
 
 /* Logo */
@@ -59,7 +58,7 @@ nav ul {
    ========================= */
 .navbar-titles {
     text-decoration: none; /* Remove sublinhado padrão */
-    color: #96ac3f;
+    color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
@@ -76,7 +75,7 @@ nav ul {
     bottom: 0;
     width: 0;  /* Inicialmente sem largura */
     height: 2px;
-    background: #96ac3f;
+    background: #3A506B;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -84,7 +83,7 @@ nav ul {
 .navbar-titles:hover,
 .navbar-titles:focus,
 .navbar-titles:active {
-    color: #FF9B71;
+    color: #3A506B;
 }
 .navbar-titles:hover::after,
 .navbar-titles:focus::after,
@@ -103,7 +102,7 @@ nav ul {
     border-radius: 20px;
     padding: 2px 8px;
     margin: 0 2rem 0 0;
-    border: 2px solid #96ac3f;
+    border: 2px solid #3A506B;
 }
 
 .search-bar input {
@@ -138,8 +137,9 @@ nav ul {
     transition: background 0.2s, box-shadow 0.3s;
 }
 
+/* Efeito hover no botão */
 .search-bar button:hover {
-    background: #96ac3f;
+    background: #3A506B;
     box-shadow: 0 2px 8px rgba(150, 172, 63, 0.15);
 }
 
@@ -148,8 +148,9 @@ nav ul {
     transition: color 0.3s;
 }
 
+/* Ícone da lupa */
 .search-bar button i {
-    color: #96ac3f;
+    color: #3A506B;
     font-size: 1.2rem;
 }
 
@@ -166,6 +167,10 @@ input[type="search"]::-webkit-search-cancel-button {
 @media (max-width: 992px) {
     .search-bar {
         display: none; /* Esconde barra de pesquisa em telas pequenas */
+    }
+
+    .navbar-titles {
+        margin: 0 2rem;
     }
     nav ul {
         gap: 2rem; /* Reduz o espaçamento entre itens do menu */
