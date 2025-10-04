@@ -173,7 +173,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 2rem;
     color: #F4F4F9;
 }
@@ -287,6 +287,7 @@ footer hr {
     .search-bar {
         display: none;
     }
+
     /* Reduz espaçamento entre itens do menu */
     .navbar-section ul {
         gap: 2rem;
@@ -294,10 +295,17 @@ footer hr {
     .navbar-titles {
         margin: 0 2rem;
     }
-    /* Ajusta layout do rodapé para empilhar colunas */
+
+    /* Ajusta a responsividade do rodapé */
     .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem 1rem;
+        gap: 0.5rem; /* Espaço entre os blocos */
+        padding: 2rem 1rem; /* Reduz padding lateral */
+        align-items: stretch; /* Faz os blocos ocuparem toda a largura */
+    }
+    .footer-info,
+    .footer-logo {
+        align-items: center; /* Centraliza conteúdo dos blocos */
+        width: 100%; /* Blocos ocupam toda a largura */
+        margin-bottom: 1rem; /* Espaço entre blocos */
     }
 }
