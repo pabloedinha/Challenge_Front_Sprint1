@@ -132,9 +132,20 @@ nav ul {
     border: none;
     cursor: pointer;
     padding: 4px 8px;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px 20px 20px 20px;
     display: flex;
     align-items: center;
+    transition: background 0.2s, box-shadow 0.3s;
+}
+
+.search-bar button:hover {
+    background: #96ac3f;
+    box-shadow: 0 2px 8px rgba(150, 172, 63, 0.15);
+}
+
+.search-bar button:hover i{
+    color: #F4F4F9;
+    transition: color 0.3s;
 }
 
 .search-bar button i {
