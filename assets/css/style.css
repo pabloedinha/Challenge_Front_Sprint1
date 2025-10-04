@@ -14,7 +14,8 @@ Open Sans - textos longos
 /* =========================
    Reset e configurações gerais
    ========================= */
-html, body {
+html,
+body {
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
@@ -45,7 +46,7 @@ html, body {
 /* =========================
    Lista de navegação
    ========================= */
-nav ul {
+.navbar-section ul {
     display: flex;
     gap: 6rem;
     list-style: none;
@@ -57,23 +58,29 @@ nav ul {
    Links da navbar
    ========================= */
 .navbar-titles {
-    text-decoration: none; /* Remove sublinhado padrão */
+    text-decoration: none;
+    /* Remove sublinhado padrão */
     color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    transition: color 0.2s; /* Suaviza troca de cor */
-    position: relative;     /* Necessário para o ::after */
-    overflow: hidden;       /* Garante que a linha não ultrapasse o link */
+    transition: color 0.2s;
+    /* Suaviza troca de cor */
+    position: relative;
+    /* Necessário para o ::after */
+    overflow: hidden;
+    /* Garante que a linha não ultrapasse o link */
 }
 
 /* Linha animada sob o link */
 .navbar-titles::after {
     content: "";
     position: absolute;
-    left: 50%; /* Começa do meio */
+    left: 50%;
+    /* Começa do meio */
     bottom: 0;
-    width: 0;  /* Inicialmente sem largura */
+    width: 0;
+    /* Inicialmente sem largura */
     height: 2px;
     background: #3A506B;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -85,6 +92,7 @@ nav ul {
 .navbar-titles:active {
     color: #3A506B;
 }
+
 .navbar-titles:hover::after,
 .navbar-titles:focus::after,
 .navbar-titles:active::after {
@@ -143,7 +151,7 @@ nav ul {
     box-shadow: 0 2px 8px rgba(150, 172, 63, 0.15);
 }
 
-.search-bar button:hover i{
+.search-bar button:hover i {
     color: #F4F4F9;
     transition: color 0.3s;
 }
@@ -192,6 +200,7 @@ footer {
     background: #F4F4F9;
     padding: 8px 8px;
 }
+
 .footer-logo p {
     margin: 0;
     text-align: center;
@@ -231,6 +240,44 @@ footer {
     color: #96ac3f;
 }
 
+footer hr {
+    border: none;
+    display: block;
+    border-top: 1px solid rgba(244, 244, 249, 0.3);
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #F4F4F9;
+}
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 0 0 1.5rem;
+    margin: 0;
+}
+
+.footer-social a {
+    color: #F4F4F9;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #96ac3f;
+}
+
 
 
 
@@ -240,13 +287,16 @@ footer {
    ========================= */
 @media (max-width: 992px) {
     .search-bar {
-        display: none; /* Esconde barra de pesquisa em telas pequenas */
+        display: none;
+        /* Esconde barra de pesquisa em telas pequenas */
     }
 
     .navbar-titles {
         margin: 0 2rem;
     }
+
     nav ul {
-        gap: 2rem; /* Reduz o espaçamento entre itens do menu */
+        gap: 2rem;
+        /* Reduz o espaçamento entre itens do menu */
     }
 }
