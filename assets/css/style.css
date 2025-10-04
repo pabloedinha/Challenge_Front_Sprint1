@@ -41,6 +41,7 @@ body {
     max-width: 110px;
     margin: 0.5rem 2rem;
     border-radius: 20px;
+    -webkit-user-drag: none;
 }
 
 /* =========================
@@ -199,6 +200,12 @@ footer {
     border-radius: 50%;
     background: #F4F4F9;
     padding: 8px 8px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: auto;
 }
 
 .footer-logo p {
@@ -257,6 +264,7 @@ footer hr {
     font-family: 'Poppins', Arial, sans-serif;
     color: #F4F4F9;
 }
+
 .footer-social ul {
     list-style: none;
     display: flex;
