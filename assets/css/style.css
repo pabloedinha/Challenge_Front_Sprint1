@@ -162,6 +162,29 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* =========================
+   Footer
+   ========================= */
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #3A506B;
+    color: #F4F4F9;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+
+/* =========================
    Responsividade
    ========================= */
 @media (max-width: 992px) {
