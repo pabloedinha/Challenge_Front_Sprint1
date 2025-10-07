@@ -169,6 +169,31 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* =========================
+   MAIN (CONTEÚDO PRINCIPAL)
+   ========================= */
+.container-problema-main {
+    background-color: #96ac3f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    flex-wrap: wrap;
+}
+
+.article-text-problema {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #F4F4F9;
+    font-size: 1.1rem;  
+    width: 50%;
+}
+
+.container-img-problema img {
+    width: 30vw;
+    height: auto;
+    border-radius: 30px;
+}
+
+/* =========================
    FOOTER (RODAPÉ)
    ========================= */
 footer {
