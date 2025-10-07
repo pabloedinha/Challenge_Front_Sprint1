@@ -272,6 +272,16 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-bottom: 1rem;
 }
 
+/* Texto explicativo */
+.portal-beneficios p {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.15rem;
+    color: #3A506B;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+
 
 
 /* =========================
