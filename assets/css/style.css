@@ -306,6 +306,33 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Animação ao passar o mouse */
+.beneficios-lista li:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 6px 24px rgba(58, 80, 107, 0.15);
+}
+
+/* Ícones dos benefícios */
+.beneficios-lista i {
+    font-size: 2.2rem;
+    color: #96ac3f;
+    margin-bottom: 0.7rem;
+    transition: color 0.3s;
+}
+
+.beneficios-lista li:hover i {
+    color: #FF9B71;
+}
+
+/* Texto dos benefícios */
+.beneficios-lista span {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #3A506B;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+
 
 
 
