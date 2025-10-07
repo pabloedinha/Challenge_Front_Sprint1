@@ -24,25 +24,34 @@ body {
     background-color: #F4F4F9;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth; /* Rolagem suave */
+    scroll-behavior: smooth;
+    /* Rolagem suave */
 }
 
 /* =========================
    NAVBAR (BARRA DE NAVEGAÇÃO)
    ========================= */
 header {
-    position: sticky; /* Fixa a navbar no topo ao rolar */
+    position: sticky;
+    /* Fixa a navbar no topo ao rolar */
     top: 0;
-    z-index: 1000; /* Garante que fique acima dos outros elementos */
-    background: #F4F4F9; /* Defina a cor de fundo para evitar sobreposição de conteúdo */
+    z-index: 1000;
+    /* Garante que fique acima dos outros elementos */
+    background: #F4F4F9;
+    /* Defina a cor de fundo para evitar sobreposição de conteúdo */
 }
 
-   .navbar-section {
-    display: flex; /* Deixa os itens lado a lado */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Espaço entre logo, menu e busca */
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+.navbar-section {
+    display: flex;
+    /* Deixa os itens lado a lado */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: space-between;
+    /* Espaço entre logo, menu e busca */
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas pequenas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
 }
 
 /* Logo da navbar */
@@ -50,14 +59,17 @@ header {
     max-width: 110px;
     margin: 0.5rem 2rem;
     border-radius: 20px;
-    -webkit-user-drag: none; /* Impede arrastar imagem no Chrome/Safari */
-    user-select: none; /* Impede seleção da imagem */
+    -webkit-user-drag: none;
+    /* Impede arrastar imagem no Chrome/Safari */
+    user-select: none;
+    /* Impede seleção da imagem */
 }
 
 /* Lista de links do menu principal */
 .navbar-section ul {
     display: flex;
-    gap: 6rem; /* Espaço entre os itens do menu */
+    gap: 6rem;
+    /* Espaço entre os itens do menu */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,23 +77,29 @@ header {
 
 /* Links do menu principal */
 .navbar-titles {
-    text-decoration: none; /* Remove sublinhado */
+    text-decoration: none;
+    /* Remove sublinhado */
     color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    transition: color 0.2s; /* Suaviza troca de cor */
-    position: relative; /* Necessário para animação da linha */
-    overflow: hidden;   /* Garante que a linha não ultrapasse o link */
+    transition: color 0.2s;
+    /* Suaviza troca de cor */
+    position: relative;
+    /* Necessário para animação da linha */
+    overflow: hidden;
+    /* Garante que a linha não ultrapasse o link */
 }
 
 /* Animação de linha que aparece ao passar o mouse */
 .navbar-titles::after {
     content: "";
     position: absolute;
-    left: 50%; /* Começa do meio */
+    left: 50%;
+    /* Começa do meio */
     bottom: 0;
-    width: 0;  /* Inicialmente sem largura */
+    width: 0;
+    /* Inicialmente sem largura */
     height: 2px;
     background: #3A506B;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,6 +111,7 @@ header {
 .navbar-titles:active {
     color: #3A506B;
 }
+
 .navbar-titles:hover::after,
 .navbar-titles:focus::after,
 .navbar-titles:active::after {
@@ -150,6 +169,7 @@ header {
     background: #3A506B;
     box-shadow: 0 2px 8px rgba(150, 172, 63, 0.15);
 }
+
 .search-bar button:hover i {
     color: #F4F4F9;
     transition: color 0.3s;
@@ -176,21 +196,39 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 3rem;
+    padding: 2.5rem;
     flex-wrap: wrap;
 }
 
 .article-text-problema {
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: #F4F4F9;
-    font-size: 1.1rem;  
     width: 50%;
 }
 
+.article-text-problema h1 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #F4F4F9;
+    margin-bottom: 1rem;
+}
+.article-text-problema p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #F4F4F9;
+    line-height: 1.6;
+}
+
 .container-img-problema img {
-    width: 30vw;
+    width: 25vw;
     height: auto;
     border-radius: 30px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 24px rgba(58, 80, 107, 0.08);
+}
+
+.container-img-problema img:hover,
+.container-img-problema img:focus {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(58, 80, 107, 0.18);
 }
 
 /* =========================
@@ -219,6 +257,7 @@ footer {
     font-family: "Poppins", Arial, sans-serif;
     font-size: 1.2rem;
 }
+
 .footer-logo img {
     max-width: 80px;
     border-radius: 50%;
@@ -231,6 +270,7 @@ footer {
     -ms-user-select: none;
     pointer-events: auto;
 }
+
 .footer-logo p {
     margin: 0;
     text-align: center;
@@ -245,6 +285,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .footer-info ul {
     list-style: none;
     padding: 0;
@@ -253,15 +294,18 @@ footer {
     flex-direction: column;
     gap: 0.7rem;
 }
+
 .footer-info h1 {
     font-size: 1.5rem;
 }
+
 .footer-info a {
     color: #F4F4F9;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
+
 .footer-info a:hover {
     color: #96ac3f;
 }
@@ -294,19 +338,24 @@ footer hr {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0 0 1rem 0; /* Espaço abaixo dos ícones */
+    margin: 0 0 1rem 0;
+    /* Espaço abaixo dos ícones */
 }
+
 .footer-social ul li {
     margin-right: 1.5rem;
 }
+
 .footer-social ul li:last-child {
     margin-right: 0;
 }
+
 .footer-social a {
     color: #F4F4F9;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
+
 .footer-social a:hover {
     color: #96ac3f;
 }
@@ -315,6 +364,7 @@ footer hr {
    RESPONSIVIDADE
    ========================= */
 @media (max-width: 992px) {
+
     /* Esconde barra de pesquisa em telas pequenas */
     .search-bar {
         display: none;
@@ -324,20 +374,28 @@ footer hr {
     .navbar-section ul {
         gap: 2rem;
     }
+
     .navbar-titles {
         margin: 0 2rem;
     }
 
     /* Ajusta a responsividade do rodapé */
     .footer-container {
-        gap: 0.5rem; /* Espaço entre os blocos */
-        padding: 2rem 1rem; /* Reduz padding lateral */
-        align-items: stretch; /* Faz os blocos ocuparem toda a largura */
+        gap: 0.5rem;
+        /* Espaço entre os blocos */
+        padding: 2rem 1rem;
+        /* Reduz padding lateral */
+        align-items: stretch;
+        /* Faz os blocos ocuparem toda a largura */
     }
+
     .footer-info,
     .footer-logo {
-        align-items: center; /* Centraliza conteúdo dos blocos */
-        width: 100%; /* Blocos ocupam toda a largura */
-        margin-bottom: 1rem; /* Espaço entre blocos */
+        align-items: center;
+        /* Centraliza conteúdo dos blocos */
+        width: 100%;
+        /* Blocos ocupam toda a largura */
+        margin-bottom: 1rem;
+        /* Espaço entre blocos */
     }
 }
