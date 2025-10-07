@@ -578,7 +578,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(58, 80, 107, 0.07);
     padding: 1.2rem 1rem;
-    min-width: 160px;
+    min-width: 200px;
     width: 30%;
     transition: transform 0.3s, box-shadow 0.3s;
     margin: auto;
@@ -590,16 +590,23 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 0 6px 24px rgba(58, 80, 107, 0.15);
 }
 
-/* Ícones dos benefícios */
-.beneficios-lista i {
-    font-size: 2.2rem;
-    color: #3a506bd8;
+/* Imagens dos benefícios */
+.beneficios-lista img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
     margin-bottom: 0.7rem;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(58, 80, 107, 0.1);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
-.beneficios-lista li:hover i {
-    color: #3A506B;
+/* Animação das imagens ao hover */
+.beneficios-lista li:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(58, 80, 107, 0.2);
 }
 
 /* Texto dos benefícios */
