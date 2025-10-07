@@ -197,7 +197,7 @@ input[type="search"]::-webkit-search-cancel-button {
     justify-content: space-around;
     align-items: center;
     padding: 2.8rem;
-    flex-wrap: wrap-reverse
+    flex-wrap: wrap;
 }
 
 .article-text-problema {
@@ -219,7 +219,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .article-text-problema a {
     display: inline-block;
-    margin-top: 1rem;
+    margin: 1rem 0 2rem 0;
     padding: 0.8rem 1.5rem;
     background-color: #e88407;
     color: #F4F4F9;
@@ -305,6 +305,83 @@ input[type="search"]::-webkit-search-cancel-button {
     position: relative;
     overflow: hidden;
 }
+
+
+/* Ícones dos cards */
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    transition: all 0.4s;
+}
+
+/* Cores específicas para cada card */
+.card-voluntario .card-icon { background: rgba(150, 172, 63, 0.1); }
+.card-voluntario .card-icon i { color: #96ac3f; }
+.card-voluntario:hover .card-icon { background: #96ac3f; transform: scale(1.1) rotate(360deg); }
+.card-voluntario:hover .card-icon i { color: #fff; }
+
+.card-atendimento .card-icon { background: rgba(58, 80, 107, 0.1); }
+.card-atendimento .card-icon i { color: #3A506B; }
+.card-atendimento:hover .card-icon { background: #3A506B; transform: scale(1.1) rotate(360deg); }
+.card-atendimento:hover .card-icon i { color: #fff; }
+
+.card-doacao .card-icon { background: rgba(255, 155, 113, 0.1); }
+.card-doacao .card-icon i { color: #FF9B71; }
+.card-doacao:hover .card-icon { background: #FF9B71; transform: scale(1.1) rotate(360deg); }
+.card-doacao:hover .card-icon i { color: #fff; }
+
+/* Títulos dos cards */
+.help-card h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: #3A506B;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Texto dos cards */
+.help-card p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* Botões dos cards */
+.card-button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cores específicas dos botões */
+.btn-voluntario { background: #96ac3f; color: #fff; }
+.btn-voluntario:hover { background: #7a8f35; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(150, 172, 63, 0.3); }
+
+.btn-atendimento { background: #3A506B; color: #fff; }
+.btn-atendimento:hover { background: #2d3f54; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(58, 80, 107, 0.3); }
+
+.btn-doacao { background: #FF9B71; color: #fff; }
+.btn-doacao:hover { background: #ff8555; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 155, 113, 0.3); }
 
 
 
