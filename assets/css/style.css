@@ -181,12 +181,16 @@ input[type="search"]::-webkit-search-cancel-button {
    ========================= */
 /* Container principal do hero */
 .container-problema-main {
-    background-color: #96ac3f;
+    background: linear-gradient(-45deg, #96ac3f, #7a8f35, #96ac3f, #6b7d2f);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2.8rem;
+    padding: 4rem 2.8rem;
     flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Container do texto principal */
@@ -412,7 +416,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Card Atendimento - cores e animações */
 .card-atendimento .card-icon {
-    background: rgba(58, 80, 107, 0.1);
+    background: #3a506b1a;
 }
 
 .card-atendimento .card-icon i {
@@ -582,13 +586,13 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Ícones dos benefícios */
 .beneficios-lista i {
     font-size: 2.2rem;
-    color: #96ac3f;
+    color: #3a506bd8;
     margin-bottom: 0.7rem;
     transition: color 0.3s;
 }
 
 .beneficios-lista li:hover i {
-    color: #FF9B71;
+    color: #3A506B;
 }
 
 /* Texto dos benefícios */
