@@ -826,6 +826,11 @@ footer hr {
         display: none;
     }
 
+    /* Esconde barra de pesquisa em telas pequenas */
+    .auth-buttons {
+        display: none;
+    }
+
     /* Reduz espaçamento entre itens do menu */
     .navbar-section ul {
         gap: 2rem;
