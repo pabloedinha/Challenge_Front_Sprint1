@@ -264,6 +264,15 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center; 
 }
 
+/* Título da seção */
+.portal-beneficios h2 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #3A506B;
+    margin-bottom: 1rem;
+}
+
+
 
 /* =========================
    FOOTER (RODAPÉ)
