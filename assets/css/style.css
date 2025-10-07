@@ -60,7 +60,7 @@ header {
 /* Lista de links do menu principal */
 .navbar-section ul {
     display: flex;
-    gap: 6rem; /* Espaço entre os itens do menu */
+    gap: 4rem; /* Espaço entre os itens do menu */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -102,6 +102,77 @@ header {
 .navbar-titles:active::after {
     width: 100%;
     left: 0;
+}
+
+/* =========================
+   BOTÕES DE LOGIN/CADASTRO
+   ========================= */
+/* Container dos botões de autenticação */
+.auth-buttons {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin: 0 2rem 0 1rem;
+}
+
+/* Estilos base para os botões */
+.auth-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #3A506B;
+    border-radius: 25px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Botão de Login */
+.login-btn {
+    background: transparent;
+    color: #3A506B;
+}
+
+.login-btn:hover {
+    background: #3A506B;
+    color: #F4F4F9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58, 80, 107, 0.3);
+}
+
+/* Botão de Cadastro */
+.signup-btn {
+    background: #3A506B;
+    color: #F4F4F9;
+}
+
+.signup-btn:hover {
+    background: #2d3f54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58, 80, 107, 0.4);
+}
+
+/* Efeito de ondulação nos botões */
+.auth-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+    transform: translate(-50%, -50%);
+}
+
+.auth-btn:hover::before {
+    width: 200px;
+    height: 200px;
 }
 
 /* =========================
