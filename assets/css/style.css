@@ -269,7 +269,7 @@ input[type="search"]::-webkit-search-cancel-button {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 2.2rem;
     color: #3A506B;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
 }
 
 /* Texto explicativo */
@@ -281,6 +281,17 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: 500;
 }
 
+/* Lista de benefícios */
+.beneficios-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
 
 
 
