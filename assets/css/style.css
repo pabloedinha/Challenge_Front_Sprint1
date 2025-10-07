@@ -253,6 +253,63 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 
+/* =========================
+   SEÇÃO: COMO PODEMOS AJUDAR?
+   ========================= */
+/* Estrutura principal da seção */
+.como-ajudar {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #F4F4F9 0%, #fff 100%);
+    text-align: center;
+}
+
+/* Título principal da seção */
+.como-ajudar h2 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #3A506B;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Linha decorativa sob o título */
+.como-ajudar h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #96ac3f, #FF9B71);
+    border-radius: 2px;
+}
+
+/* Container dos cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo base dos cards */
+.help-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(58, 80, 107, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
 
 .portal-beneficios {
     background: #F4F4F9;
@@ -303,7 +360,9 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 0 2px 8px rgba(58, 80, 107, 0.07);
     padding: 1.2rem 1rem;
     min-width: 160px;
+    width: 30%;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin: auto;
 }
 
 /* Animação ao passar o mouse */
