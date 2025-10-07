@@ -4,6 +4,7 @@ Cores utilizadas:
 #F4F4F9 - branco creme
 #FF9B71 - laranja suave
 #96ac3f - verde claro
+#e88407 - laranja principal
 
 Fontes:
 Poppins - textos curtos
@@ -24,34 +25,27 @@ body {
     background-color: #F4F4F9;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
-    /* Rolagem suave */
+    scroll-behavior: smooth; /* Rolagem suave */
 }
 
 /* =========================
    NAVBAR (BARRA DE NAVEGAÇÃO)
    ========================= */
+/* Cabeçalho fixo no topo da página */
 header {
-    position: sticky;
-    /* Fixa a navbar no topo ao rolar */
+    position: sticky; /* Fixa a navbar no topo ao rolar */
     top: 0;
-    z-index: 1000;
-    /* Garante que fique acima dos outros elementos */
-    background: #F4F4F9;
-    /* Defina a cor de fundo para evitar sobreposição de conteúdo */
+    z-index: 1000; /* Garante que fique acima dos outros elementos */
+    background: #F4F4F9; /* Cor de fundo para evitar sobreposição */
 }
 
+/* Container principal da navbar */
 .navbar-section {
-    display: flex;
-    /* Deixa os itens lado a lado */
-    align-items: center;
-    /* Centraliza verticalmente */
-    justify-content: space-between;
-    /* Espaço entre logo, menu e busca */
-    flex-wrap: wrap;
-    /* Permite quebrar linha em telas pequenas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Sombra leve */
+    display: flex; /* Deixa os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaço entre logo, menu e busca */
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 /* Logo da navbar */
@@ -59,17 +53,14 @@ header {
     max-width: 110px;
     margin: 0.5rem 2rem;
     border-radius: 20px;
-    -webkit-user-drag: none;
-    /* Impede arrastar imagem no Chrome/Safari */
-    user-select: none;
-    /* Impede seleção da imagem */
+    -webkit-user-drag: none; /* Impede arrastar imagem no Chrome/Safari */
+    user-select: none; /* Impede seleção da imagem */
 }
 
 /* Lista de links do menu principal */
 .navbar-section ul {
     display: flex;
-    gap: 6rem;
-    /* Espaço entre os itens do menu */
+    gap: 6rem; /* Espaço entre os itens do menu */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -77,29 +68,23 @@ header {
 
 /* Links do menu principal */
 .navbar-titles {
-    text-decoration: none;
-    /* Remove sublinhado */
+    text-decoration: none; /* Remove sublinhado */
     color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    transition: color 0.2s;
-    /* Suaviza troca de cor */
-    position: relative;
-    /* Necessário para animação da linha */
-    overflow: hidden;
-    /* Garante que a linha não ultrapasse o link */
+    transition: color 0.2s; /* Suaviza troca de cor */
+    position: relative; /* Necessário para animação da linha */
+    overflow: hidden; /* Garante que a linha não ultrapasse o link */
 }
 
 /* Animação de linha que aparece ao passar o mouse */
 .navbar-titles::after {
     content: "";
     position: absolute;
-    left: 50%;
-    /* Começa do meio */
+    left: 50%; /* Começa do meio */
     bottom: 0;
-    width: 0;
-    /* Inicialmente sem largura */
+    width: 0; /* Inicialmente sem largura */
     height: 2px;
     background: #3A506B;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -122,6 +107,7 @@ header {
 /* =========================
    BARRA DE PESQUISA
    ========================= */
+/* Container da barra de pesquisa */
 .search-bar {
     display: flex;
     align-items: center;
@@ -132,6 +118,7 @@ header {
     border: 2px solid #3A506B;
 }
 
+/* Configuração geral do input */
 .search-bar input {
     font-family: 'Poppins', Arial, sans-serif;
 }
@@ -146,6 +133,7 @@ header {
     background: transparent;
 }
 
+/* Estilo do placeholder */
 .search-bar input::placeholder {
     color: #3A506B;
     font-size: 1rem;
@@ -189,8 +177,9 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* =========================
-   MAIN (CONTEÚDO PRINCIPAL)
+   SEÇÃO PRINCIPAL - PROBLEMA
    ========================= */
+/* Container principal do hero */
 .container-problema-main {
     background-color: #96ac3f;
     display: flex;
@@ -200,16 +189,20 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-wrap: wrap;
 }
 
+/* Container do texto principal */
 .article-text-problema {
     width: 50%;
 }
 
+/* Título principal da seção */
 .article-text-problema h1 {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 2.5rem;
     color: #F4F4F9;
     margin-bottom: 1rem;
 }
+
+/* Parágrafo descritivo */
 .article-text-problema p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.2rem;
@@ -217,6 +210,8 @@ input[type="search"]::-webkit-search-cancel-button {
     line-height: 1.6;
     text-align: justify;
 }
+
+/* Botão de call-to-action */
 .article-text-problema a {
     display: inline-block;
     margin: 1rem 0 2rem 0;
@@ -230,12 +225,15 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 0 4px 12px rgba(155, 69, 33, 0.3);
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
+
+/* Animação de hover no botão */
 .article-text-problema a:hover {
     background-color: #f79012;
     box-shadow: 0 6px 16px rgba(255, 155, 113, 0.4);
     transform: translateY(-3px);
 }
 
+/* Imagem da seção principal */
 .container-img-problema img {
     width: 550px;
     height: auto;
@@ -244,14 +242,12 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 0 4px 24px rgba(58, 80, 107, 0.08);
 }
 
+/* Animação de hover na imagem */
 .container-img-problema img:hover,
 .container-img-problema img:focus {
     transform: scale(1.07) rotate(-2deg);
     box-shadow: 0 8px 32px rgba(58, 80, 107, 0.18);
 }
-
-
-
 
 /* =========================
    SEÇÃO: COMO PODEMOS AJUDAR?
@@ -325,6 +321,8 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: all 0.6s;
     opacity: 0;
 }
+
+/* Cores específicas do brilho para cada card */
 .card-voluntario::before {
     background: linear-gradient(45deg, transparent, rgba(150, 172, 63, 0.2), transparent);
 }
@@ -341,14 +339,23 @@ input[type="search"]::-webkit-search-cancel-button {
     background: linear-gradient(45deg, transparent, rgba(58, 80, 107, 0.2), transparent);
 }
 
+/* Animação de brilho */
 .help-card:hover::before {
     animation: shine 0.8s ease-in-out;
 }
 
 @keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+        opacity: 0;
+    }
 }
 
 /* Cores específicas das bordas no hover */
@@ -385,21 +392,59 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: all 0.4s;
 }
 
-/* Cores específicas para cada card */
-.card-voluntario .card-icon { background: rgba(150, 172, 63, 0.1); }
-.card-voluntario .card-icon i { color: #96ac3f; }
-.card-voluntario:hover .card-icon { background: #96ac3f; transform: scale(1.1) rotate(360deg); }
-.card-voluntario:hover .card-icon i { color: #fff; }
+/* Card Voluntário - cores e animações */
+.card-voluntario .card-icon {
+    background: rgba(150, 172, 63, 0.1);
+}
 
-.card-atendimento .card-icon { background: rgba(58, 80, 107, 0.1); }
-.card-atendimento .card-icon i { color: #3A506B; }
-.card-atendimento:hover .card-icon { background: #3A506B; transform: scale(1.1) rotate(360deg); }
-.card-atendimento:hover .card-icon i { color: #fff; }
+.card-voluntario .card-icon i {
+    color: #96ac3f;
+}
 
-.card-doacao .card-icon { background: rgba(255, 155, 113, 0.1); }
-.card-doacao .card-icon i { color: #e88407; }
-.card-doacao:hover .card-icon { background: #e88407; transform: scale(1.1) rotate(360deg); }
-.card-doacao:hover .card-icon i { color: #fff; }
+.card-voluntario:hover .card-icon {
+    background: #96ac3f;
+    transform: scale(1.1) rotate(360deg);
+}
+
+.card-voluntario:hover .card-icon i {
+    color: #fff;
+}
+
+/* Card Atendimento - cores e animações */
+.card-atendimento .card-icon {
+    background: rgba(58, 80, 107, 0.1);
+}
+
+.card-atendimento .card-icon i {
+    color: #3A506B;
+}
+
+.card-atendimento:hover .card-icon {
+    background: #3A506B;
+    transform: scale(1.1) rotate(360deg);
+}
+
+.card-atendimento:hover .card-icon i {
+    color: #fff;
+}
+
+/* Card Doação - cores e animações */
+.card-doacao .card-icon {
+    background: rgba(255, 155, 113, 0.1);
+}
+
+.card-doacao .card-icon i {
+    color: #e88407;
+}
+
+.card-doacao:hover .card-icon {
+    background: #e88407;
+    transform: scale(1.1) rotate(360deg);
+}
+
+.card-doacao:hover .card-icon i {
+    color: #fff;
+}
 
 /* Títulos dos cards */
 .help-card h3 {
@@ -434,20 +479,46 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
 }
 
-/* Cores específicas dos botões */
-.btn-voluntario { background: #96ac3f; color: #fff; }
-.btn-voluntario:hover { background: #7a8f35; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(150, 172, 63, 0.3); }
+/* Botão do card voluntário */
+.btn-voluntario {
+    background: #96ac3f;
+    color: #fff;
+}
 
-.btn-atendimento { background: #3A506B; color: #fff; }
-.btn-atendimento:hover { background: #2d3f54; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(58, 80, 107, 0.3); }
+.btn-voluntario:hover {
+    background: #7a8f35;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(150, 172, 63, 0.3);
+}
 
-.btn-doacao { background: #e88407; color: #fff; }
-.btn-doacao:hover { background: #e88407; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 155, 113, 0.3); }
+/* Botão do card atendimento */
+.btn-atendimento {
+    background: #3A506B;
+    color: #fff;
+}
 
+.btn-atendimento:hover {
+    background: #2d3f54;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(58, 80, 107, 0.3);
+}
 
+/* Botão do card doação */
+.btn-doacao {
+    background: #e88407;
+    color: #fff;
+}
 
+.btn-doacao:hover {
+    background: #e88407;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 155, 113, 0.3);
+}
 
-
+/* =========================
+   SEÇÃO: PORTAL DE BENEFÍCIOS
+   ========================= */
+/* Container principal da seção */
 .portal-beneficios {
     background: #F4F4F9;
     border-radius: 24px;
@@ -455,7 +526,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 2.5rem 2rem;
     margin: 1rem auto;
     max-width: 90%;
-    text-align: center; 
+    text-align: center;
 }
 
 /* Título da seção */
@@ -502,7 +573,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin: auto;
 }
 
-/* Animação ao passar o mouse */
+/* Animação ao passar o mouse nos benefícios */
 .beneficios-lista li:hover {
     transform: translateY(-6px) scale(1.05);
     box-shadow: 0 6px 24px rgba(58, 80, 107, 0.15);
@@ -528,19 +599,15 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center;
 }
 
-
-
-
-
-
 /* =========================
    FOOTER (RODAPÉ)
    ========================= */
+/* Container principal do footer */
 footer {
     background-color: #3A506B;
 }
 
-/* Container principal do rodapé */
+/* Container dos links e informações */
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -560,6 +627,7 @@ footer {
     font-size: 1.2rem;
 }
 
+/* Imagem do logo no footer */
 .footer-logo img {
     max-width: 80px;
     border-radius: 50%;
@@ -573,6 +641,7 @@ footer {
     pointer-events: auto;
 }
 
+/* Texto do logo no footer */
 .footer-logo p {
     margin: 0;
     text-align: center;
@@ -588,6 +657,7 @@ footer {
     align-items: center;
 }
 
+/* Lista de links no footer */
 .footer-info ul {
     list-style: none;
     padding: 0;
@@ -597,10 +667,12 @@ footer {
     gap: 0.7rem;
 }
 
+/* Títulos das seções do footer */
 .footer-info h1 {
     font-size: 1.5rem;
 }
 
+/* Links do footer */
 .footer-info a {
     color: #F4F4F9;
     text-decoration: none;
@@ -640,10 +712,10 @@ footer hr {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0 0 1rem 0;
-    /* Espaço abaixo dos ícones */
+    margin: 0 0 1rem 0; /* Espaço abaixo dos ícones */
 }
 
+/* Espaçamento entre ícones sociais */
 .footer-social ul li {
     margin-right: 1.5rem;
 }
@@ -652,6 +724,7 @@ footer hr {
     margin-right: 0;
 }
 
+/* Links das redes sociais */
 .footer-social a {
     color: #F4F4F9;
     font-size: 1.5rem;
@@ -666,7 +739,6 @@ footer hr {
    RESPONSIVIDADE
    ========================= */
 @media (max-width: 992px) {
-
     /* Esconde barra de pesquisa em telas pequenas */
     .search-bar {
         display: none;
@@ -681,23 +753,17 @@ footer hr {
         margin: 0 2rem;
     }
 
-    /* Ajusta a responsividade do rodapé */
+    /* Ajusta responsividade do footer */
     .footer-container {
-        gap: 0.5rem;
-        /* Espaço entre os blocos */
-        padding: 2rem 1rem;
-        /* Reduz padding lateral */
-        align-items: stretch;
-        /* Faz os blocos ocuparem toda a largura */
+        gap: 0.5rem; /* Espaço entre os blocos */
+        padding: 2rem 1rem; /* Reduz padding lateral */
+        align-items: stretch; /* Faz os blocos ocuparem toda a largura */
     }
 
     .footer-info,
     .footer-logo {
-        align-items: center;
-        /* Centraliza conteúdo dos blocos */
-        width: 100%;
-        /* Blocos ocupam toda a largura */
-        margin-bottom: 1rem;
-        /* Espaço entre blocos */
+        align-items: center; /* Centraliza conteúdo dos blocos */
+        width: 100%; /* Blocos ocupam toda a largura */
+        margin-bottom: 1rem; /* Espaço entre blocos */
     }
 }
