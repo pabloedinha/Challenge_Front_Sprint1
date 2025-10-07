@@ -250,6 +250,21 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 0 8px 32px rgba(58, 80, 107, 0.18);
 }
 
+
+
+
+
+.portal-beneficios {
+    background: #F4F4F9;
+    border-radius: 24px;
+    box-shadow: 0 2px 16px rgba(58, 80, 107, 0.08);
+    padding: 2.5rem 2rem;
+    margin: 1rem auto;
+    max-width: 90%;
+    text-align: center; 
+}
+
+
 /* =========================
    FOOTER (RODAPÉ)
    ========================= */
