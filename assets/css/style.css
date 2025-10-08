@@ -29,27 +29,27 @@ body {
 }
 
 /* =========================
-   NAVBAR (BARRA DE NAVEGAÇÃO)
+   CABEÇALHO E NAVEGAÇÃO
    ========================= */
 /* Cabeçalho fixo no topo da página */
-header {
+.cabecalho-principal {
     position: sticky; /* Fixa a navbar no topo ao rolar */
     top: 0;
     z-index: 1000; /* Garante que fique acima dos outros elementos */
     background: #F4F4F9; /* Cor de fundo para evitar sobreposição */
 }
 
-/* Container principal da navbar */
-.navbar-section {
+/* Container principal da navegação */
+.secao-navegacao {
     display: flex; /* Deixa os itens lado a lado */
     align-items: center; /* Centraliza verticalmente */
     justify-content: space-between; /* Espaço entre logo, menu e busca */
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    flex-wrap: nowrap; /* Impede quebra de linha em telas pequenas */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-/* Logo da navbar */
-#logo-img {
+/* Logo da navegação */
+.imagem-logo {
     max-width: 110px;
     margin: 0.5rem 2rem;
     border-radius: 20px;
@@ -58,7 +58,7 @@ header {
 }
 
 /* Lista de links do menu principal */
-.navbar-section ul {
+.secao-navegacao ul {
     display: flex;
     gap: 4rem; /* Espaço entre os itens do menu */
     list-style: none;
@@ -67,7 +67,7 @@ header {
 }
 
 /* Links do menu principal */
-.navbar-titles {
+.links-navegacao {
     text-decoration: none; /* Remove sublinhado */
     color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
@@ -79,7 +79,7 @@ header {
 }
 
 /* Animação de linha que aparece ao passar o mouse */
-.navbar-titles::after {
+.links-navegacao::after {
     content: "";
     position: absolute;
     left: 50%; /* Começa do meio */
@@ -91,15 +91,15 @@ header {
 }
 
 /* Linha e cor permanecem ao interagir */
-.navbar-titles:hover,
-.navbar-titles:focus,
-.navbar-titles:active {
+.links-navegacao:hover,
+.links-navegacao:focus,
+.links-navegacao:active {
     color: #3A506B;
 }
 
-.navbar-titles:hover::after,
-.navbar-titles:focus::after,
-.navbar-titles:active::after {
+.links-navegacao:hover::after,
+.links-navegacao:focus::after,
+.links-navegacao:active::after {
     width: 100%;
     left: 0;
 }
@@ -108,7 +108,7 @@ header {
    BOTÕES DE LOGIN/CADASTRO
    ========================= */
 /* Container dos botões de autenticação */
-.auth-buttons {
+.botoes-autenticacao {
     display: flex;
     gap: 0.8rem;
     align-items: center;
@@ -116,7 +116,7 @@ header {
 }
 
 /* Estilos base para os botões */
-.auth-btn {
+.botao-autenticacao {
     padding: 0.6rem 1.2rem;
     border: 2px solid #3A506B;
     border-radius: 25px;
@@ -132,12 +132,12 @@ header {
 }
 
 /* Botão de Login */
-.login-btn {
+.botao-login {
     background: transparent;
     color: #3A506B;
 }
 
-.login-btn:hover {
+.botao-login:hover {
     background: #3A506B;
     color: #F4F4F9;
     transform: translateY(-2px);
@@ -145,19 +145,19 @@ header {
 }
 
 /* Botão de Cadastro */
-.signup-btn {
+.botao-cadastro {
     background: #3A506B;
     color: #F4F4F9;
 }
 
-.signup-btn:hover {
+.botao-cadastro:hover {
     background: #2d3f54;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(58, 80, 107, 0.4);
 }
 
 /* Efeito de ondulação nos botões */
-.auth-btn::before {
+.botao-autenticacao::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -170,7 +170,7 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.auth-btn:hover::before {
+.botao-autenticacao:hover::before {
     width: 200px;
     height: 200px;
 }
@@ -179,7 +179,7 @@ header {
    BARRA DE PESQUISA
    ========================= */
 /* Container da barra de pesquisa */
-.search-bar {
+.barra-pesquisa {
     display: flex;
     align-items: center;
     background: #F4F4F9;
@@ -189,12 +189,12 @@ header {
 }
 
 /* Configuração geral do input */
-.search-bar input {
+.barra-pesquisa input {
     font-family: 'Poppins', Arial, sans-serif;
 }
 
 /* Input da barra de pesquisa */
-.search-bar input[type="search"] {
+.barra-pesquisa input[type="search"] {
     border: none;
     outline: none;
     padding: 6px 8px;
@@ -204,14 +204,14 @@ header {
 }
 
 /* Estilo do placeholder */
-.search-bar input::placeholder {
+.barra-pesquisa input::placeholder {
     color: #3A506B;
     font-size: 1rem;
     opacity: 0.4;
 }
 
 /* Botão da barra de pesquisa */
-.search-bar button {
+.barra-pesquisa button {
     background: none;
     border: none;
     cursor: pointer;
@@ -223,18 +223,18 @@ header {
 }
 
 /* Animação de hover no botão de pesquisar */
-.search-bar button:hover {
+.barra-pesquisa button:hover {
     background: #3A506B;
     box-shadow: 0 2px 8px rgba(150, 172, 63, 0.15);
 }
 
-.search-bar button:hover i {
+.barra-pesquisa button:hover i {
     color: #F4F4F9;
     transition: color 0.3s;
 }
 
 /* Ícone da lupa */
-.search-bar button i {
+.barra-pesquisa button i {
     color: #3A506B;
     font-size: 1.2rem;
 }
@@ -247,13 +247,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* =========================
-   SEÇÃO PRINCIPAL - PROBLEMA
+   SEÇÃO PRINCIPAL - HERO
    ========================= */
-/* Container principal do hero */
-.container-problema-main {
+/* Container principal da seção hero */
+.secao-hero-principal {
     background: linear-gradient(-45deg, #96ac3f, #7a8f35, #96ac3f, #6b7d2f);
     background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
+    animation: movimentoGradiente 8s ease infinite;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -264,19 +264,19 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Animação de gradiente de fundo */
-@keyframes gradientShift {
+@keyframes movimentoGradiente {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
 /* Container do texto principal */
-.article-text-problema {
+.conteudo-texto-hero {
     width: 50%;
 }
 
 /* Título principal da seção */
-.article-text-problema h1 {
+.conteudo-texto-hero h1 {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 2.5rem;
     color: #F4F4F9;
@@ -284,7 +284,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Parágrafo descritivo */
-.article-text-problema p {
+.conteudo-texto-hero p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.2rem;
     color: #F4F4F9;
@@ -293,7 +293,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Botão de call-to-action */
-.article-text-problema a {
+.conteudo-texto-hero a {
     display: inline-block;
     margin: 1rem 0 2rem 0;
     padding: 0.8rem 1.5rem;
@@ -308,14 +308,14 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Animação de hover no botão */
-.article-text-problema a:hover {
+.conteudo-texto-hero a:hover {
     background-color: #f79012;
     box-shadow: 0 6px 16px rgba(255, 155, 113, 0.4);
     transform: translateY(-3px);
 }
 
 /* Imagem da seção principal */
-.container-img-problema img {
+.container-imagem-hero img {
     width: 550px;
     height: auto;
     border-radius: 30px;
@@ -324,24 +324,24 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Animação de hover na imagem */
-.container-img-problema img:hover,
-.container-img-problema img:focus {
+.container-imagem-hero img:hover,
+.container-imagem-hero img:focus {
     transform: scale(1.07) rotate(-2deg);
     box-shadow: 0 8px 32px rgba(58, 80, 107, 0.18);
 }
 
 /* =========================
-   SEÇÃO: COMO PODEMOS AJUDAR?
+   SEÇÃO: COMO PODEMOS AJUDAR
    ========================= */
 /* Estrutura principal da seção */
-.como-ajudar {
+.secao-como-ajudar {
     padding: 4rem 2rem;
     background: linear-gradient(135deg, #F4F4F9 0%, #fff 100%);
     text-align: center;
 }
 
 /* Título principal da seção */
-.como-ajudar h2 {
+.secao-como-ajudar h2 {
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 2.5rem;
     color: #3A506B;
@@ -350,7 +350,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Linha decorativa sob o título */
-.como-ajudar h2::after {
+.secao-como-ajudar h2::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -362,8 +362,8 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 2px;
 }
 
-/* Container dos cards */
-.cards-container {
+/* Container dos cartões */
+.container-cartoes-ajuda {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -371,8 +371,8 @@ input[type="search"]::-webkit-search-cancel-button {
     margin: 0 auto;
 }
 
-/* Estilo base dos cards */
-.help-card {
+/* Estilo base dos cartões */
+.cartao-ajuda {
     background: #fff;
     border-radius: 20px;
     padding: 2rem 1.5rem;
@@ -383,15 +383,15 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
 }
 
-/* Animação de hover nos cards */
-.help-card:hover {
+/* Animação de hover nos cartões */
+.cartao-ajuda:hover {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 12px 40px rgba(58, 80, 107, 0.15);
     border-color: #e883076c;
 }
 
 /* Efeito de brilho no hover */
-.help-card::before {
+.cartao-ajuda::before {
     content: "";
     position: absolute;
     top: -50%;
@@ -403,29 +403,25 @@ input[type="search"]::-webkit-search-cancel-button {
     opacity: 0;
 }
 
-/* Cores específicas do brilho para cada card */
-.card-voluntario::before {
+/* Cores específicas do brilho para cada cartão */
+.cartao-voluntario::before {
     background: linear-gradient(45deg, transparent, rgba(150, 172, 63, 0.2), transparent);
 }
 
-.card-atendimento::before {
+.cartao-atendimento::before {
     background: linear-gradient(45deg, transparent, rgba(58, 80, 107, 0.2), transparent);
 }
 
-.card-doacao::before {
+.cartao-doacao::before {
     background: linear-gradient(45deg, transparent, rgba(232, 132, 7, 0.2), transparent);
 }
 
-.card-duvidas::before {
-    background: linear-gradient(45deg, transparent, rgba(58, 80, 107, 0.2), transparent);
-}
-
 /* Animação de brilho */
-.help-card:hover::before {
-    animation: shine 0.8s ease-in-out;
+.cartao-ajuda:hover::before {
+    animation: efeitoBrilho 0.8s ease-in-out;
 }
 
-@keyframes shine {
+@keyframes efeitoBrilho {
     0% {
         transform: translateX(-100%) translateY(-100%) rotate(45deg);
         opacity: 0;
@@ -440,24 +436,20 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Cores específicas das bordas no hover */
-.card-voluntario:hover {
+.cartao-voluntario:hover {
     border-color: rgba(150, 172, 63, 0.4);
 }
 
-.card-atendimento:hover {
+.cartao-atendimento:hover {
     border-color: rgba(58, 80, 107, 0.4);
 }
 
-.card-doacao:hover {
+.cartao-doacao:hover {
     border-color: rgba(232, 132, 7, 0.4);
 }
 
-.card-duvidas:hover {
-    border-color: rgba(58, 80, 107, 0.4);
-}
-
-/* Ícones dos cards */
-.card-icon {
+/* Ícones dos cartões */
+.icone-cartao {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
@@ -468,67 +460,67 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-icon i {
+.icone-cartao i {
     font-size: 2.5rem;
     transition: all 0.4s;
 }
 
-/* Card Voluntário - cores e animações */
-.card-voluntario .card-icon {
+/* Cartão Voluntário - cores e animações */
+.cartao-voluntario .icone-cartao {
     background: rgba(150, 172, 63, 0.1);
 }
 
-.card-voluntario .card-icon i {
+.cartao-voluntario .icone-cartao i {
     color: #96ac3f;
 }
 
-.card-voluntario:hover .card-icon {
+.cartao-voluntario:hover .icone-cartao {
     background: #96ac3f;
     transform: scale(1.1) rotate(360deg);
 }
 
-.card-voluntario:hover .card-icon i {
+.cartao-voluntario:hover .icone-cartao i {
     color: #fff;
 }
 
-/* Card Atendimento - cores e animações */
-.card-atendimento .card-icon {
+/* Cartão Atendimento - cores e animações */
+.cartao-atendimento .icone-cartao {
     background: #3a506b1a;
 }
 
-.card-atendimento .card-icon i {
+.cartao-atendimento .icone-cartao i {
     color: #3A506B;
 }
 
-.card-atendimento:hover .card-icon {
+.cartao-atendimento:hover .icone-cartao {
     background: #3A506B;
     transform: scale(1.1) rotate(360deg);
 }
 
-.card-atendimento:hover .card-icon i {
+.cartao-atendimento:hover .icone-cartao i {
     color: #fff;
 }
 
-/* Card Doação - cores e animações */
-.card-doacao .card-icon {
+/* Cartão Doação - cores e animações */
+.cartao-doacao .icone-cartao {
     background: rgba(255, 155, 113, 0.1);
 }
 
-.card-doacao .card-icon i {
+.cartao-doacao .icone-cartao i {
     color: #e88407;
 }
 
-.card-doacao:hover .card-icon {
+.cartao-doacao:hover .icone-cartao {
     background: #e88407;
     transform: scale(1.1) rotate(360deg);
 }
 
-.card-doacao:hover .card-icon i {
+.cartao-doacao:hover .icone-cartao i {
     color: #fff;
 }
 
-/* Títulos dos cards */
-.help-card h3 {
+/* Títulos dos cartões */
+.cartao-ajuda h3 {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 1.3rem;
     color: #3A506B;
@@ -536,8 +528,8 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: 600;
 }
 
-/* Texto dos cards */
-.help-card p {
+/* Texto dos cartões */
+.cartao-ajuda p {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #3A506B;
     line-height: 1.6;
@@ -545,8 +537,8 @@ input[type="search"]::-webkit-search-cancel-button {
     opacity: 0.8;
 }
 
-/* Botões dos cards */
-.card-button {
+/* Botões dos cartões */
+.botao-cartao {
     width: 100%;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -561,37 +553,37 @@ input[type="search"]::-webkit-search-cancel-button {
     text-decoration: none;
 }
 
-/* Botão do card voluntário */
-.btn-voluntario {
+/* Botão do cartão voluntário */
+.botao-voluntario {
     background: #96ac3f;
     color: #fff;
 }
 
-.btn-voluntario:hover {
+.botao-voluntario:hover {
     background: #7a8f35;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(150, 172, 63, 0.3);
 }
 
-/* Botão do card atendimento */
-.btn-atendimento {
+/* Botão do cartão atendimento */
+.botao-atendimento {
     background: #3A506B;
     color: #fff;
 }
 
-.btn-atendimento:hover {
+.botao-atendimento:hover {
     background: #2d3f54;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(58, 80, 107, 0.3);
 }
 
-/* Botão do card doação */
-.btn-doacao {
+/* Botão do cartão doação */
+.botao-doacao {
     background: #e88407;
     color: #fff;
 }
 
-.btn-doacao:hover {
+.botao-doacao:hover {
     background: #e88407;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 155, 113, 0.3);
@@ -601,7 +593,7 @@ input[type="search"]::-webkit-search-cancel-button {
    SEÇÃO: PORTAL DE BENEFÍCIOS
    ========================= */
 /* Container principal da seção */
-.portal-beneficios {
+.secao-portal-beneficios {
     background: #F4F4F9;
     border-radius: 24px;
     box-shadow: 0 2px 16px rgba(58, 80, 107, 0.08);
@@ -612,7 +604,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Título da seção */
-.portal-beneficios h2 {
+.secao-portal-beneficios h2 {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 2.2rem;
     color: #3A506B;
@@ -620,7 +612,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Texto explicativo */
-.portal-beneficios p {
+.secao-portal-beneficios p {
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 1.15rem;
     color: #3A506B;
@@ -629,7 +621,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Lista de benefícios */
-.beneficios-lista {
+.lista-beneficios {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -641,7 +633,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Cada item de benefício */
-.beneficios-lista li {
+.lista-beneficios li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -656,35 +648,35 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Animação ao passar o mouse nos benefícios */
-.beneficios-lista li:hover {
+.lista-beneficios li:hover {
     transform: translateY(-6px) scale(1.05);
     box-shadow: 0 6px 24px rgba(58, 80, 107, 0.15);
 }
 
 /* Ícones dos benefícios com cores específicas para cada um */
-.beneficios-lista i {
+.lista-beneficios i {
     font-size: 2.2rem;
     margin-bottom: 0.7rem;
     transition: all 0.3s;
 }
 
 /* Primeiro ícone (Rastreamento) - Verde */
-.beneficios-lista li:nth-child(1) i {
+.lista-beneficios li:nth-child(1) i {
     color: #96ac3f;
 }
 
 /* Segundo ícone (Relatórios) - Azul */
-.beneficios-lista li:nth-child(2) i {
+.lista-beneficios li:nth-child(2) i {
     color: #3A506B;
 }
 
 /* Terceiro ícone (Agilidade) - Laranja */
-.beneficios-lista li:nth-child(3) i {
+.lista-beneficios li:nth-child(3) i {
     color: #e88407;
 }
 
 /* Texto dos benefícios com cores destacadas no hover */
-.beneficios-lista span {
+.lista-beneficios span {
     font-family: 'Poppins', Arial, sans-serif;
     color: #3A506B;
     font-size: 1.05rem;
@@ -693,24 +685,24 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Destaque das palavras em negrito com cores específicas */
-.beneficios-lista li:nth-child(1) span strong {
+.lista-beneficios li:nth-child(1) span strong {
     color: #96ac3f;
 }
 
-.beneficios-lista li:nth-child(3) span strong {
+.lista-beneficios li:nth-child(3) span strong {
     color: #e88407;
 }
 
 /* =========================
-   FOOTER (RODAPÉ)
+   RODAPÉ
    ========================= */
-/* Container principal do footer */
-footer {
+/* Container principal do rodapé */
+.rodape-principal {
     background-color: #3A506B;
 }
 
 /* Container dos links e informações */
-.footer-container {
+.container-rodape {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -720,7 +712,7 @@ footer {
 }
 
 /* Logo e descrição do rodapé */
-.footer-logo {
+.logo-rodape {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -729,8 +721,8 @@ footer {
     font-size: 1.2rem;
 }
 
-/* Imagem do logo no footer */
-.footer-logo img {
+/* Imagem do logo no rodapé */
+.logo-rodape img {
     max-width: 80px;
     border-radius: 50%;
     background: #F4F4F9;
@@ -743,14 +735,14 @@ footer {
     pointer-events: auto;
 }
 
-/* Texto do logo no footer */
-.footer-logo p {
+/* Texto do logo no rodapé */
+.logo-rodape p {
     margin: 0;
     text-align: center;
 }
 
 /* Blocos de links do rodapé */
-.footer-info {
+.informacoes-rodape {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -759,8 +751,8 @@ footer {
     align-items: center;
 }
 
-/* Lista de links no footer */
-.footer-info ul {
+/* Lista de links no rodapé */
+.informacoes-rodape ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -769,25 +761,25 @@ footer {
     gap: 0.7rem;
 }
 
-/* Títulos das seções do footer */
-.footer-info h1 {
+/* Títulos das seções do rodapé */
+.informacoes-rodape h1 {
     font-size: 1.5rem;
 }
 
-/* Links do footer */
-.footer-info a {
+/* Links do rodapé */
+.informacoes-rodape a {
     color: #F4F4F9;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
-.footer-info a:hover {
+.informacoes-rodape a:hover {
     color: #96ac3f;
 }
 
 /* Linha divisória do rodapé */
-footer hr {
+.rodape-principal hr {
     border: none;
     display: block;
     border-top: 1px solid rgba(244, 244, 249, 0.3);
@@ -796,7 +788,7 @@ footer hr {
 }
 
 /* Parte inferior do rodapé: redes sociais e direitos autorais */
-.footer-bottom {
+.inferior-rodape {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -807,7 +799,7 @@ footer hr {
 }
 
 /* Lista de ícones sociais */
-.footer-social ul {
+.redes-sociais ul {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -818,22 +810,22 @@ footer hr {
 }
 
 /* Espaçamento entre ícones sociais */
-.footer-social ul li {
+.redes-sociais ul li {
     margin-right: 1.5rem;
 }
 
-.footer-social ul li:last-child {
+.redes-sociais ul li:last-child {
     margin-right: 0;
 }
 
 /* Links das redes sociais */
-.footer-social a {
+.redes-sociais a {
     color: #F4F4F9;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
 
-.footer-social a:hover {
+.redes-sociais a:hover {
     color: #96ac3f;
 }
 
@@ -842,33 +834,33 @@ footer hr {
    ========================= */
 @media (max-width: 992px) {
     /* Esconde barra de pesquisa em telas pequenas */
-    .search-bar {
+    .barra-pesquisa {
         display: none;
     }
 
-    /* Esconde barra de pesquisa em telas pequenas */
-    .auth-buttons {
+    /* Esconde botões de autenticação em telas pequenas */
+    .botoes-autenticacao {
         display: none;
     }
 
     /* Reduz espaçamento entre itens do menu */
-    .navbar-section ul {
+    .secao-navegacao ul {
         gap: 2rem;
     }
 
-    .navbar-titles {
+    .links-navegacao {
         margin: 0 2rem;
     }
 
-    /* Ajusta responsividade do footer */
-    .footer-container {
+    /* Ajusta responsividade do rodapé */
+    .container-rodape {
         gap: 0.5rem; /* Espaço entre os blocos */
         padding: 2rem 1rem; /* Reduz padding lateral */
         align-items: stretch; /* Faz os blocos ocuparem toda a largura */
     }
 
-    .footer-info,
-    .footer-logo {
+    .informacoes-rodape,
+    .logo-rodape {
         align-items: center; /* Centraliza conteúdo dos blocos */
         width: 100%; /* Blocos ocupam toda a largura */
         margin-bottom: 1rem; /* Espaço entre blocos */

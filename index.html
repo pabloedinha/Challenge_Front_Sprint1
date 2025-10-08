@@ -22,23 +22,23 @@
 
 <body>
     <!-- Cabeçalho com navegação principal -->
-    <header>
-        <nav class="navbar-section">
+    <header class="cabecalho-principal">
+        <nav class="secao-navegacao">
             <!-- Logo do projeto -->
-            <a href="./index.html" class="logo">
-                <img src="./assets/img/logo.png" alt="Logo do projeto" id="logo-img">
+            <a href="./index.html" class="link-logo">
+                <img src="./assets/img/logo.png" alt="Logo do projeto" class="imagem-logo">
             </a>
             
             <!-- Menu de navegação -->
             <ul>
-                <li><a href="#" class="navbar-titles">Início</a></li>
-                <li><a href="./assets/page/quem-somos.html" class="navbar-titles">Quem Somos</a></li>
-                <li><a href="./assets/page/sobre.html" class="navbar-titles">Sobre</a></li>
-                <li><a href="./assets/page/faq.html" class="navbar-titles">FAQ</a></li>
+                <li><a href="#" class="links-navegacao">Início</a></li>
+                <li><a href="./assets/page/quem-somos.html" class="links-navegacao">Quem Somos</a></li>
+                <li><a href="./assets/page/sobre.html" class="links-navegacao">Sobre</a></li>
+                <li><a href="./assets/page/faq.html" class="links-navegacao">FAQ</a></li>
             </ul>
 
             <!-- Barra de pesquisa -->
-            <form class="search-bar">
+            <form class="barra-pesquisa">
                 <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -46,9 +46,9 @@
             </form>
             
             <!-- Botões de autenticação -->
-            <div class="auth-buttons">
-                <a href="#" class="auth-btn login-btn">Login</a>
-                <a href="#" class="auth-btn signup-btn">Cadastro</a>
+            <div class="botoes-autenticacao">
+                <a href="#" class="botao-autenticacao botao-login">Login</a>
+                <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
             </div>
         </nav>
     </header>
@@ -56,9 +56,9 @@
     <!-- Conteúdo principal da página -->
     <main>
         <!-- Seção principal - apresentação do problema -->
-        <section class="container-problema-main">
+        <section class="secao-hero-principal">
             <!-- Conteúdo textual da seção principal -->
-            <article class="article-text-problema">
+            <article class="conteudo-texto-hero">
                 <h1>A saúde bucal é um direito de todos</h1>
                 <p>
                     Um sorriso não deveria ser um privilégio. Ele é a expressão da nossa alegria, um passaporte para
@@ -70,20 +70,20 @@
             </article>
             
             <!-- Imagem ilustrativa da seção -->
-            <aside class="container-img-problema">
+            <aside class="container-imagem-hero">
                 <img src="./assets/img/sorriso.jpg" alt="Menina deitada na grama sorrindo.">
             </aside>
         </section>
 
         <!-- Seção: Como podemos ajudar? -->
-        <section class="como-ajudar">
+        <section class="secao-como-ajudar">
             <h2>Como podemos ajudar você hoje?</h2>
             
-            <!-- Container dos cards de ajuda -->
-            <div class="cards-container">
-                <!-- Card 1: Dentista Voluntário -->
-                <article class="help-card card-voluntario">
-                    <div class="card-icon">
+            <!-- Container dos cartões de ajuda -->
+            <div class="container-cartoes-ajuda">
+                <!-- Cartão 1: Dentista Voluntário -->
+                <article class="cartao-ajuda cartao-voluntario">
+                    <div class="icone-cartao">
                         <i class="fa-solid fa-user-doctor"></i>
                     </div>
                     <h3>Quero ser um Dentista Voluntário</h3>
@@ -91,12 +91,12 @@
                         Faça parte da maior rede de voluntariado especializado do mundo. Cadastre-se e ajude a
                         transformar vidas.
                     </p>
-                    <a class="card-button btn-voluntario" href="#">Saiba Mais</a>
+                    <a class="botao-cartao botao-voluntario" href="#">Saiba Mais</a>
                 </article>
 
-                <!-- Card 2: Atendimento Odontológico -->
-                <article class="help-card card-atendimento">
-                    <div class="card-icon">
+                <!-- Cartão 2: Atendimento Odontológico -->
+                <article class="cartao-ajuda cartao-atendimento">
+                    <div class="icone-cartao">
                         <i class="fa-solid fa-tooth"></i>
                     </div>
                     <h3>Preciso de Atendimento Odontológico</h3>
@@ -104,23 +104,23 @@
                         Se você tem entre 11 e 17 anos ou é uma mulher vítima de violência, veja como se inscrever em
                         nossos programas.
                     </p>
-                    <a class="card-button btn-atendimento" href="#">Verificar Critérios</a>
+                    <a class="botao-cartao botao-atendimento" href="#">Verificar Critérios</a>
                 </article>
 
-                <!-- Card 3: Doação e Parceria -->
-                <article class="help-card card-doacao">
-                    <div class="card-icon">
+                <!-- Cartão 3: Doação e Parceria -->
+                <article class="cartao-ajuda cartao-doacao">
+                    <div class="icone-cartao">
                         <i class="fa-solid fa-handshake"></i>
                     </div>
                     <h3>Quero Doar ou ser um Parceiro</h3>
                     <p>Sua contribuição é fundamental para continuarmos nosso trabalho. Apoie nossa causa.</p>
-                    <a class="card-button btn-doacao" href="#">Quero doar!</a>
+                    <a class="botao-cartao botao-doacao" href="#">Quero doar!</a>
                 </article>
             </div>
         </section>
 
         <!-- Seção: Portal exclusivo de benefícios -->
-        <section class="portal-beneficios">
+        <section class="secao-portal-beneficios">
             <h2>Seu Portal Exclusivo</h2>
             <p>
                 Caso trabalhe conosco, ao se cadastrar, você ganha acesso a um portal exclusivo para acompanhar o status
@@ -130,7 +130,7 @@
             </p>
             
             <!-- Lista de benefícios do portal -->
-            <ul class="beneficios-lista">
+            <ul class="lista-beneficios">
                 <li>
                     <i class="fa-solid fa-location-arrow"></i>
                     <span><strong>Rastreamento:</strong> Acompanhe em tempo real.</span>
@@ -148,17 +148,17 @@
     </main>
 
     <!-- Rodapé com informações e redes sociais -->
-    <footer>
+    <footer class="rodape-principal">
         <!-- Container principal com informações organizadas -->
-        <section class="footer-container">
+        <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
-            <div class="footer-logo">
+            <div class="logo-rodape">
                 <img src="./assets/img/logo.png" alt="Logo">
                 <p>Lorem, ipsum.</p>
             </div>
             
             <!-- Blocos de navegação do rodapé -->
-            <nav class="footer-info">
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -167,7 +167,7 @@
                 </ul>
             </nav>
             
-            <nav class="footer-info">
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -176,7 +176,7 @@
                 </ul>
             </nav>
             
-            <nav class="footer-info">
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -185,7 +185,7 @@
                 </ul>
             </nav>
             
-            <nav class="footer-info">
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -196,27 +196,27 @@
         </section>
         
         <!-- Linha divisória do rodapé -->
-        <hr class="footer-line">
+        <hr class="linha-divisoria-rodape">
         
         <!-- Parte inferior: redes sociais e direitos autorais -->
-        <section class="footer-bottom">
+        <section class="inferior-rodape">
             <!-- Navegação das redes sociais -->
-            <nav class="footer-social">
-                <ul class="social-icons">
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-whatsapp"></i></a>
+            <nav class="redes-sociais">
+                <ul class="icones-sociais">
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-whatsapp"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-facebook"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-facebook"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-linkedin"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-github"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-github"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-instagram"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-instagram"></i></a>
                     </li>
                 </ul>
             </nav>
