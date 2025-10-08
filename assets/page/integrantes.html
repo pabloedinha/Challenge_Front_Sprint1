@@ -5,58 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integrantes</title>
+    
     <!-- Google Fonts para estilização das fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    
     <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="../css/style.css">
+    
     <!-- Ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Cabeçalho com navegação principal -->
-    <header>
-        <nav class="navbar-section">
+    <header class="cabecalho-principal">
+        <nav class="secao-navegacao">
             <!-- Logo do projeto -->
-            <a href="../../index.html" class="logo">
-                <img src="../img/logo.png" alt="Logo do projeto" id="logo-img">
+            <a href="../../index.html" class="link-logo">
+                <img src="../img/logo.png" alt="Logo do projeto" class="imagem-logo">
             </a>
+            
             <!-- Menu de navegação -->
             <ul>
-                <li><a href="../../index.html" class="navbar-titles">Início</a></li>
-                <li><a href="./quem-somos.html" class="navbar-titles">Quem Somos</a></li>
-                <li><a href="./sobre.html" class="navbar-titles">Sobre</a></li>
-                <li><a href="./faq.html" class="navbar-titles">FAQ</a></li>
+                <li><a href="../../index.html" class="links-navegacao">Início</a></li>
+                <li><a href="./quem-somos.html" class="links-navegacao">Quem Somos</a></li>
+                <li><a href="./sobre.html" class="links-navegacao">Sobre</a></li>
+                <li><a href="./faq.html" class="links-navegacao">FAQ</a></li>
+                <li><a href="./contato.html" class="links-navegacao">Contato</a></li>
             </ul>
+
             <!-- Barra de pesquisa -->
-            <form class="search-bar">
+            <form class="barra-pesquisa">
                 <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
+            
+            <!-- Botões de autenticação -->
+            <div class="botoes-autenticacao">
+                <a href="#" class="botao-autenticacao botao-login">Login</a>
+                <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
+            </div>
         </nav>
     </header>
 
     <!-- Conteúdo principal da página -->
     <main>
-        <!-- Conteúdo será adicionado aqui futuramente [WIP] -->
+        
     </main>
 
     <!-- Rodapé com informações e redes sociais -->
-    <footer>
-        <section class="footer-container">
-            <!-- Logo e breve descrição -->
-            <div class="footer-logo">
+    <footer class="rodape-principal">
+        <!-- Container principal com informações organizadas -->
+        <section class="container-rodape">
+            <!-- Logo e descrição da empresa -->
+            <div class="logo-rodape">
                 <img src="../img/logo.png" alt="Logo">
                 <p>Lorem, ipsum.</p>
             </div>
-            <!-- Listas de links do rodapé -->
-            <nav class="footer-info">
+            
+            <!-- Blocos de navegação do rodapé -->
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -64,7 +78,8 @@
                     <li><a href="">Lorem.</a></li>
                 </ul>
             </nav>
-            <nav class="footer-info">
+            
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -72,7 +87,8 @@
                     <li><a href="">Lorem.</a></li>
                 </ul>
             </nav>
-            <nav class="footer-info">
+            
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -80,7 +96,8 @@
                     <li><a href="">Lorem.</a></li>
                 </ul>
             </nav>
-            <nav class="footer-info">
+            
+            <nav class="informacoes-rodape">
                 <h1>Lorem</h1>
                 <ul>
                     <li><a href="">Lorem.</a></li>
@@ -89,29 +106,33 @@
                 </ul>
             </nav>
         </section>
+        
         <!-- Linha divisória do rodapé -->
-        <hr class="footer-line">
-        <section class="footer-bottom">
-            <!-- Redes sociais -->
-            <nav class="footer-social">
-                <ul class="social-icons">
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-whatsapp"></i></a>
+        <hr class="linha-divisoria-rodape">
+        
+        <!-- Parte inferior: redes sociais e direitos autorais -->
+        <section class="inferior-rodape">
+            <!-- Navegação das redes sociais -->
+            <nav class="redes-sociais">
+                <ul class="icones-sociais">
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-whatsapp"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-facebook"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-facebook"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-linkedin"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-github"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-github"></i></a>
                     </li>
-                    <li class="social-list">
-                        <a href="" class="icons-click"><i class="fa-brands fa-instagram"></i></a>
+                    <li class="item-social">
+                        <a href="" class="link-icone"><i class="fa-brands fa-instagram"></i></a>
                     </li>
                 </ul>
             </nav>
+            
             <!-- Direitos autorais -->
             <p>&copy; Todos os direitos reservados, 2025.</p>
         </section>
