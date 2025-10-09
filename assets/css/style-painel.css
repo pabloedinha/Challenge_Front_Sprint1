@@ -1,0 +1,350 @@
+/* =========================
+   DASHBOARD - ESTILOS ESPECÍFICOS
+   ========================= */
+
+/* =========================
+   CONTAINER PRINCIPAL
+   ========================= */
+.container-dashboard {
+    padding: 2rem;
+    background: #F4F4F9;
+    min-height: 80vh
+}
+
+/* =========================
+   BOTÃO DE LOGOUT NO DASHBOARD
+   ========================= */
+.botao-logout {
+    background: #e84a5f;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+/* =========================
+   CABEÇALHO DO DASHBOARD
+   ========================= */
+.cabecalho-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #3a506b1a;
+}
+
+.boas-vindas h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: #3A506B;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.boas-vindas p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.data-hora {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #96ac3f;
+    font-weight: 500;
+}
+
+.data-hora i {
+    font-size: 1.2rem;
+}
+
+/* Usuario logado no header */
+.usuario-logado {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    font-weight: 500;
+}
+
+.usuario-logado i {
+    font-size: 1.5rem;
+    color: #96ac3f;
+}
+
+/* =========================
+   TÍTULOS DAS SEÇÕES
+   ========================= */
+.titulo-secao-dashboard {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.6rem;
+    color: #3A506B;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* =========================
+   SEÇÃO DE ESTATÍSTICAS
+   ========================= */
+.secao-estatisticas {
+    margin-bottom: 3rem;
+}
+
+.grid-estatisticas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-estatistica {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #3a506b1a;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s;
+}
+
+.card-estatistica:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #3a506b26;
+}
+
+.icone-estatistica {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-estatistica.atendimentos .icone-estatistica {
+    background: #96ac3f1a;
+}
+
+.card-estatistica.voluntarios .icone-estatistica {
+    background: #3a506b1a;
+}
+
+.card-estatistica.pendencias .icone-estatistica {
+    background: #e884071a;
+}
+
+.card-estatistica.sucesso .icone-estatistica {
+    background: #28a7451a;
+}
+
+.icone-estatistica i {
+    font-size: 1.5rem;
+}
+
+.card-estatistica.atendimentos .icone-estatistica i { color: #96ac3f; }
+.card-estatistica.voluntarios .icone-estatistica i { color: #3A506B; }
+.card-estatistica.pendencias .icone-estatistica i { color: #e88407; }
+.card-estatistica.sucesso .icone-estatistica i { color: #28a745; }
+
+.info-estatistica h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #3A506B;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.info-estatistica .numero {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: #3A506B;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.info-estatistica .periodo {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* =========================
+   SEÇÃO DA TABELA
+   ========================= */
+.secao-tabela {
+    margin-bottom: 3rem;
+}
+
+.container-tabela {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(58, 80, 107, 0.1);
+    overflow: hidden;
+}
+
+.tabela-dashboard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-dashboard th {
+    background: #3A506B;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tabela-dashboard td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+}
+
+.tabela-dashboard tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.tabela-dashboard tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status badges */
+.status {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status.concluido {
+    background: #28a7451a;
+    color: #28a745;
+}
+
+.status.andamento {
+    background: #007bff1a;
+    color: #007bff;
+}
+
+.status.pendente {
+    background: #e884071a;
+    color: #e88407;
+}
+
+.status.cancelado {
+    background: #dc35451a;
+    color: #dc3545;
+}
+
+.status.agendado {
+    background: #96ac3f1a;
+    color: #96ac3f;
+}
+
+.botao-acao {
+    background: none;
+    border: none;
+    color: #96ac3f;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.botao-acao:hover {
+    background: #96ac3f1a;
+    color: #7a8f35;
+}
+
+/* =========================
+   SEÇÃO DE AÇÕES RÁPIDAS
+   ========================= */
+.secao-acoes-rapidas {
+    margin-bottom: 3rem;
+}
+
+.grid-acoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-acao {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #3a506b1a;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.card-acao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #3a506b26;
+}
+
+.icone-acao {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #96ac3f1a;
+}
+
+.icone-acao i {
+    font-size: 1.5rem;
+    color: #96ac3f;
+}
+
+.card-acao h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #3A506B;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.card-acao p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.botao-acao-rapida {
+    background: #96ac3f;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.botao-acao-rapida:hover {
+    background: #7a8f35;
+    transform: translateY(-2px);
+}
