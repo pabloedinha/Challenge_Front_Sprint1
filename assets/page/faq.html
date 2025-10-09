@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ</title>
+    <title>FAQ - Cod3X</title>
     
     <!-- Google Fonts para estilização das fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,145 @@
 
     <!-- Conteúdo principal da página -->
     <main>
-        
+        <!-- Seção de Dúvidas -->
+        <section class="secao-faq">
+            <div class="container-faq">
+                <div class="cabecalho-faq">
+                    <div class="icone-faq">
+                        <i class="fa-solid fa-question-circle"></i>
+                    </div>
+                    <h1 class="titulo-faq">Dúvidas Frequentes</h1>
+                    <p class="subtitulo-faq">
+                        Tem alguma dúvida sobre nosso projeto? Envie sua pergunta e nossa equipe 
+                        responderá o mais breve possível!
+                    </p>
+                </div>
+
+                <div class="container-formulario-faq">
+                    <form class="formulario-duvidas" action="#" method="POST">
+                        <div class="grupo-campo">
+                            <label for="nome-completo" class="label-campo">
+                                <i class="fa-solid fa-user"></i>
+                                Nome Completo
+                            </label>
+                            <input 
+                                type="text" 
+                                id="nome-completo" 
+                                name="nome-completo" 
+                                class="campo-input" 
+                                placeholder="Digite seu nome completo"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="email" class="label-campo">
+                                <i class="fa-solid fa-envelope"></i>
+                                E-mail
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="campo-input" 
+                                placeholder="Digite seu e-mail"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="categoria-duvida" class="label-campo">
+                                <i class="fa-solid fa-tags"></i>
+                                Categoria da Dúvida
+                            </label>
+                            <select id="categoria-duvida" name="categoria-duvida" class="campo-select" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="funcionalidades">Funcionalidades da Plataforma</option>
+                                <option value="tecnologia">Tecnologias Utilizadas</option>
+                                <option value="projeto">Sobre o Projeto</option>
+                                <option value="equipe">Sobre a Equipe</option>
+                                <option value="turma-bem">Turma do Bem</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="assunto" class="label-campo">
+                                <i class="fa-solid fa-text-width"></i>
+                                Assunto
+                            </label>
+                            <input 
+                                type="text" 
+                                id="assunto" 
+                                name="assunto" 
+                                class="campo-input" 
+                                placeholder="Resumo da sua dúvida"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="mensagem" class="label-campo">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                Sua Dúvida
+                            </label>
+                            <textarea 
+                                id="mensagem" 
+                                name="mensagem" 
+                                class="campo-textarea" 
+                                placeholder="Descreva sua dúvida detalhadamente..."
+                                rows="6"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="grupo-campo-checkbox">
+                            <input type="checkbox" id="receber-novidades" name="receber-novidades" class="campo-checkbox">
+                            <label for="receber-novidades" class="label-checkbox">
+                                Quero receber novidades sobre o projeto por e-mail
+                            </label>
+                        </div>
+
+                        <div class="grupo-botoes">
+                            <button type="submit" class="botao-enviar">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Enviar Dúvida
+                            </button>
+                            <button type="reset" class="botao-limpar">
+                                <i class="fa-solid fa-eraser"></i>
+                                Limpar Formulário
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="informacoes-adicionais">
+                        <div class="card-info">
+                            <div class="icone-info">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h3>Tempo de Resposta</h3>
+                            <p>Respondemos em até 24 horas úteis</p>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="icone-info">
+                                <i class="fa-solid fa-shield-alt"></i>
+                            </div>
+                            <h3>Privacidade</h3>
+                            <p>Seus dados estão seguros conosco</p>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="icone-info">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h3>Suporte Especializado</h3>
+                            <p>Equipe técnica qualificada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Rodapé com informações e redes sociais -->
@@ -65,43 +203,43 @@
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
                 <img src="../img/logo.png" alt="Logo">
-                <p>Lorem, ipsum.</p>
+                <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
             <!-- Blocos de navegação do rodapé -->
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Navegação</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="./quem-somos.html">Quem Somos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
                 </ul>
             </nav>
             
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Suporte</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="#">Ajuda</a></li>
                 </ul>
             </nav>
             
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Projeto</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="#">FIAP Challenge</a></li>
+                    <li><a href="#">Turma do Bem</a></li>
+                    <li><a href="#">Documentação</a></li>
                 </ul>
             </nav>
             
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Legal</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Licenças</a></li>
                 </ul>
             </nav>
         </section>
@@ -133,7 +271,7 @@
             </nav>
             
             <!-- Direitos autorais -->
-            <p>&copy; Todos os direitos reservados, 2025.</p>
+            <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
         </section>
     </footer>
 </body>
