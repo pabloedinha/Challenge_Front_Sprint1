@@ -2,51 +2,60 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Meta tags obrigatórias para responsividade e codificação -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem Somos - Cod3X</title>
     
-    <!-- Google Fonts para estilização das fontes -->
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <!-- CSS principal do projeto -->
+    <!-- Arquivos CSS: Ordem de carregamento (geral -> específico) -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-quem-somos.css">
     
-    <!-- Ícones Font Awesome -->
+    <!-- Font Awesome: Biblioteca de ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <!-- ========================================
-         CABEÇALHO COM NAVEGAÇÃO PRINCIPAL
+         CABEÇALHO PRINCIPAL DA APLICAÇÃO
          ======================================== -->
     <header class="cabecalho-principal">
-        <nav class="secao-navegacao">
-            <!-- Logo do projeto -->
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
+            <!-- Logo: Sempre linkado para a página inicial -->
             <a href="../../index.html" class="link-logo">
-                <img src="../img/logo.png" alt="Logo do projeto" class="imagem-logo">
+                <img src="../img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
             </a>
             
-            <!-- Menu de navegação principal -->
-            <ul>
-                <li><a href="../../index.html" class="links-navegacao">Início</a></li>
-                <li><a href="./sobre.html" class="links-navegacao">Sobre</a></li>
-                <li><a href="./faq.html" class="links-navegacao">FAQ</a></li>
-                <li><a href="./contato.html" class="links-navegacao">Contato</a></li>
+            <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
+            <ul role="menubar">
+                <li role="none">
+                    <a href="../../index.html" class="links-navegacao" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="./sobre.html" class="links-navegacao" role="menuitem">Sobre</a>
+                </li>
+                <li role="none">
+                    <a href="./faq.html" class="links-navegacao" role="menuitem">FAQ</a>
+                </li>
+                <li role="none">
+                    <a href="./contato.html" class="links-navegacao" role="menuitem">Contato</a>
+                </li>
             </ul>
 
-            <!-- Barra de pesquisa -->
-            <form class="barra-pesquisa">
-                <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- Formulário de busca: Importante usar form para acessibilidade -->
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
             </form>
             
-            <!-- Botões de autenticação -->
+            <!-- Botões de autenticação: Separados em container próprio -->
             <div class="botoes-autenticacao">
                 <a href="#" class="botao-autenticacao botao-login">Login</a>
                 <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
@@ -57,8 +66,8 @@
     <!-- ========================================
          CONTEÚDO PRINCIPAL DA PÁGINA
          ======================================== -->
-    <main>
-        <!-- Seção Hero - Impacto Imediato -->
+    <main role="main">
+        <!-- Seção Hero: Primeira impressão e impacto visual -->
         <section class="secao-hero-quem-somos">
             <div class="conteudo-hero-quem-somos">
                 <h1 class="titulo-principal-quem-somos">Tecnologia que Gera Sorrisos</h1>
@@ -66,6 +75,7 @@
                     Somos a Cod3X, um grupo de desenvolvimento da FIAP dedicado a criar soluções digitais 
                     para fortalecer o impacto social da ONG Turma do Bem.
                 </p>
+                <!-- Âncora interna: Navegação suave para seção específica -->
                 <a href="#missao" class="botao-hero-quem-somos">Conheça nossa Missão</a>
             </div>
             <div class="container-imagem-hero-quem-somos">
@@ -73,14 +83,16 @@
             </div>
         </section>
 
-        <!-- Seção Nossa História - Problema e Solução -->
-        <section class="secao-nossa-historia">
+        <!-- ========================================
+             SEÇÃO: NOSSA HISTÓRIA
+             ======================================== -->
+        <section class="secao-nossa-historia" aria-labelledby="titulo-historia">
             <div class="container-nossa-historia">
-                <h2 class="titulo-secao-quem-somos">O Desafio que nos Move</h2>
+                <h2 id="titulo-historia" class="titulo-secao-quem-somos">O Desafio que nos Move</h2>
                 
-                <!-- Bloco: O Problema -->
+                <!-- Article: Conteúdo independente sobre o problema -->
                 <article class="bloco-historia problema">
-                    <div class="icone-historia">
+                    <div class="icone-historia" aria-hidden="true">
                         <i class="fa-solid fa-exclamation-triangle"></i>
                     </div>
                     <div class="conteudo-historia">
@@ -94,9 +106,9 @@
                     </div>
                 </article>
 
-                <!-- Bloco: Nossa Origem -->
+                <!-- Article: Conteúdo independente sobre nossa origem -->
                 <article class="bloco-historia solucao">
-                    <div class="icone-historia">
+                    <div class="icone-historia" aria-hidden="true">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
                     <div class="conteudo-historia">
@@ -112,15 +124,18 @@
             </div>
         </section>
 
-        <!-- Seção Filosofia - Missão, Visão e Valores -->
-        <section id="missao" class="secao-filosofia">
+        <!-- ========================================
+             SEÇÃO: NOSSA FILOSOFIA (MVV)
+             ======================================== -->
+        <section id="missao" class="secao-filosofia" aria-labelledby="titulo-filosofia">
             <div class="container-filosofia">
-                <h2 class="titulo-secao-quem-somos">Nossa Filosofia</h2>
+                <h2 id="titulo-filosofia" class="titulo-secao-quem-somos">Nossa Filosofia</h2>
                 
-                <div class="container-mvv">
-                    <!-- Card Missão -->
+                <!-- Container: Agrupa os cartões MVV em layout responsivo -->
+                <div class="container-mvv" role="region" aria-label="Missão, Visão e Valores">
+                    <!-- Cartão Missão -->
                     <article class="cartao-mvv missao">
-                        <div class="icone-mvv">
+                        <div class="icone-mvv" aria-hidden="true">
                             <i class="fa-solid fa-bullseye"></i>
                         </div>
                         <h3>Missão</h3>
@@ -131,9 +146,9 @@
                         </p>
                     </article>
 
-                    <!-- Card Visão -->
+                    <!-- Cartão Visão -->
                     <article class="cartao-mvv visao">
-                        <div class="icone-mvv">
+                        <div class="icone-mvv" aria-hidden="true">
                             <i class="fa-solid fa-eye"></i>
                         </div>
                         <h3>Visão</h3>
@@ -143,23 +158,24 @@
                         </p>
                     </article>
 
-                    <!-- Card Valores -->
+                    <!-- Cartão Valores -->
                     <article class="cartao-mvv valores">
-                        <div class="icone-mvv">
+                        <div class="icone-mvv" aria-hidden="true">
                             <i class="fa-solid fa-gem"></i>
                         </div>
                         <h3>Valores</h3>
+                        <!-- Lista de valores: UL para itens relacionados -->
                         <ul class="lista-valores">
                             <li>
-                                <i class="fa-solid fa-heart"></i> 
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i> 
                                 Impacto Social: Nosso código tem um objetivo final: o bem-estar da comunidade
                             </li>
                             <li>
-                                <i class="fa-solid fa-user-friends"></i> 
+                                <i class="fa-solid fa-user-friends" aria-hidden="true"></i> 
                                 Inovação Centrada no Humano: Criamos soluções fáceis de usar para todos
                             </li>
                             <li>
-                                <i class="fa-solid fa-handshake"></i> 
+                                <i class="fa-solid fa-handshake" aria-hidden="true"></i> 
                                 Colaboração e Transparência: Trabalhamos em equipe, compartilhando conhecimento
                             </li>
                         </ul>
@@ -168,28 +184,32 @@
             </div>
         </section>
 
-        <!-- Seção Equipe - Apresentação dos Integrantes -->
-        <section class="secao-equipe">
+        <!-- ========================================
+             SEÇÃO: NOSSA EQUIPE
+             ======================================== -->
+        <section class="secao-equipe" aria-labelledby="titulo-equipe">
             <div class="container-equipe">
-                <h2 class="titulo-secao-quem-somos">Os Rostos por Trás do Código</h2>
+                <h2 id="titulo-equipe" class="titulo-secao-quem-somos">Os Rostos por Trás do Código</h2>
                 <p class="subtitulo-equipe">Conheça os desenvolvedores que transformam ideias em realidade</p>
                 
-                <div class="container-cartoes-equipe">
+                <!-- Grid de integrantes: Container responsivo para cartões -->
+                <div class="container-cartoes-equipe" role="region" aria-label="Membros da equipe">
                     <!-- Integrante 1: Gabriel Stuani -->
                     <article class="cartao-integrante">
                         <div class="foto-integrante">
-                            <img src="../img/integrante_1.jpeg" alt="Foto do Gabriel Stuani">
+                            <img src="../img/integrante_1.jpeg" alt="Gabriel Stuani, desenvolvedor back-end da equipe">
                         </div>
                         <div class="info-integrante">
                             <h3 class="nome-integrante">Gabriel Stuani</h3>
                             <p class="rm-integrante">1TDSPB - RM 566682</p>
                             <p class="funcao-integrante">Desenvolvedor Back-end JavaScript</p>
+                            <!-- Links sociais: target="_blank" com rel="noopener" para segurança -->
                             <div class="links-integrante">
-                                <a href="#" class="link-social linkedin" target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-linkedin"></i>
+                                <a href="#" class="link-social linkedin" target="_blank" rel="noopener" aria-label="LinkedIn do Gabriel Stuani">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://github.com/Gstuani" class="link-social github" target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-github"></i>
+                                <a href="https://github.com/Gstuani" class="link-social github" target="_blank" rel="noopener" aria-label="GitHub do Gabriel Stuani">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -198,18 +218,18 @@
                     <!-- Integrante 2: Pablo Oliveira Garcia -->
                     <article class="cartao-integrante">
                         <div class="foto-integrante">
-                            <img src="../img/integrante_2.jpeg" alt="Foto do Pablo Oliveira Garcia">
+                            <img src="../img/integrante_2.jpeg" alt="Pablo Oliveira Garcia, desenvolvedor front-end e designer UI/UX da equipe">
                         </div>
                         <div class="info-integrante">
                             <h3 class="nome-integrante">Pablo Oliveira Garcia</h3>
                             <p class="rm-integrante">1TDSPB - RM 568074</p>
                             <p class="funcao-integrante">Desenvolvedor Front-end & UI/UX</p>
                             <div class="links-integrante">
-                                <a href="https://www.linkedin.com/in/pabloedinha/" class="link-social linkedin" target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/pabloedinha/" class="link-social linkedin" target="_blank" rel="noopener" aria-label="LinkedIn do Pablo Oliveira Garcia">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://github.com/pabloedinha" class="link-social github" target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-github"></i>
+                                <a href="https://github.com/pabloedinha" class="link-social github" target="_blank" rel="noopener" aria-label="GitHub do Pablo Oliveira Garcia">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -218,18 +238,18 @@
                     <!-- Integrante 3: Guilherme Soares -->
                     <article class="cartao-integrante">
                         <div class="foto-integrante">
-                            <img src="../img/integrante_3.jpeg" alt="Foto do Guilherme Soares">
+                            <img src="../img/integrante_3.jpeg" alt="Guilherme Soares, arquiteto de banco de dados da equipe">
                         </div>
                         <div class="info-integrante">
                             <h3 class="nome-integrante">Guilherme Soares</h3>
                             <p class="rm-integrante">1TDSPB - RM 568227</p>
                             <p class="funcao-integrante">Arquiteto de Banco de Dados</p>
                             <div class="links-integrante">
-                                <a href="https://www.linkedin.com/in/guilherme-soares-3936b8333/" class="link-social linkedin" target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/guilherme-soares-3936b8333/" class="link-social linkedin" target="_blank" rel="noopener" aria-label="LinkedIn do Guilherme Soares">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://github.com/Guilherme-Soares00" class="link-social github" target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-github"></i>
+                                <a href="https://github.com/Guilherme-Soares00" class="link-social github" target="_blank" rel="noopener" aria-label="GitHub do Guilherme Soares">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -238,20 +258,23 @@
             </div>
         </section>
 
-        <!-- Seção Call to Action Final -->
-        <section class="secao-cta-final">
+        <!-- ========================================
+             SEÇÃO: CALL TO ACTION FINAL
+             ======================================== -->
+        <section class="secao-cta-final" aria-labelledby="titulo-cta-final">
             <div class="container-cta-final">
-                <h2 class="titulo-cta-final">Vamos construir essa ponte juntos?</h2>
+                <h2 id="titulo-cta-final" class="titulo-cta-final">Vamos construir essa ponte juntos?</h2>
                 <p class="texto-cta-final">
                     Veja em detalhes como nossa plataforma funciona ou entre em contato para saber mais sobre nosso trabalho.
                 </p>
+                <!-- Botões CTA: Principais ações que queremos que o usuário execute -->
                 <div class="botoes-cta-final">
                     <a href="./sobre.html" class="botao-cta conhecer-solucao">
-                        <i class="fa-solid fa-rocket"></i>
+                        <i class="fa-solid fa-rocket" aria-hidden="true"></i>
                         Conheça a Solução
                     </a>
                     <a href="./contato.html" class="botao-cta fale-conosco">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         Fale Conosco
                     </a>
                 </div>
@@ -262,8 +285,8 @@
     <!-- ========================================
          RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
          ======================================== -->
-    <footer class="rodape-principal">
-        <!-- Container principal com informações organizadas -->
+    <footer class="rodape-principal" role="contentinfo">
+        <!-- Container principal: Organiza o layout do rodapé -->
         <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
@@ -271,9 +294,9 @@
                 <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
-            <!-- Blocos de navegação do rodapé -->
-            <nav class="informacoes-rodape">
-                <h1>Navegação</h1>
+            <!-- Navegação 1: Links principais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
+                <h3>Navegação</h3>
                 <ul>
                     <li><a href="../../index.html">Início</a></li>
                     <li><a href="./quem-somos.html">Quem Somos</a></li>
@@ -281,8 +304,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Suporte</h1>
+            <!-- Navegação 2: Suporte ao usuário -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
+                <h3>Suporte</h3>
                 <ul>
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
@@ -290,8 +314,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Projeto</h1>
+            <!-- Navegação 3: Informações do projeto -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
+                <h3>Projeto</h3>
                 <ul>
                     <li><a href="#">FIAP Challenge</a></li>
                     <li><a href="#">Turma do Bem</a></li>
@@ -299,8 +324,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Legal</h1>
+            <!-- Navegação 4: Aspectos legais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
+                <h3>Legal</h3>
                 <ul>
                     <li><a href="#">Termos de Uso</a></li>
                     <li><a href="#">Privacidade</a></li>
@@ -309,43 +335,43 @@
             </nav>
         </section>
         
-        <!-- Linha divisória do rodapé -->
-        <hr class="linha-divisoria-rodape">
+        <!-- Divisor visual entre seções do rodapé -->
+        <hr class="linha-divisoria-rodape" role="separator">
         
-        <!-- Parte inferior: redes sociais e direitos autorais -->
+        <!-- Seção inferior: Redes sociais e copyright -->
         <section class="inferior-rodape">
-            <!-- Navegação das redes sociais -->
-            <nav class="redes-sociais">
+            <!-- Navegação das redes sociais: aria-label para acessibilidade -->
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
                 <ul class="icones-sociais">
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
                 </ul>
             </nav>
             
-            <!-- Direitos autorais -->
+            <!-- Copyright: Informações legais obrigatórias -->
             <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
         </section>
     </footer>
