@@ -24,7 +24,8 @@ body {
     background-color: #F4F4F9;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth; /* Rolagem suave */
+    scroll-behavior: smooth;
+    /* Rolagem suave */
 }
 
 /* =========================
@@ -32,19 +33,27 @@ body {
    ========================= */
 /* Cabeçalho fixo no topo da página */
 .cabecalho-principal {
-    position: sticky; /* Fixa a navbar no topo ao rolar */
+    position: sticky;
+    /* Fixa a navbar no topo ao rolar */
     top: 0;
-    z-index: 1000; /* Garante que fique acima dos outros elementos */
-    background: #F4F4F9; /* Cor de fundo para evitar sobreposição */
+    z-index: 1000;
+    /* Garante que fique acima dos outros elementos */
+    background: #F4F4F9;
+    /* Cor de fundo para evitar sobreposição */
 }
 
 /* Container principal da navegação */
 .secao-navegacao {
-    display: flex; /* Deixa os itens lado a lado */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Espaço entre logo, menu e busca */
-    flex-wrap: nowrap; /* Impede quebra de linha em telas pequenas */
-    box-shadow: 0 2px 4px #0000001a; /* Sombra leve */
+    display: flex;
+    /* Deixa os itens lado a lado */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: space-between;
+    /* Espaço entre logo, menu e busca */
+    flex-wrap: nowrap;
+    /* Impede quebra de linha em telas pequenas */
+    box-shadow: 0 2px 4px #0000001a;
+    /* Sombra leve */
 }
 
 /* Logo da navegação */
@@ -52,14 +61,17 @@ body {
     max-width: 110px;
     margin: 0.5rem 2rem;
     border-radius: 20px;
-    -webkit-user-drag: none; /* Impede arrastar imagem no Chrome/Safari */
-    user-select: none; /* Impede seleção da imagem */
+    -webkit-user-drag: none;
+    /* Impede arrastar imagem no Chrome/Safari */
+    user-select: none;
+    /* Impede seleção da imagem */
 }
 
 /* Lista de links do menu principal */
 .secao-navegacao ul {
     display: flex;
-    gap: 4rem; /* Espaço entre os itens do menu */
+    gap: 4rem;
+    /* Espaço entre os itens do menu */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -67,23 +79,29 @@ body {
 
 /* Links do menu principal */
 .links-navegacao {
-    text-decoration: none; /* Remove sublinhado */
+    text-decoration: none;
+    /* Remove sublinhado */
     color: #3A506B;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    transition: color 0.2s; /* Suaviza troca de cor */
-    position: relative; /* Necessário para animação da linha */
-    overflow: hidden; /* Garante que a linha não ultrapasse o link */
+    transition: color 0.2s;
+    /* Suaviza troca de cor */
+    position: relative;
+    /* Necessário para animação da linha */
+    overflow: hidden;
+    /* Garante que a linha não ultrapasse o link */
 }
 
 /* Animação de linha que aparece ao passar o mouse */
 .links-navegacao::after {
     content: "";
     position: absolute;
-    left: 50%; /* Começa do meio */
+    left: 50%;
+    /* Começa do meio */
     bottom: 0;
-    width: 0; /* Inicialmente sem largura */
+    width: 0;
+    /* Inicialmente sem largura */
     height: 2px;
     background: #3A506B;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -359,7 +377,8 @@ input[type="search"]::-webkit-search-cancel-button {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0 0 1rem 0; /* Espaço abaixo dos ícones */
+    margin: 0 0 1rem 0;
+    /* Espaço abaixo dos ícones */
 }
 
 /* Espaçamento entre ícones sociais */
@@ -385,37 +404,44 @@ input[type="search"]::-webkit-search-cancel-button {
 /* =========================
    RESPONSIVIDADE
    ========================= */
-@media (max-width: 992px) {
-    /* Esconde barra de pesquisa em telas pequenas */
-    .barra-pesquisa {
-        display: none;
-    }
-
-    /* Esconde botões de autenticação em telas pequenas */
-    .botoes-autenticacao {
-        display: none;
-    }
-
+@media (min-width: 1300px) {
     /* Reduz espaçamento entre itens do menu */
     .secao-navegacao ul {
         gap: 2rem;
+        margin: 0 2rem 0 0;
+    }
+
+    .imagem-logo {
+        margin: auto 0 0 0.5rem;
+    }
+
+    .secao-navegacao li {
+        display: flex;
+        text-align: center;
+        align-items: center;
     }
 
     .links-navegacao {
-        margin: 0 2rem;
+        margin: 0 auto;
     }
 
     /* Ajusta responsividade do rodapé */
     .container-rodape {
-        gap: 0.5rem; /* Espaço entre os blocos */
-        padding: 2rem 1rem; /* Reduz padding lateral */
-        align-items: stretch; /* Faz os blocos ocuparem toda a largura */
+        gap: 0.5rem;
+        /* Espaço entre os blocos */
+        padding: 2rem 1rem;
+        /* Reduz padding lateral */
+        align-items: stretch;
+        /* Faz os blocos ocuparem toda a largura */
     }
 
     .informacoes-rodape,
     .logo-rodape {
-        align-items: center; /* Centraliza conteúdo dos blocos */
-        width: 100%; /* Blocos ocupam toda a largura */
-        margin-bottom: 1rem; /* Espaço entre blocos */
+        align-items: center;
+        /* Centraliza conteúdo dos blocos */
+        width: 100%;
+        /* Blocos ocupam toda a largura */
+        margin-bottom: 1rem;
+        /* Espaço entre blocos */
     }
 }
