@@ -333,6 +333,14 @@
     background: #27ae600d;
 }
 
+.texto-ajuda {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 0.3rem;
+    display: block;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
 /* =========================
    RESPONSIVIDADE FAQ
    ========================= */
