@@ -841,8 +841,9 @@ input[type="search"]::-webkit-search-cancel-button {
     background: linear-gradient(135deg,  #e88407 35%, #96AC3F 95%);
     padding: 1rem 1rem 1rem 7rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     min-height: 50vh;
 }
 
@@ -879,7 +880,7 @@ input[type="search"]::-webkit-search-cancel-button {
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
     border-radius: 50px;
     box-shadow: 0 8px 25px #e8840766;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -894,7 +895,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .container-imagem-hero-quem-somos {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -907,6 +907,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 30px;
     box-shadow: 0 8px 32px rgba(58, 80, 107, 0.18);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 0 2rem 0;
 }
 
 .container-imagem-hero-quem-somos img:hover,
