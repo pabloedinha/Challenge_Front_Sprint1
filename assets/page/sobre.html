@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+    <title>Sobre o Projeto - Cod3X</title>
     
     <!-- Google Fonts para estilização das fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,7 @@
             <ul>
                 <li><a href="../../index.html" class="links-navegacao">Início</a></li>
                 <li><a href="./quem-somos.html" class="links-navegacao">Quem Somos</a></li>
+                <li><a href="./sobre.html" class="links-navegacao">Sobre</a></li>
                 <li><a href="./faq.html" class="links-navegacao">FAQ</a></li>
                 <li><a href="./contato.html" class="links-navegacao">Contato</a></li>
             </ul>
@@ -55,7 +56,86 @@
 
     <!-- Conteúdo principal da página -->
     <main>
-        
+        <!-- Seção Funcionalidades Principais -->
+        <section class="secao-funcionalidades">
+            <div class="container-funcionalidades">
+                <h2 class="titulo-secao-sobre">Recursos em Destaque</h2>
+                <p class="subtitulo-funcionalidades">
+                    Conheça as principais funcionalidades que transformam a gestão de atendimentos da Turma do Bem
+                </p>
+                
+                <div class="grid-funcionalidades">
+                    <article class="card-funcionalidade centralizacao">
+                        <div class="icone-funcionalidade">
+                            <i class="fa-solid fa-inbox"></i>
+                        </div>
+                        <h3>Centralização de Atendimentos</h3>
+                        <p>Todos os contatos recebidos são convertidos em tickets em uma única plataforma, 
+                           acabando com a perda de informações.</p>
+                        <div class="detalhe-visual">
+                            <div class="exemplo-ticket">
+                                <div class="cabecalho-ticket">
+                                    <span class="id-ticket">#001</span>
+                                    <span class="status-ticket aberto">Aberto</span>
+                                </div>
+                                <div class="conteudo-ticket">Solicitação de voluntariado</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-funcionalidade roteamento">
+                        <div class="icone-funcionalidade">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <h3>Roteamento Automático</h3>
+                        <p>O sistema analisa o assunto das mensagens e, com base em palavras-chave, encaminha 
+                           o atendimento para a área responsável.</p>
+                        <div class="detalhe-visual">
+                            <div class="fluxo-roteamento">
+                                <div class="entrada-fluxo">📧 Email</div>
+                                <div class="seta-fluxo">➜</div>
+                                <div class="analise-fluxo">🔍 Análise</div>
+                                <div class="seta-fluxo">➜</div>
+                                <div class="destino-fluxo">👥 Equipe</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-funcionalidade acompanhamento">
+                        <div class="icone-funcionalidade">
+                            <i class="fa-solid fa-tasks"></i>
+                        </div>
+                        <h3>Acompanhamento de Status</h3>
+                        <p>Permite o acompanhamento do ciclo de vida de cada solicitação com status claros 
+                           e atualizáveis em tempo real.</p>
+                        <div class="detalhe-visual">
+                            <div class="linha-status">
+                                <div class="status-item aberto">Aberto</div>
+                                <div class="status-item andamento">Em Andamento</div>
+                                <div class="status-item concluido">Concluído</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-funcionalidade relatorios">
+                        <div class="icone-funcionalidade">
+                            <i class="fa-solid fa-chart-bar"></i>
+                        </div>
+                        <h3>Relatórios Gerenciais</h3>
+                        <p>A plataforma gera relatórios estatísticos sobre o volume de atendimentos por status 
+                           e por área, fornecendo dados para decisões estratégicas.</p>
+                        <div class="detalhe-visual">
+                            <div class="mini-grafico">
+                                <div class="barra-grafico" style="height: 60%;"></div>
+                                <div class="barra-grafico" style="height: 80%;"></div>
+                                <div class="barra-grafico" style="height: 40%;"></div>
+                                <div class="barra-grafico" style="height: 90%;"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Rodapé com informações e redes sociais -->
@@ -65,43 +145,43 @@
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
                 <img src="../img/logo.png" alt="Logo">
-                <p>Lorem, ipsum.</p>
+                <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
             <!-- Blocos de navegação do rodapé -->
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Navegação</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="./quem-somos.html">Quem Somos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
                 </ul>
             </nav>
             
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Suporte</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="#">Ajuda</a></li>
                 </ul>
             </nav>
             
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Projeto</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="#">FIAP Challenge</a></li>
+                    <li><a href="#">Turma do Bem</a></li>
+                    <li><a href="#">Documentação</a></li>
                 </ul>
             </nav>
             
             <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+                <h1>Legal</h1>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Licenças</a></li>
                 </ul>
             </nav>
         </section>
@@ -133,7 +213,7 @@
             </nav>
             
             <!-- Direitos autorais -->
-            <p>&copy; Todos os direitos reservados, 2025.</p>
+            <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
         </section>
     </footer>
 </body>
