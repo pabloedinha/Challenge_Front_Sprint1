@@ -1,12 +1,286 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+    <!-- Meta tags obrigatórias para responsividade e codificação -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Cadastro</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    <title>Login - Cod3X</title>
     
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Arquivos CSS: Ordem de carregamento (geral -> específico) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-login.css">
+    
+    <!-- Font Awesome: Biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ========================================
+         CABEÇALHO PRINCIPAL DA APLICAÇÃO
+         ======================================== -->
+    <header class="cabecalho-principal">
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
+            <!-- Logo: Sempre linkado para a página inicial -->
+            <a href="../../index.html" class="link-logo">
+                <img src="../img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
+            </a>
+            
+            <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
+            <ul role="menubar">
+                <li role="none">
+                    <a href="../../index.html" class="links-navegacao" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="./quem-somos.html" class="links-navegacao" role="menuitem">Quem Somos</a>
+                </li>
+                <li role="none">
+                    <a href="./sobre.html" class="links-navegacao" role="menuitem">Sobre</a>
+                </li>
+                <li role="none">
+                    <a href="./painel.html" class="links-navegacao" role="menuitem">Painel</a>
+                </li>
+                <li role="none">
+                    <a href="./contato.html" class="links-navegacao" role="menuitem">Contato</a>
+                </li>
+            </ul>
+
+            <!-- Formulário de busca: Importante usar form para acessibilidade -->
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </form>
+            
+            <!-- Botões de autenticação: Separados em container próprio -->
+            <div class="botoes-autenticacao">
+                <a href="#" class="botao-autenticacao botao-login">Login</a>
+                <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         SEÇÃO: FORMULÁRIO DE LOGIN
+         ======================================== -->
+    <main class="container-login" role="main">
+        <section class="secao-login" aria-labelledby="titulo-login">
+            <div class="formulario-login-wrapper">
+                <!-- Cabeçalho do Login -->
+                <div class="cabecalho-login">
+                    <!-- Ícone de login animado -->
+                    <div class="icone-login" aria-hidden="true">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    
+                    <h1 id="titulo-login" class="titulo-login">Acesso ao Painel</h1>
+                    <p class="subtitulo-login">
+                        Faça login para acessar o painel administrativo da plataforma
+                    </p>
+                </div>
+
+                <!-- Formulário de Login -->
+                <form class="formulario-login" action="#" method="POST" role="form" aria-labelledby="titulo-login">
+                    <!-- Campo: E-mail/Usuário -->
+                    <div class="grupo-campo-login">
+                        <label for="email-login" class="label-campo-login">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            E-mail ou Usuário
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email-login" 
+                            name="email-login" 
+                            class="campo-input-login" 
+                            placeholder="Digite seu e-mail ou usuário"
+                            required
+                            aria-describedby="email-login-desc"
+                            autocomplete="username"
+                        >
+                        <span id="email-login-desc" class="texto-ajuda-login" aria-live="polite">
+                            Utilize o e-mail cadastrado na plataforma
+                        </span>
+                    </div>
+
+                    <!-- Campo: Senha -->
+                    <div class="grupo-campo-login">
+                        <label for="senha-login" class="label-campo-login">
+                            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                            Senha
+                        </label>
+                        <div class="container-senha">
+                            <input 
+                                type="password" 
+                                id="senha-login" 
+                                name="senha-login" 
+                                class="campo-input-login campo-senha" 
+                                placeholder="Digite sua senha"
+                                required
+                                aria-describedby="senha-login-desc"
+                                autocomplete="current-password"
+                            >
+                            <!-- Botão para mostrar/ocultar senha -->
+                            <button type="button" class="botao-mostrar-senha" aria-label="Mostrar ou ocultar senha">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <span id="senha-login-desc" class="texto-ajuda-login" aria-live="polite">
+                            Sua senha deve ter no mínimo 8 caracteres
+                        </span>
+                    </div>
+
+                    <!-- Opções adicionais -->
+                    <div class="opcoes-login">
+                        <!-- Checkbox: Lembrar de mim -->
+                        <div class="grupo-checkbox-login">
+                            <input type="checkbox" id="lembrar-login" name="lembrar-login" class="campo-checkbox-login">
+                            <label for="lembrar-login" class="label-checkbox-login">
+                                Lembrar de mim
+                            </label>
+                        </div>
+
+                        <!-- Link: Esqueci minha senha -->
+                        <a href="#" class="link-esqueci-senha">
+                            Esqueci minha senha
+                        </a>
+                    </div>
+
+                    <!-- Botão de Login -->
+                    <button type="button" class="botao-login-principal">
+                        <i class="fa-solid fa-sign-in-alt" aria-hidden="true"></i>
+                        Entrar no Painel
+                    </button>
+
+                    <!-- Divisor visual -->
+                    <div class="divisor-login" role="separator">
+                        <span>ou</span>
+                    </div>
+
+                    <!-- Botão de Cadastro -->
+                    <a href="#" class="botao-cadastro-novo">
+                        <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+                        Criar Nova Conta
+                    </a>
+                </form>
+
+                <!-- Informações de Segurança -->
+                <div class="info-seguranca" role="region" aria-label="Informações de segurança">
+                    <div class="item-seguranca">
+                        <i class="fa-solid fa-shield-alt" aria-hidden="true"></i>
+                        <span>Conexão Segura</span>
+                    </div>
+                    <div class="item-seguranca">
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                        <span>Sessão de 24h</span>
+                    </div>
+                    <div class="item-seguranca">
+                        <i class="fa-solid fa-user-lock" aria-hidden="true"></i>
+                        <span>Dados Protegidos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+        <!-- ========================================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+         ======================================== -->
+    <footer class="rodape-principal" role="contentinfo">
+        <!-- Container principal: Organiza o layout do rodapé -->
+        <section class="container-rodape">
+            <!-- Logo e descrição da empresa -->
+            <div class="logo-rodape">
+                <img src="../img/logo.png" alt="Logo Cod3X">
+                <p>Cod3X - Tecnologia com Propósito</p>
+            </div>
+            
+            <!-- Navegação 1: Links principais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="./quem-somos.html">Quem Somos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Navegação 2: Suporte ao usuário -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Navegação 3: Informações do projeto -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
+                <h3>Projeto</h3>
+                <ul>
+                    <li><a href="#">FIAP Challenge</a></li>
+                    <li><a href="#">Turma do Bem</a></li>
+                    <li><a href="#">Documentação</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Navegação 4: Aspectos legais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Licenças</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <!-- Divisor visual entre seções do rodapé -->
+        <hr class="linha-divisoria-rodape" role="separator">
+        
+        <!-- Seção inferior: Redes sociais e copyright -->
+        <section class="inferior-rodape">
+            <!-- Navegação das redes sociais: aria-label para acessibilidade -->
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
+                <ul class="icones-sociais">
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Copyright: Informações legais obrigatórias -->
+            <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
+        </section>
+    </footer>
 </body>
+
 </html>
