@@ -9,9 +9,7 @@
     <!-- Google Fonts para estilização das fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="../css/style.css">
@@ -21,7 +19,9 @@
 </head>
 
 <body>
-    <!-- Cabeçalho com navegação principal -->
+    <!-- ========================================
+         CABEÇALHO COM NAVEGAÇÃO PRINCIPAL
+         ======================================== -->
     <header class="cabecalho-principal">
         <nav class="secao-navegacao">
             <!-- Logo do projeto -->
@@ -29,9 +29,10 @@
                 <img src="../img/logo.png" alt="Logo do projeto" class="imagem-logo">
             </a>
             
-            <!-- Menu de navegação -->
+            <!-- Menu de navegação principal -->
             <ul>
                 <li><a href="../../index.html" class="links-navegacao">Início</a></li>
+                <li><a href="./quem-somos.html" class="links-navegacao">Quem Somos</a></li>
                 <li><a href="./sobre.html" class="links-navegacao">Sobre</a></li>
                 <li><a href="./faq.html" class="links-navegacao">FAQ</a></li>
                 <li><a href="./contato.html" class="links-navegacao">Contato</a></li>
@@ -53,7 +54,9 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal da página -->
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL DA PÁGINA
+         ======================================== -->
     <main>
         <!-- Seção Hero - Impacto Imediato -->
         <section class="secao-hero-quem-somos">
@@ -66,15 +69,16 @@
                 <a href="#nossa-historia" class="botao-hero-quem-somos">Conheça nossa Missão</a>
             </div>
             <div class="container-imagem-hero-quem-somos">
-                <img src="../img/sorrisos.png" alt="personagens sorrindo.">
+                <img src="../img/sorrisos.png" alt="Personagens sorrindo representando o impacto positivo do projeto">
             </div>
         </section>
 
-        <!-- Seção Nossa História -->
+        <!-- Seção Nossa História - Problema e Solução -->
         <section id="nossa-historia" class="secao-nossa-historia">
             <div class="container-nossa-historia">
                 <h2 class="titulo-secao-quem-somos">O Desafio que nos Move</h2>
                 
+                <!-- Bloco: O Problema -->
                 <article class="bloco-historia problema">
                     <div class="icone-historia">
                         <i class="fa-solid fa-exclamation-triangle"></i>
@@ -90,6 +94,7 @@
                     </div>
                 </article>
 
+                <!-- Bloco: Nossa Origem -->
                 <article class="bloco-historia solucao">
                     <div class="icone-historia">
                         <i class="fa-solid fa-lightbulb"></i>
@@ -107,13 +112,13 @@
             </div>
         </section>
 
-        <!-- Seção Filosofia (Missão, Visão e Valores) -->
+        <!-- Seção Filosofia - Missão, Visão e Valores -->
         <section class="secao-filosofia">
             <div class="container-filosofia">
                 <h2 class="titulo-secao-quem-somos">Nossa Filosofia</h2>
                 
                 <div class="container-mvv">
-                    <!-- Missão -->
+                    <!-- Card Missão -->
                     <article class="cartao-mvv missao">
                         <div class="icone-mvv">
                             <i class="fa-solid fa-bullseye"></i>
@@ -126,7 +131,7 @@
                         </p>
                     </article>
 
-                    <!-- Visão -->
+                    <!-- Card Visão -->
                     <article class="cartao-mvv visao">
                         <div class="icone-mvv">
                             <i class="fa-solid fa-eye"></i>
@@ -138,30 +143,39 @@
                         </p>
                     </article>
 
-                    <!-- Valores -->
+                    <!-- Card Valores -->
                     <article class="cartao-mvv valores">
                         <div class="icone-mvv">
                             <i class="fa-solid fa-gem"></i>
                         </div>
                         <h3>Valores</h3>
                         <ul class="lista-valores">
-                            <li><i class="fa-solid fa-heart"></i> Impacto Social: Nosso código tem um objetivo final: o bem-estar da comunidade</li>
-                            <li><i class="fa-solid fa-user-friends"></i> Inovação Centrada no Humano: Criamos soluções fáceis de usar para todos</li>
-                            <li><i class="fa-solid fa-handshake"></i> Colaboração e Transparência: Trabalhamos em equipe, compartilhando conhecimento</li>
+                            <li>
+                                <i class="fa-solid fa-heart"></i> 
+                                Impacto Social: Nosso código tem um objetivo final: o bem-estar da comunidade
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user-friends"></i> 
+                                Inovação Centrada no Humano: Criamos soluções fáceis de usar para todos
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-handshake"></i> 
+                                Colaboração e Transparência: Trabalhamos em equipe, compartilhando conhecimento
+                            </li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Equipe -->
+        <!-- Seção Equipe - Apresentação dos Integrantes -->
         <section class="secao-equipe">
             <div class="container-equipe">
                 <h2 class="titulo-secao-quem-somos">Os Rostos por Trás do Código</h2>
                 <p class="subtitulo-equipe">Conheça os desenvolvedores que transformam ideias em realidade</p>
                 
                 <div class="container-cartoes-equipe">
-                    <!-- Integrante 1 -->
+                    <!-- Integrante 1: Gabriel Stuani -->
                     <article class="cartao-integrante">
                         <div class="foto-integrante">
                             <img src="../img/integrante_1.jpeg" alt="Foto do Gabriel Stuani">
@@ -181,10 +195,10 @@
                         </div>
                     </article>
 
-                    <!-- Integrante 2 -->
+                    <!-- Integrante 2: Pablo Oliveira Garcia -->
                     <article class="cartao-integrante">
                         <div class="foto-integrante">
-                            <img src="../img/integrante_2.jpeg" alt="Foto do Integrante 2">
+                            <img src="../img/integrante_2.jpeg" alt="Foto do Pablo Oliveira Garcia">
                         </div>
                         <div class="info-integrante">
                             <h3 class="nome-integrante">Pablo Oliveira Garcia</h3>
@@ -201,10 +215,10 @@
                         </div>
                     </article>
 
-                    <!-- Integrante 3 -->
+                    <!-- Integrante 3: Guilherme Soares -->
                     <article class="cartao-integrante">
                         <div class="foto-integrante">
-                            <img src="../img/integrante_3.jpeg" alt="Foto do Integrante 3">
+                            <img src="../img/integrante_3.jpeg" alt="Foto do Guilherme Soares">
                         </div>
                         <div class="info-integrante">
                             <h3 class="nome-integrante">Guilherme Soares</h3>
@@ -245,13 +259,15 @@
         </section>
     </main>
 
-    <!-- Rodapé com informações e redes sociais -->
+    <!-- ========================================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+         ======================================== -->
     <footer class="rodape-principal">
         <!-- Container principal com informações organizadas -->
         <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
-                <img src="../img/logo.png" alt="Logo">
+                <img src="../img/logo.png" alt="Logo Cod3X">
                 <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
@@ -302,19 +318,29 @@
             <nav class="redes-sociais">
                 <ul class="icones-sociais">
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="link-icone" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="link-icone" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="link-icone" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="link-icone" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="link-icone" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
