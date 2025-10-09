@@ -2,51 +2,60 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Meta tags obrigatórias para responsividade e codificação -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre o Projeto - Cod3X</title>
     
-    <!-- Google Fonts para estilização das fontes -->
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <!-- CSS principal do projeto -->
+    <!-- Arquivos CSS: Ordem de carregamento (geral -> específico) -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-sobre.css">
     
-    <!-- Ícones Font Awesome -->
+    <!-- Font Awesome: Biblioteca de ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Cabeçalho com navegação principal -->
+    <!-- ========================================
+         CABEÇALHO PRINCIPAL DA APLICAÇÃO
+         ======================================== -->
     <header class="cabecalho-principal">
-        <nav class="secao-navegacao">
-            <!-- Logo do projeto -->
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
+            <!-- Logo: Sempre linkado para a página inicial -->
             <a href="../../index.html" class="link-logo">
-                <img src="../img/logo.png" alt="Logo do projeto" class="imagem-logo">
+                <img src="../img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
             </a>
             
-            <!-- Menu de navegação -->
-            <ul>
-                <li><a href="../../index.html" class="links-navegacao">Início</a></li>
-                <li><a href="./quem-somos.html" class="links-navegacao">Quem Somos</a></li>
-                <li><a href="./faq.html" class="links-navegacao">FAQ</a></li>
-                <li><a href="./contato.html" class="links-navegacao">Contato</a></li>
+            <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
+            <ul role="menubar">
+                <li role="none">
+                    <a href="../../index.html" class="links-navegacao" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="./quem-somos.html" class="links-navegacao" role="menuitem">Quem Somos</a>
+                </li>
+                <li role="none">
+                    <a href="./faq.html" class="links-navegacao" role="menuitem">FAQ</a>
+                </li>
+                <li role="none">
+                    <a href="./contato.html" class="links-navegacao" role="menuitem">Contato</a>
+                </li>
             </ul>
 
-            <!-- Barra de pesquisa -->
-            <form class="barra-pesquisa">
-                <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- Formulário de busca: Importante usar form para acessibilidade -->
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
             </form>
             
-            <!-- Botões de autenticação -->
+            <!-- Botões de autenticação: Separados em container próprio -->
             <div class="botoes-autenticacao">
                 <a href="#" class="botao-autenticacao botao-login">Login</a>
                 <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
@@ -54,25 +63,34 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal da página -->
-    <main>
-        <!-- Seção Funcionalidades Principais -->
-        <section class="secao-funcionalidades">
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL DA PÁGINA
+         ======================================== -->
+    <main role="main">
+        <!-- ========================================
+             SEÇÃO: FUNCIONALIDADES PRINCIPAIS
+             ======================================== -->
+        <section class="secao-funcionalidades" aria-labelledby="titulo-funcionalidades">
             <div class="container-funcionalidades">
-                <h2 class="titulo-secao-sobre">Recursos em Destaque</h2>
+                <h2 id="titulo-funcionalidades" class="titulo-secao-sobre">Recursos em Destaque</h2>
                 <p class="subtitulo-funcionalidades">
                     Conheça as principais funcionalidades que transformam a gestão de atendimentos da Turma do Bem
                 </p>
                 
-                <div class="grid-funcionalidades">
+                <!-- Grid: Container responsivo para os cartões de funcionalidade -->
+                <div class="grid-funcionalidades" role="region" aria-label="Lista de funcionalidades">
+                    <!-- Funcionalidade 1: Centralização de Atendimentos -->
                     <article class="card-funcionalidade centralizacao">
-                        <div class="icone-funcionalidade">
+                        <div class="icone-funcionalidade" aria-hidden="true">
                             <i class="fa-solid fa-inbox"></i>
                         </div>
                         <h3>Centralização de Atendimentos</h3>
-                        <p>Todos os contatos recebidos são convertidos em tickets/protocolos em uma única plataforma, 
-                           acabando com a perda de informações.</p>
-                        <div class="detalhe-visual">
+                        <p>
+                            Todos os contatos recebidos são convertidos em tickets/protocolos em uma única plataforma, 
+                            acabando com a perda de informações.
+                        </p>
+                        <!-- Exemplo visual: Demonstração da funcionalidade -->
+                        <div class="detalhe-visual" aria-label="Exemplo de ticket de atendimento">
                             <div class="exemplo-ticket">
                                 <div class="cabecalho-ticket">
                                     <span class="id-ticket">#001</span>
@@ -83,32 +101,40 @@
                         </div>
                     </article>
 
+                    <!-- Funcionalidade 2: Roteamento Automático -->
                     <article class="card-funcionalidade roteamento">
-                        <div class="icone-funcionalidade">
+                        <div class="icone-funcionalidade" aria-hidden="true">
                             <i class="fa-solid fa-route"></i>
                         </div>
                         <h3>Roteamento Automático</h3>
-                        <p>O sistema analisa o assunto das mensagens e, com base em palavras-chave e uso de PLN para identificar o contexto, encaminha 
-                           o atendimento para a área responsável.</p>
-                        <div class="detalhe-visual">
+                        <p>
+                            O sistema analisa o assunto das mensagens e, com base em palavras-chave e uso de PLN para identificar o contexto, 
+                            encaminha o atendimento para a área responsável.
+                        </p>
+                        <!-- Fluxo visual: Demonstração do processo de roteamento -->
+                        <div class="detalhe-visual" aria-label="Fluxo de roteamento automático">
                             <div class="fluxo-roteamento">
                                 <div class="entrada-fluxo">📧 Email</div>
-                                <div class="seta-fluxo">➜</div>
+                                <div class="seta-fluxo" aria-hidden="true">➜</div>
                                 <div class="analise-fluxo">🔍 Análise</div>
-                                <div class="seta-fluxo">➜</div>
+                                <div class="seta-fluxo" aria-hidden="true">➜</div>
                                 <div class="destino-fluxo">👥 Equipe</div>
                             </div>
                         </div>
                     </article>
 
+                    <!-- Funcionalidade 3: Acompanhamento de Status -->
                     <article class="card-funcionalidade acompanhamento">
-                        <div class="icone-funcionalidade">
+                        <div class="icone-funcionalidade" aria-hidden="true">
                             <i class="fa-solid fa-tasks"></i>
                         </div>
                         <h3>Acompanhamento de Status</h3>
-                        <p>Permite o acompanhamento do ciclo de vida de cada solicitação com status claros 
-                           e atualizáveis em tempo real.</p>
-                        <div class="detalhe-visual">
+                        <p>
+                            Permite o acompanhamento do ciclo de vida de cada solicitação com status claros 
+                            e atualizáveis em tempo real.
+                        </p>
+                        <!-- Linha do tempo: Estados do ticket -->
+                        <div class="detalhe-visual" aria-label="Linha do tempo de status">
                             <div class="linha-status">
                                 <div class="status-item aberto">Aberto</div>
                                 <div class="status-item andamento">Em Andamento</div>
@@ -117,65 +143,78 @@
                         </div>
                     </article>
 
+                    <!-- Funcionalidade 4: Relatórios Gerenciais -->
                     <article class="card-funcionalidade relatorios">
-                        <div class="icone-funcionalidade">
+                        <div class="icone-funcionalidade" aria-hidden="true">
                             <i class="fa-solid fa-chart-bar"></i>
                         </div>
                         <h3>Relatórios Gerenciais</h3>
-                        <p>A plataforma gera relatórios estatísticos sobre o volume de atendimentos por status 
-                           e por área, fornecendo dados para decisões estratégicas.</p>
-                        <div class="detalhe-visual">
+                        <p>
+                            A plataforma gera relatórios estatísticos sobre o volume de atendimentos por status 
+                            e por área, fornecendo dados para decisões estratégicas.
+                        </p>
+                        <!-- Gráfico visual: Representação de dados -->
+                        <div class="detalhe-visual" aria-label="Exemplo de gráfico de relatórios">
                             <div class="mini-grafico">
-                                <div class="barra-grafico" style="height: 60%;"></div>
-                                <div class="barra-grafico" style="height: 80%;"></div>
-                                <div class="barra-grafico" style="height: 40%;"></div>
-                                <div class="barra-grafico" style="height: 90%;"></div>
+                                <div class="barra-grafico" style="height: 60%;" aria-label="60% de dados"></div>
+                                <div class="barra-grafico" style="height: 80%;" aria-label="80% de dados"></div>
+                                <div class="barra-grafico" style="height: 40%;" aria-label="40% de dados"></div>
+                                <div class="barra-grafico" style="height: 90%;" aria-label="90% de dados"></div>
                             </div>
                         </div>
                     </article>
 
+                    <!-- Funcionalidade 5: Integração Multi-canal -->
                     <article class="card-funcionalidade integracao">
-                        <div class="icone-funcionalidade">
+                        <div class="icone-funcionalidade" aria-hidden="true">
                             <i class="fa-solid fa-plug"></i>
                         </div>
                         <h3>Integração Multi-canal</h3>
-                        <p>Conectamos diretamente com as APIs do WhatsApp Business e Gmail, sincronizando 
-                           automaticamente todas as mensagens recebidas nos canais já utilizados pela ONG.</p>
-                        <div class="detalhe-visual">
+                        <p>
+                            Conectamos diretamente com as APIs do WhatsApp Business e Gmail, sincronizando 
+                            automaticamente todas as mensagens recebidas nos canais já utilizados pela ONG.
+                        </p>
+                        <!-- Canais de integração: Demonstração visual -->
+                        <div class="detalhe-visual" aria-label="Canais de integração disponíveis">
                             <div class="canais-integracao">
                                 <div class="canal-item whatsapp">
-                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                                     <span>WhatsApp</span>
                                 </div>
-                                <div class="sincronizacao-icon">
+                                <div class="sincronizacao-icon" aria-hidden="true">
                                     <i class="fa-solid fa-sync-alt"></i>
                                 </div>
                                 <div class="canal-item gmail">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                                     <span>Gmail</span>
                                 </div>
                             </div>
                         </div>
                     </article>
 
+                    <!-- Funcionalidade 6: Acessibilidade Inclusiva -->
                     <article class="card-funcionalidade acessibilidade">
-                        <div class="icone-funcionalidade">
+                        <div class="icone-funcionalidade" aria-hidden="true">
                             <i class="fa-solid fa-universal-access"></i>
                         </div>
                         <h3>Acessibilidade Inclusiva</h3>
-                        <p>Interface totalmente acessível com recursos como aumento de fonte, alto contraste e compatibilidade total com leitores de tela.</p>
-                        <div class="detalhe-visual">
+                        <p>
+                            Interface totalmente acessível com recursos como aumento de fonte, alto contraste e 
+                            compatibilidade total com leitores de tela.
+                        </p>
+                        <!-- Recursos de acessibilidade: Lista visual -->
+                        <div class="detalhe-visual" aria-label="Recursos de acessibilidade disponíveis">
                             <div class="recursos-acessibilidade">
                                 <div class="recurso-item">
-                                    <i class="fa-solid fa-text-height"></i>
+                                    <i class="fa-solid fa-text-height" aria-hidden="true"></i>
                                     <span>Fonte Ajustável</span>
                                 </div>
                                 <div class="recurso-item">
-                                    <i class="fa-solid fa-volume-up"></i>
+                                    <i class="fa-solid fa-volume-up" aria-hidden="true"></i>
                                     <span>Leitor de Voz</span>
                                 </div>
                                 <div class="recurso-item">
-                                    <i class="fa-solid fa-adjust"></i>
+                                    <i class="fa-solid fa-adjust" aria-hidden="true"></i>
                                     <span>Alto Contraste</span>
                                 </div>
                             </div>
@@ -185,49 +224,57 @@
             </div>
         </section>
 
-        <!-- Seção Tecnologias Utilizadas -->
-        <section class="secao-tecnologias">
+        <!-- ========================================
+             SEÇÃO: TECNOLOGIAS UTILIZADAS
+             ======================================== -->
+        <section class="secao-tecnologias" aria-labelledby="titulo-tecnologias">
             <div class="container-tecnologias">
-                <h2 class="titulo-secao-sobre">Tecnologias que Movem o Projeto</h2>
+                <h2 id="titulo-tecnologias" class="titulo-secao-sobre">Tecnologias que Movem o Projeto</h2>
                 <p class="subtitulo-tecnologias">
                     Conheça as tecnologias modernas e robustas que utilizamos para construir uma solução escalável e eficiente
                 </p>
                 
-                <div class="grid-tecnologias">
+                <!-- Grid: Container responsivo para as tecnologias -->
+                <div class="grid-tecnologias" role="region" aria-label="Lista de tecnologias utilizadas">
+                    <!-- Tecnologia 1: HTML5 -->
                     <article class="card-tecnologia html">
-                        <div class="icone-tecnologia">
+                        <div class="icone-tecnologia" aria-hidden="true">
                             <i class="fa-brands fa-html5"></i>
                         </div>
                         <h3>HTML5</h3>
                         <p>Estrutura semântica e acessível para uma base sólida da aplicação web.</p>
                     </article>
 
+                    <!-- Tecnologia 2: CSS3 -->
                     <article class="card-tecnologia css">
-                        <div class="icone-tecnologia">
+                        <div class="icone-tecnologia" aria-hidden="true">
                             <i class="fa-brands fa-css3-alt"></i>
                         </div>
                         <h3>CSS3</h3>
                         <p>Estilização moderna com flexbox, grid e animações para uma interface responsiva.</p>
                     </article>
 
+                    <!-- Tecnologia 3: JavaScript -->
                     <article class="card-tecnologia javascript">
-                        <div class="icone-tecnologia">
+                        <div class="icone-tecnologia" aria-hidden="true">
                             <i class="fa-brands fa-js-square"></i>
                         </div>
                         <h3>JavaScript</h3>
                         <p>Linguagem principal para interatividade e lógica de negócio no frontend.</p>
                     </article>
 
+                    <!-- Tecnologia 4: Angular -->
                     <article class="card-tecnologia angular">
-                        <div class="icone-tecnologia">
+                        <div class="icone-tecnologia" aria-hidden="true">
                             <i class="fa-brands fa-angular"></i>
                         </div>
                         <h3>Angular</h3>
                         <p>Framework robusto para desenvolvimento da versão avançada da plataforma.</p>
                     </article>
 
+                    <!-- Tecnologia 5: MySQL -->
                     <article class="card-tecnologia mysql">
-                        <div class="icone-tecnologia">
+                        <div class="icone-tecnologia" aria-hidden="true">
                             <i class="fa-solid fa-database"></i>
                         </div>
                         <h3>MySQL</h3>
@@ -238,19 +285,21 @@
         </section>
     </main>
 
-    <!-- Rodapé com informações e redes sociais -->
-    <footer class="rodape-principal">
-        <!-- Container principal com informações organizadas -->
+    <!-- ========================================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+         ======================================== -->
+    <footer class="rodape-principal" role="contentinfo">
+        <!-- Container principal: Organiza o layout do rodapé -->
         <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
-                <img src="../img/logo.png" alt="Logo">
+                <img src="../img/logo.png" alt="Logo Cod3X">
                 <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
-            <!-- Blocos de navegação do rodapé -->
-            <nav class="informacoes-rodape">
-                <h1>Navegação</h1>
+            <!-- Navegação 1: Links principais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
+                <h3>Navegação</h3>
                 <ul>
                     <li><a href="../../index.html">Início</a></li>
                     <li><a href="./quem-somos.html">Quem Somos</a></li>
@@ -258,8 +307,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Suporte</h1>
+            <!-- Navegação 2: Suporte ao usuário -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
+                <h3>Suporte</h3>
                 <ul>
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
@@ -267,8 +317,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Projeto</h1>
+            <!-- Navegação 3: Informações do projeto -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
+                <h3>Projeto</h3>
                 <ul>
                     <li><a href="#">FIAP Challenge</a></li>
                     <li><a href="#">Turma do Bem</a></li>
@@ -276,8 +327,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Legal</h1>
+            <!-- Navegação 4: Aspectos legais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
+                <h3>Legal</h3>
                 <ul>
                     <li><a href="#">Termos de Uso</a></li>
                     <li><a href="#">Privacidade</a></li>
@@ -286,33 +338,43 @@
             </nav>
         </section>
         
-        <!-- Linha divisória do rodapé -->
-        <hr class="linha-divisoria-rodape">
+        <!-- Divisor visual entre seções do rodapé -->
+        <hr class="linha-divisoria-rodape" role="separator">
         
-        <!-- Parte inferior: redes sociais e direitos autorais -->
+        <!-- Seção inferior: Redes sociais e copyright -->
         <section class="inferior-rodape">
-            <!-- Navegação das redes sociais -->
-            <nav class="redes-sociais">
+            <!-- Navegação das redes sociais: aria-label para acessibilidade -->
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
                 <ul class="icones-sociais">
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="link-icone" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="link-icone" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="link-icone" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="link-icone" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="link-icone" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
             
-            <!-- Direitos autorais -->
+            <!-- Copyright: Informações legais obrigatórias -->
             <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
         </section>
     </footer>
