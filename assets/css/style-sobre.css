@@ -326,3 +326,132 @@
     color: #3A506B;
     font-weight: 600;
 }
+
+/* =========================
+   SEÇÃO TECNOLOGIAS
+   ========================= */
+.secao-tecnologias {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #F4F4F9 0%, #fff 100%);
+}
+
+.container-tecnologias {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subtitulo-tecnologias {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #3A506B;
+    margin-bottom: 4rem;
+    opacity: 0.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card-tecnologia {
+    background: #fff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px #3a506b14;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-tecnologia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+.card-tecnologia.html::before { background: #e34f26; }
+.card-tecnologia.css::before { background: #1572b6; }
+.card-tecnologia.javascript::before { background: #f7df1e; }
+.card-tecnologia.angular::before { background: #dd0031; }
+.card-tecnologia.mysql::before { background: #00758f; }
+
+.card-tecnologia:hover::before {
+    transform: scaleX(1);
+}
+
+.card-tecnologia:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px #3a506b26;
+}
+
+.icone-tecnologia {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.card-tecnologia.html .icone-tecnologia {
+    background: #e34f261a;
+}
+
+.card-tecnologia.css .icone-tecnologia {
+    background: #1572b61a;
+}
+
+.card-tecnologia.javascript .icone-tecnologia {
+    background: #f7df1e1a;
+}
+
+.card-tecnologia.angular .icone-tecnologia {
+    background: #dd00311a;
+}
+
+.card-tecnologia.mysql .icone-tecnologia {
+    background: #00758f1a;
+}
+
+.icone-tecnologia i {
+    font-size: 2.5rem;
+}
+
+.card-tecnologia.html .icone-tecnologia i { color: #e34f26; }
+.card-tecnologia.css .icone-tecnologia i { color: #1572b6; }
+.card-tecnologia.javascript .icone-tecnologia i { color: #f7df1e; }
+.card-tecnologia.angular .icone-tecnologia i { color: #dd0031; }
+.card-tecnologia.mysql .icone-tecnologia i { color: #00758f; }
+
+.card-tecnologia:hover .icone-tecnologia {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-tecnologia h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #3A506B;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.card-tecnologia p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+}
