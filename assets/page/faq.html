@@ -2,51 +2,60 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Meta tags obrigatórias para responsividade e codificação -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Cod3X</title>
     
-    <!-- Google Fonts para estilização das fontes -->
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <!-- CSS principal do projeto -->
+    <!-- Arquivos CSS: Ordem de carregamento (geral -> específico) -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-faq.css">
     
-    <!-- Ícones Font Awesome -->
+    <!-- Font Awesome: Biblioteca de ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Cabeçalho com navegação principal -->
+    <!-- ========================================
+         CABEÇALHO PRINCIPAL DA APLICAÇÃO
+         ======================================== -->
     <header class="cabecalho-principal">
-        <nav class="secao-navegacao">
-            <!-- Logo do projeto -->
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
+            <!-- Logo: Sempre linkado para a página inicial -->
             <a href="../../index.html" class="link-logo">
-                <img src="../img/logo.png" alt="Logo do projeto" class="imagem-logo">
+                <img src="../img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
             </a>
             
-            <!-- Menu de navegação -->
-            <ul>
-                <li><a href="../../index.html" class="links-navegacao">Início</a></li>
-                <li><a href="./quem-somos.html" class="links-navegacao">Quem Somos</a></li>
-                <li><a href="./sobre.html" class="links-navegacao">Sobre</a></li>
-                <li><a href="./contato.html" class="links-navegacao">Contato</a></li>
+            <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
+            <ul role="menubar">
+                <li role="none">
+                    <a href="../../index.html" class="links-navegacao" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="./quem-somos.html" class="links-navegacao" role="menuitem">Quem Somos</a>
+                </li>
+                <li role="none">
+                    <a href="./sobre.html" class="links-navegacao" role="menuitem">Sobre</a>
+                </li>
+                <li role="none">
+                    <a href="./contato.html" class="links-navegacao" role="menuitem">Contato</a>
+                </li>
             </ul>
 
-            <!-- Barra de pesquisa -->
-            <form class="barra-pesquisa">
-                <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- Formulário de busca: Importante usar form para acessibilidade -->
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
             </form>
             
-            <!-- Botões de autenticação -->
+            <!-- Botões de autenticação: Separados em container próprio -->
             <div class="botoes-autenticacao">
                 <a href="#" class="botao-autenticacao botao-login">Login</a>
                 <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
@@ -54,16 +63,21 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal da página -->
-    <main>
-        <!-- Seção de Dúvidas -->
-        <section class="secao-faq">
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL DA PÁGINA
+         ======================================== -->
+    <main role="main">
+        <!-- ========================================
+             SEÇÃO: FORMULÁRIO DE DÚVIDAS FREQUENTES
+             ======================================== -->
+        <section class="secao-faq" aria-labelledby="titulo-faq">
             <div class="container-faq">
+                <!-- Cabeçalho da seção: Apresenta o propósito da página -->
                 <div class="cabecalho-faq">
-                    <div class="icone-faq">
+                    <div class="icone-faq" aria-hidden="true">
                         <i class="fa-solid fa-question-circle"></i>
                     </div>
-                    <h1 class="titulo-faq">Dúvidas Frequentes</h1>
+                    <h1 id="titulo-faq" class="titulo-faq">Dúvidas Frequentes</h1>
                     <p class="subtitulo-faq">
                         Tem alguma dúvida sobre nosso projeto? Envie sua pergunta e nossa equipe 
                         responderá o mais breve possível!
@@ -71,10 +85,12 @@
                 </div>
 
                 <div class="container-formulario-faq">
-                    <form class="formulario-duvidas" action="#" method="POST">
+                    <!-- Formulário de contato: Estrutura semântica completa -->
+                    <form class="formulario-duvidas" action="#" method="POST" role="form" aria-labelledby="titulo-faq">
+                        <!-- Campo: Nome Completo -->
                         <div class="grupo-campo">
                             <label for="nome-completo" class="label-campo">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-user" aria-hidden="true"></i>
                                 Nome Completo
                             </label>
                             <input 
@@ -84,12 +100,18 @@
                                 class="campo-input" 
                                 placeholder="Digite seu nome completo"
                                 required
+                                aria-describedby="nome-completo-desc"
                             >
+                            <!-- Texto de ajuda: aria-describedby conecta com o campo -->
+                            <span id="nome-completo-desc" class="texto-ajuda" aria-live="polite">
+                                Informe seu nome completo para identificação
+                            </span>
                         </div>
 
+                        <!-- Campo: E-mail -->
                         <div class="grupo-campo">
                             <label for="email" class="label-campo">
-                                <i class="fa-solid fa-envelope"></i>
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                                 E-mail
                             </label>
                             <input 
@@ -99,15 +121,20 @@
                                 class="campo-input" 
                                 placeholder="Digite seu e-mail"
                                 required
+                                aria-describedby="email-desc"
                             >
+                            <span id="email-desc" class="texto-ajuda" aria-live="polite">
+                                Utilizaremos este e-mail para responder sua dúvida
+                            </span>
                         </div>
 
+                        <!-- Campo: Categoria (Select) -->
                         <div class="grupo-campo">
                             <label for="categoria-duvida" class="label-campo">
-                                <i class="fa-solid fa-tags"></i>
+                                <i class="fa-solid fa-tags" aria-hidden="true"></i>
                                 Categoria da Dúvida
                             </label>
-                            <select id="categoria-duvida" name="categoria-duvida" class="campo-select" required>
+                            <select id="categoria-duvida" name="categoria-duvida" class="campo-select" required aria-describedby="categoria-desc">
                                 <option value="">Selecione uma categoria</option>
                                 <option value="funcionalidades">Funcionalidades da Plataforma</option>
                                 <option value="tecnologia">Tecnologias Utilizadas</option>
@@ -116,11 +143,15 @@
                                 <option value="turma-bem">Turma do Bem</option>
                                 <option value="outros">Outros</option>
                             </select>
+                            <span id="categoria-desc" class="texto-ajuda" aria-live="polite">
+                                Escolha a categoria que melhor se relaciona com sua dúvida
+                            </span>
                         </div>
 
+                        <!-- Campo: Assunto -->
                         <div class="grupo-campo">
                             <label for="assunto" class="label-campo">
-                                <i class="fa-solid fa-text-width"></i>
+                                <i class="fa-solid fa-text-width" aria-hidden="true"></i>
                                 Assunto
                             </label>
                             <input 
@@ -130,12 +161,18 @@
                                 class="campo-input" 
                                 placeholder="Resumo da sua dúvida"
                                 required
+                                aria-describedby="assunto-desc"
+                                maxlength="100"
                             >
+                            <span id="assunto-desc" class="texto-ajuda" aria-live="polite">
+                                Descreva brevemente o tema da sua dúvida (máximo 100 caracteres)
+                            </span>
                         </div>
 
+                        <!-- Campo: Mensagem (Textarea) -->
                         <div class="grupo-campo">
                             <label for="mensagem" class="label-campo">
-                                <i class="fa-solid fa-comment-dots"></i>
+                                <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
                                 Sua Dúvida
                             </label>
                             <textarea 
@@ -145,9 +182,15 @@
                                 placeholder="Descreva sua dúvida detalhadamente..."
                                 rows="6"
                                 required
+                                aria-describedby="mensagem-desc"
+                                maxlength="1000"
                             ></textarea>
+                            <span id="mensagem-desc" class="texto-ajuda" aria-live="polite">
+                                Detalhe sua dúvida para que possamos ajudá-lo melhor (máximo 1000 caracteres)
+                            </span>
                         </div>
 
+                        <!-- Campo: Checkbox para newsletter -->
                         <div class="grupo-campo-checkbox">
                             <input type="checkbox" id="receber-novidades" name="receber-novidades" class="campo-checkbox">
                             <label for="receber-novidades" class="label-checkbox">
@@ -155,61 +198,70 @@
                             </label>
                         </div>
 
+                        <!-- Botões de ação: Enviar e Limpar -->
                         <div class="grupo-botoes">
-                            <button type="button" class="botao-enviar">
-                                <i class="fa-solid fa-paper-plane"></i>
+                            <button type="submit" class="botao-enviar">
+                                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                                 Enviar Dúvida
                             </button>
                             <button type="reset" class="botao-limpar">
-                                <i class="fa-solid fa-eraser"></i>
+                                <i class="fa-solid fa-eraser" aria-hidden="true"></i>
                                 Limpar Formulário
                             </button>
                         </div>
                     </form>
 
-                    <div class="informacoes-adicionais">
-                        <div class="card-info">
-                            <div class="icone-info">
+                    <!-- ========================================
+                         INFORMAÇÕES COMPLEMENTARES
+                         ======================================== -->
+                    <div class="informacoes-adicionais" role="region" aria-label="Informações sobre nosso suporte">
+                        <!-- Card 1: Tempo de Resposta -->
+                        <article class="card-info">
+                            <div class="icone-info" aria-hidden="true">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
                             <h3>Tempo de Resposta</h3>
                             <p>Respondemos em até 24 horas úteis</p>
-                        </div>
+                        </article>
 
-                        <div class="card-info">
-                            <div class="icone-info">
+                        <!-- Card 2: Privacidade -->
+                        <article class="card-info">
+                            <div class="icone-info" aria-hidden="true">
                                 <i class="fa-solid fa-shield-alt"></i>
                             </div>
                             <h3>Privacidade</h3>
                             <p>Seus dados estão seguros conosco</p>
-                        </div>
+                        </article>
 
-                        <div class="card-info">
-                            <div class="icone-info">
+                        <!-- Card 3: Suporte Especializado -->
+                        <article class="card-info">
+                            <div class="icone-info" aria-hidden="true">
                                 <i class="fa-solid fa-headset"></i>
                             </div>
                             <h3>Suporte Especializado</h3>
                             <p>Equipe técnica qualificada</p>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé com informações e redes sociais -->
-    <footer class="rodape-principal">
-        <!-- Container principal com informações organizadas -->
+    <!-- ========================================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+         ======================================== -->
+    <footer class="rodape-principal" role="contentinfo">
+        <!-- Container principal: Organiza o layout do rodapé -->
         <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
-                <img src="../img/logo.png" alt="Logo">
+                <img src="../img/logo.png" alt="Logo Cod3X">
                 <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
-            <!-- Blocos de navegação do rodapé -->
-            <nav class="informacoes-rodape">
-                <h1>Navegação</h1>
+            <!-- Navegação 1: Links principais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
+                <h3>Navegação</h3>
                 <ul>
                     <li><a href="../../index.html">Início</a></li>
                     <li><a href="./quem-somos.html">Quem Somos</a></li>
@@ -217,8 +269,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Suporte</h1>
+            <!-- Navegação 2: Suporte ao usuário -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
+                <h3>Suporte</h3>
                 <ul>
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
@@ -226,8 +279,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Projeto</h1>
+            <!-- Navegação 3: Informações do projeto -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
+                <h3>Projeto</h3>
                 <ul>
                     <li><a href="#">FIAP Challenge</a></li>
                     <li><a href="#">Turma do Bem</a></li>
@@ -235,8 +289,9 @@
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Legal</h1>
+            <!-- Navegação 4: Aspectos legais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
+                <h3>Legal</h3>
                 <ul>
                     <li><a href="#">Termos de Uso</a></li>
                     <li><a href="#">Privacidade</a></li>
@@ -245,33 +300,43 @@
             </nav>
         </section>
         
-        <!-- Linha divisória do rodapé -->
-        <hr class="linha-divisoria-rodape">
+        <!-- Divisor visual entre seções do rodapé -->
+        <hr class="linha-divisoria-rodape" role="separator">
         
-        <!-- Parte inferior: redes sociais e direitos autorais -->
+        <!-- Seção inferior: Redes sociais e copyright -->
         <section class="inferior-rodape">
-            <!-- Navegação das redes sociais -->
-            <nav class="redes-sociais">
+            <!-- Navegação das redes sociais: aria-label para acessibilidade -->
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
                 <ul class="icones-sociais">
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="link-icone" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="link-icone" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="link-icone" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="link-icone" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="link-icone" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
             
-            <!-- Direitos autorais -->
+            <!-- Copyright: Informações legais obrigatórias -->
             <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
         </section>
     </footer>
