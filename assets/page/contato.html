@@ -2,50 +2,60 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Meta tags obrigatórias para responsividade e codificação -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Contato - Cod3X</title>
     
-    <!-- Google Fonts para estilização das fontes -->
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <!-- CSS principal do projeto -->
+    <!-- Arquivos CSS: Ordem de carregamento (geral -> específico) -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-contato.css">
     
-    <!-- Ícones Font Awesome -->
+    <!-- Font Awesome: Biblioteca de ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Cabeçalho com navegação principal -->
+    <!-- ========================================
+         CABEÇALHO PRINCIPAL DA APLICAÇÃO
+         ======================================== -->
     <header class="cabecalho-principal">
-        <nav class="secao-navegacao">
-            <!-- Logo do projeto -->
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
+            <!-- Logo: Sempre linkado para a página inicial -->
             <a href="../../index.html" class="link-logo">
-                <img src="../img/logo.png" alt="Logo do projeto" class="imagem-logo">
+                <img src="../img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
             </a>
             
-            <!-- Menu de navegação -->
-            <ul>
-                <li><a href="../../index.html" class="links-navegacao">Início</a></li>
-                <li><a href="./quem-somos.html" class="links-navegacao">Quem Somos</a></li>
-                <li><a href="./sobre.html" class="links-navegacao">Sobre</a></li>
-                <li><a href="./faq.html" class="links-navegacao">FAQ</a></li>
+            <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
+            <ul role="menubar">
+                <li role="none">
+                    <a href="../../index.html" class="links-navegacao" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="./quem-somos.html" class="links-navegacao" role="menuitem">Quem Somos</a>
+                </li>
+                <li role="none">
+                    <a href="./sobre.html" class="links-navegacao" role="menuitem">Sobre</a>
+                </li>
+                <li role="none">
+                    <a href="./faq.html" class="links-navegacao" role="menuitem">FAQ</a>
+                </li>
             </ul>
 
-            <!-- Barra de pesquisa -->
-            <form class="barra-pesquisa">
-                <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- Formulário de busca: Importante usar form para acessibilidade -->
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
             </form>
             
-            <!-- Botões de autenticação -->
+            <!-- Botões de autenticação: Separados em container próprio -->
             <div class="botoes-autenticacao">
                 <a href="#" class="botao-autenticacao botao-login">Login</a>
                 <a href="#" class="botao-autenticacao botao-cadastro">Cadastro</a>
@@ -53,87 +63,222 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal da página -->
-    <main>
-        
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL DA PÁGINA
+         ======================================== -->
+    <main role="main">
+        <!-- ========================================
+             SEÇÃO: FORMAS DE CONTATO
+             ======================================== -->
+        <section class="secao-contato" aria-labelledby="titulo-contato">
+            <div class="container-contato">
+                <!-- Cabeçalho da seção: Apresenta o propósito da página -->
+                <div class="cabecalho-contato">
+                    <h1 id="titulo-contato" class="titulo-secao-sobre">Entre em Contato Conosco</h1>
+                    <p class="subtitulo-contato">
+                        Estamos sempre prontos para ajudar. Escolha a forma de contato que preferir e nossa equipe 
+                        responderá o mais breve possível.
+                    </p>
+                </div>
+
+                <!-- Grid: Container responsivo para os cartões de contato -->
+                <div class="grid-contatos" role="region" aria-label="Formas de contato disponíveis">
+                    <!-- Cartão 1: E-mail -->
+                    <article class="card-contato email">
+                        <div class="icone-contato" aria-hidden="true">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3>E-mail</h3>
+                        <p>Envie um e-mail e responderemos em até 24 horas</p>
+                        <div class="info-contato">
+                            <a href="mailto:contato@cod3x.com.br" class="link-contato">
+                                contato@cod3x.com.br
+                            </a>
+                        </div>
+                        <div class="horario-funcionamento">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <span>Seg-Sex: 9h às 18h</span>
+                        </div>
+                    </article>
+
+                    <!-- Cartão 2: WhatsApp -->
+                    <article class="card-contato whatsapp">
+                        <div class="icone-contato" aria-hidden="true">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Converse conosco diretamente pelo WhatsApp</p>
+                        <div class="info-contato">
+                            <a href="https://wa.me/5511999999999" class="link-contato" target="_blank" rel="noopener">
+                                (11) 99999-9999
+                            </a>
+                        </div>
+                        <div class="horario-funcionamento">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <span>Seg-Sáb: 8h às 20h</span>
+                        </div>
+                    </article>
+
+                    <!-- Cartão 3: Localização -->
+                    <article class="card-contato localizacao">
+                        <div class="icone-contato" aria-hidden="true">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Nossa Localização</h3>
+                        <p>Venha nos visitar em nosso escritório</p>
+                        <div class="info-contato endereco">
+                            <p>
+                                <strong>FIAP - Unidade Paulista</strong><br>
+                                Av. Paulista, 1106 - Bela Vista<br>
+                                São Paulo, SP - CEP: 01311-000
+                            </p>
+                        </div>
+                        <div class="horario-funcionamento">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <span>Seg-Sex: 8h às 22h</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ========================================
+                     MAPA DE LOCALIZAÇÃO
+                     ======================================== -->
+                <div class="container-mapa" role="region" aria-label="Mapa de localização">
+                    <h2 class="titulo-mapa">Como Chegar</h2>
+                    <p class="subtitulo-mapa">
+                        Veja nossa localização no mapa e encontre a melhor rota para nos visitar
+                    </p>
+                    
+                    <!-- Iframe do Google Maps: src será substituído posteriormente -->
+                    <div class="mapa-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.196341436241!2d-46.65237618556839!3d-23.556627067517935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dbf9ff57%3A0x4ca8eb5c4f7ecca9!2sFIAP%20%7C%20Faculdade%20de%20Informática%20e%20Administração%20Paulista!5e0!3m2!1spt!2sbr!4v1234567890123"
+                            class="mapa-iframe"
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização da Cod3X - FIAP Paulista"
+                            aria-label="Mapa interativo mostrando a localização da empresa">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Informações complementares do endereço -->
+                    <div class="info-mapa">
+                        <div class="detalhe-endereco">
+                            <h4>Pontos de Referência</h4>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-subway" aria-hidden="true"></i>
+                                    Metrô Paulista (Linha 4-Amarela)
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bus" aria-hidden="true"></i>
+                                    Parada de ônibus na Av. Paulista
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-car" aria-hidden="true"></i>
+                                    Estacionamento disponível nas proximidades
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Rodapé com informações e redes sociais -->
-    <footer class="rodape-principal">
-        <!-- Container principal com informações organizadas -->
+    <!-- ========================================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+         ======================================== -->
+    <footer class="rodape-principal" role="contentinfo">
+        <!-- Container principal: Organiza o layout do rodapé -->
         <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
             <div class="logo-rodape">
-                <img src="../img/logo.png" alt="Logo">
-                <p>Lorem, ipsum.</p>
+                <img src="../img/logo.png" alt="Logo Cod3X">
+                <p>Cod3X - Tecnologia com Propósito</p>
             </div>
             
-            <!-- Blocos de navegação do rodapé -->
-            <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+            <!-- Navegação 1: Links principais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
+                <h3>Navegação</h3>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="./quem-somos.html">Quem Somos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+            <!-- Navegação 2: Suporte ao usuário -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
+                <h3>Suporte</h3>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="#">Ajuda</a></li>
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+            <!-- Navegação 3: Informações do projeto -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
+                <h3>Projeto</h3>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="#">FIAP Challenge</a></li>
+                    <li><a href="#">Turma do Bem</a></li>
+                    <li><a href="#">Documentação</a></li>
                 </ul>
             </nav>
             
-            <nav class="informacoes-rodape">
-                <h1>Lorem</h1>
+            <!-- Navegação 4: Aspectos legais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
+                <h3>Legal</h3>
                 <ul>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
-                    <li><a href="">Lorem.</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Licenças</a></li>
                 </ul>
             </nav>
         </section>
         
-        <!-- Linha divisória do rodapé -->
-        <hr class="linha-divisoria-rodape">
+        <!-- Divisor visual entre seções do rodapé -->
+        <hr class="linha-divisoria-rodape" role="separator">
         
-        <!-- Parte inferior: redes sociais e direitos autorais -->
+        <!-- Seção inferior: Redes sociais e copyright -->
         <section class="inferior-rodape">
-            <!-- Navegação das redes sociais -->
-            <nav class="redes-sociais">
+            <!-- Navegação das redes sociais: aria-label para acessibilidade -->
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
                 <ul class="icones-sociais">
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="link-icone" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="link-icone" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="link-icone" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="link-icone" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li class="item-social">
-                        <a href="" class="link-icone"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="link-icone" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
             
-            <!-- Direitos autorais -->
-            <p>&copy; Todos os direitos reservados, 2025.</p>
+            <!-- Copyright: Informações legais obrigatórias -->
+            <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
         </section>
     </footer>
 </body>
