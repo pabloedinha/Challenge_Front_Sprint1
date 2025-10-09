@@ -1,12 +1,374 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+    <!-- Meta tags obrigatórias para responsividade e codificação -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel - Cod3X</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    <title>Painel Administrativo - Cod3X</title>
     
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Arquivos CSS: Ordem de carregamento (geral -> específico) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-painel.css">
+    
+    <!-- Font Awesome: Biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ========================================
+         CABEÇALHO PRINCIPAL DA APLICAÇÃO
+         ======================================== -->
+    <header class="cabecalho-principal">
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
+            <!-- Logo: Sempre linkado para a página inicial -->
+            <a href="../../index.html" class="link-logo">
+                <img src="../img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
+            </a>
+            
+            <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
+            <ul role="menubar">
+                <li role="none">
+                    <a href="../../index.html" class="links-navegacao" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="./quem-somos.html" class="links-navegacao" role="menuitem">Quem Somos</a>
+                </li>
+                <li role="none">
+                    <a href="./sobre.html" class="links-navegacao" role="menuitem">Sobre</a>
+                </li>
+                <li role="none">
+                    <a href="./faq.html" class="links-navegacao" role="menuitem">FAQ</a>
+                </li>
+                <li role="none">
+                    <a href="./contato.html" class="links-navegacao" role="menuitem">Contato</a>
+                </li>
+            </ul>
+
+            <!-- Formulário de busca: Importante usar form para acessibilidade -->
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </form>
+            
+            <!-- Botões de autenticação: Alterados para mostrar usuário logado -->
+            <div class="botoes-autenticacao">
+                <div class="usuario-logado">
+                    <i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+                    <span>Alexandre Carlos</span>
+                </div>
+                <a href="../../index.html" class="botao-logout">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL DO DASHBOARD
+         ======================================== -->
+    <main class="container-dashboard" role="main">
+        <!-- Cabeçalho do Dashboard -->
+        <section class="cabecalho-dashboard">
+            <div class="boas-vindas">
+                <h1>Dashboard Administrativo</h1>
+                <p>Bem-vindo ao painel de controle da plataforma Turma do Bem</p>
+            </div>
+            <div class="data-hora">
+                <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+                <span>10 de Outubro de 2025 - 14:30</span>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CARDS DE ESTATÍSTICAS PRINCIPAIS
+             ======================================== -->
+        <section class="secao-estatisticas" aria-labelledby="titulo-estatisticas">
+            <h2 id="titulo-estatisticas" class="titulo-secao-dashboard">Visão Geral</h2>
+            
+            <div class="grid-estatisticas" role="region" aria-label="Estatísticas principais">
+                <!-- Card 1: Total de Atendimentos -->
+                <article class="card-estatistica atendimentos">
+                    <div class="icone-estatistica" aria-hidden="true">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="info-estatistica">
+                        <h3>Total de Atendimentos</h3>
+                        <span class="numero">1,247</span>
+                        <span class="periodo">Este mês</span>
+                    </div>
+                </article>
+
+                <!-- Card 2: Voluntários Ativos -->
+                <article class="card-estatistica voluntarios">
+                    <div class="icone-estatistica" aria-hidden="true">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="info-estatistica">
+                        <h3>Voluntários Ativos</h3>
+                        <span class="numero">89</span>
+                        <span class="periodo">Atualmente</span>
+                    </div>
+                </article>
+
+                <!-- Card 3: Solicitações Pendentes -->
+                <article class="card-estatistica pendencias">
+                    <div class="icone-estatistica" aria-hidden="true">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="info-estatistica">
+                        <h3>Pendentes</h3>
+                        <span class="numero">23</span>
+                        <span class="periodo">Aguardando</span>
+                    </div>
+                </article>
+
+                <!-- Card 4: Taxa de Sucesso -->
+                <article class="card-estatistica sucesso">
+                    <div class="icone-estatistica" aria-hidden="true">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="info-estatistica">
+                        <h3>Taxa de Sucesso</h3>
+                        <span class="numero">94%</span>
+                        <span class="periodo">Últimos 30 dias</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========================================
+             TABELA DE ATENDIMENTOS RECENTES
+             ======================================== -->
+        <section class="secao-tabela" aria-labelledby="titulo-atendimentos">
+            <h2 id="titulo-atendimentos" class="titulo-secao-dashboard">Atendimentos Recentes</h2>
+            
+            <div class="container-tabela">
+                <table class="tabela-dashboard" role="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Paciente</th>
+                            <th scope="col">Voluntário</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Maria Santos</td>
+                            <td>Dr. Carlos Lima</td>
+                            <td>08/10/2025</td>
+                            <td><span class="status concluido">Concluído</span></td>
+                            <td>
+                                <button class="botao-acao visualizar" aria-label="Visualizar atendimento 1001">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>João Oliveira</td>
+                            <td>Dra. Ana Costa</td>
+                            <td>09/10/2025</td>
+                            <td><span class="status andamento">Em Andamento</span></td>
+                            <td>
+                                <button class="botao-acao visualizar" aria-label="Visualizar atendimento 1002">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>Sofia Pereira</td>
+                            <td>Dr. Roberto Silva</td>
+                            <td>10/10/2025</td>
+                            <td><span class="status pendente">Pendente</span></td>
+                            <td>
+                                <button class="botao-acao visualizar" aria-label="Visualizar atendimento 1003">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1004</td>
+                            <td>Pedro Mendes</td>
+                            <td>Dra. Lucia Rocha</td>
+                            <td>10/10/2025</td>
+                            <td><span class="status cancelado">Cancelado</span></td>
+                            <td>
+                                <button class="botao-acao visualizar" aria-label="Visualizar atendimento 1004">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1005</td>
+                            <td>Ana Miranda</td>
+                            <td>Dr. Marcos Alves</td>
+                            <td>10/10/2025</td>
+                            <td><span class="status agendado">Agendado</span></td>
+                            <td>
+                                <button class="botao-acao visualizar" aria-label="Visualizar atendimento 1005">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ========================================
+             AÇÕES RÁPIDAS
+             ======================================== -->
+        <section class="secao-acoes-rapidas" aria-labelledby="titulo-acoes">
+            <h2 id="titulo-acoes" class="titulo-secao-dashboard">Ações Rápidas</h2>
+            
+            <div class="grid-acoes" role="region" aria-label="Ações rápidas disponíveis">
+                <!-- Ação 1: Novo Atendimento -->
+                <article class="card-acao novo-atendimento">
+                    <div class="icone-acao" aria-hidden="true">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <h3>Novo Atendimento</h3>
+                    <p>Registrar um novo atendimento no sistema</p>
+                    <button class="botao-acao-rapida">Criar</button>
+                </article>
+
+                <!-- Ação 2: Relatórios -->
+                <article class="card-acao relatorios">
+                    <div class="icone-acao" aria-hidden="true">
+                        <i class="fa-solid fa-file-alt"></i>
+                    </div>
+                    <h3>Gerar Relatório</h3>
+                    <p>Criar relatório detalhado de atividades</p>
+                    <button class="botao-acao-rapida">Gerar</button>
+                </article>
+
+                <!-- Ação 3: Gerenciar Voluntários -->
+                <article class="card-acao voluntarios-acao">
+                    <div class="icone-acao" aria-hidden="true">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <h3>Gerenciar Voluntários</h3>
+                    <p>Adicionar ou editar voluntários cadastrados</p>
+                    <button class="botao-acao-rapida">Gerenciar</button>
+                </article>
+
+                <!-- Ação 4: Configurações -->
+                <article class="card-acao configuracoes">
+                    <div class="icone-acao" aria-hidden="true">
+                        <i class="fa-solid fa-cog"></i>
+                    </div>
+                    <h3>Configurações</h3>
+                    <p>Ajustar configurações do sistema</p>
+                    <button class="botao-acao-rapida">Acessar</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+         ======================================== -->
+    <footer class="rodape-principal" role="contentinfo">
+        <!-- Container principal: Organiza o layout do rodapé -->
+        <section class="container-rodape">
+            <!-- Logo e descrição da empresa -->
+            <div class="logo-rodape">
+                <img src="../img/logo.png" alt="Logo Cod3X">
+                <p>Cod3X - Tecnologia com Propósito</p>
+            </div>
+            
+            <!-- Navegação 1: Links principais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="./quem-somos.html">Quem Somos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Navegação 2: Suporte ao usuário -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="./painel.html">Painel</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Navegação 3: Informações do projeto -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
+                <h3>Projeto</h3>
+                <ul>
+                    <li><a href="#">FIAP Challenge</a></li>
+                    <li><a href="#">Turma do Bem</a></li>
+                    <li><a href="#">Documentação</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Navegação 4: Aspectos legais -->
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Licenças</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <!-- Divisor visual entre seções do rodapé -->
+        <hr class="linha-divisoria-rodape" role="separator">
+        
+        <!-- Seção inferior: Redes sociais e copyright -->
+        <section class="inferior-rodape">
+            <!-- Navegação das redes sociais: aria-label para acessibilidade -->
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
+                <ul class="icones-sociais">
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="item-social">
+                        <a href="#" class="link-icone" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Copyright: Informações legais obrigatórias -->
+            <p>&copy; Todos os direitos reservados, 2025 - Cod3X FIAP.</p>
+        </section>
+    </footer>
 </body>
+
 </html>
