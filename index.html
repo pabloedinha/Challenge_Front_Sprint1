@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge - Saúde Bucal para Todos</title>
     
-    <!-- Google Fonts: Carregamento otimizado com preconnect -->
+    <!-- Google Fonts: Carregamento otimizado com preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -25,43 +25,43 @@
          CABEÇALHO PRINCIPAL DA APLICAÇÃO
          ======================================== -->
     <header class="cabecalho-principal">
-        <nav class="secao-navegacao">
+        <nav class="secao-navegacao" role="navigation" aria-label="Navegação principal">
             <!-- Logo: Sempre linkado para a página inicial -->
             <a href="./index.html" class="link-logo">
-                <img src="./assets/img/logo.png" alt="Logo do projeto" class="imagem-logo">
+                <img src="./assets/img/logo.png" alt="Logo do projeto Cod3X" class="imagem-logo">
             </a>
             
             <!-- Menu de navegação: Lista não ordenada para melhor semântica -->
-            <ul>
-                <li>
-                    <a href="./assets/page/quem-somos.html" class="links-navegacao">Quem Somos</a>
+            <ul role="menubar">
+                <li role="none">
+                    <a href="./assets/page/quem-somos.html" class="links-navegacao" role="menuitem">Quem Somos</a>
                 </li>
-                <li>
-                    <a href="./assets/page/sobre.html" class="links-navegacao">Sobre</a>
+                <li role="none">
+                    <a href="./assets/page/sobre.html" class="links-navegacao" role="menuitem">Sobre</a>
                 </li>
-                <li>
-                    <a href="./assets/page/painel.html" class="links-navegacao">Painel</a>
+                <li role="none">
+                    <a href="./assets/page/painel.html" class="links-navegacao" role="menuitem">Painel</a>
                 </li>
-                <li>
-                    <a href="./assets/page/faq.html" class="links-navegacao">FAQ</a>
+                <li role="none">
+                    <a href="./assets/page/faq.html" class="links-navegacao" role="menuitem">FAQ</a>
                 </li>
-                <li>
-                    <a href="./assets/page/contato.html" class="links-navegacao">Contato</a>
+                <li role="none">
+                    <a href="./assets/page/contato.html" class="links-navegacao" role="menuitem">Contato</a>
                 </li>
             </ul>
 
             <!-- Formulário de busca: Importante usar form para acessibilidade -->
-            <form class="barra-pesquisa">
-                <input type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            <form class="barra-pesquisa" role="search">
+                <input type="search" placeholder="Pesquisar" aria-label="Campo de pesquisa">
+                <button type="submit" aria-label="Executar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </button>
             </form>
             
             <!-- Botões de autenticação: Separados em container próprio -->
             <div class="botoes-autenticacao">
-                <a href="./assets/page/login-cadastro.html" class="botao-autenticacao botao-login">Login</a>
-                <a href="./assets/page/login-cadastro.html" class="botao-autenticacao botao-cadastro">Cadastro</a>
+                <a href="./assets/page/painel.html" class="botao-autenticacao botao-login">Login</a>
+                <a href="./assets/page/painel.html" class="botao-autenticacao botao-cadastro">Cadastro</a>
             </div>
         </nav>
     </header>
@@ -69,7 +69,7 @@
     <!-- ========================================
          CONTEÚDO PRINCIPAL DA PÁGINA
          ======================================== -->
-    <main>
+    <main role="main">
         <!-- Seção Hero: Primeira impressão da página -->
         <section class="secao-hero-principal">
             <!-- Article: Conteúdo independente e reutilizável -->
@@ -82,59 +82,60 @@
                     vidas. Porque acreditamos que um sorriso saudável tem o poder de gerar inclusão social.
                 </p>
                 <!-- CTA (Call to Action): Botão principal da seção -->
-                <a href="#" class="botao-cta">Quero ajuda!</a>
+                <a href="./assets/page/contato.html" class="botao-cta">Quero ajuda!</a>
             </article>
             
             <!-- Aside: Conteúdo complementar (imagem) -->
             <aside class="container-imagem-hero">
-                <img src="./assets/img/sorriso.jpg" alt="Menina deitada na grama sorrindo">
+                <img src="./assets/img/sorriso.jpg" alt="Menina deitada na grama sorrindo, representando a alegria proporcionada pela saúde bucal">
             </aside>
         </section>
 
         <!-- ========================================
              SEÇÃO: COMO PODEMOS AJUDAR
              ======================================== -->
-        <section class="secao-como-ajudar">
-            <h2>Como podemos ajudar você hoje?</h2>
+        <section class="secao-como-ajudar" aria-labelledby="titulo-como-ajudar">
+            <h2 id="titulo-como-ajudar">Como podemos ajudar você hoje?</h2>
             
             <!-- Container: Agrupa os cartões em flexbox ou grid -->
-            <div class="container-cartoes-ajuda">
+            <div class="container-cartoes-ajuda" role="region" aria-label="Opções de ajuda disponíveis">
                 <!-- Cartão 1: Dentista Voluntário -->
                 <article class="cartao-ajuda cartao-voluntario">
-                    <div class="icone-cartao">
+                    <div class="icone-cartao" aria-hidden="true">
                         <i class="fa-solid fa-user-doctor"></i>
                     </div>
                     <h3>Quero ser um Dentista Voluntário</h3>
                     <p>
                         Faça parte da maior rede de voluntariado especializado do mundo. Cadastre-se e ajude a
-                        transformar vidas.
+                        transformar vidas através da saúde bucal.
                     </p>
-                    <a href="#" class="botao-cartao botao-voluntario">Saiba Mais</a>
+                    <a href="./assets/page/contato.html" class="botao-cartao botao-voluntario">Saiba Mais</a>
                 </article>
 
                 <!-- Cartão 2: Atendimento Odontológico -->
                 <article class="cartao-ajuda cartao-atendimento">
-                    <div class="icone-cartao">
+                    <div class="icone-cartao" aria-hidden="true">
                         <i class="fa-solid fa-tooth"></i>
                     </div>
                     <h3>Preciso de Atendimento Odontológico</h3>
                     <p>
                         Se você tem entre 11 e 17 anos ou é uma mulher vítima de violência, veja como se inscrever em
-                        nossos programas.
+                        nossos programas de atendimento gratuito.
                     </p>
-                    <a href="#" class="botao-cartao botao-atendimento">Verificar Critérios</a>
+                    <a href="./assets/page/contato.html" class="botao-cartao botao-atendimento">Verificar Critérios</a>
                 </article>
 
                 <!-- Cartão 3: Doação e Parceria -->
                 <article class="cartao-ajuda cartao-doacao">
-                    <div class="icone-cartao">
+                    <div class="icone-cartao" aria-hidden="true">
                         <i class="fa-solid fa-handshake"></i>
                     </div>
                     <h3>Quero Doar ou ser um Parceiro</h3>
                     <p>
-                        Sua contribuição é fundamental para continuarmos nosso trabalho. Apoie nossa causa.
+                        Sua contribuição é fundamental para continuarmos nosso trabalho de transformação social.
+                        Apoie nossa causa e faça a diferença na vida de muitas pessoas.
                     </p>
-                    <a href="#" class="botao-cartao botao-doacao">Quero doar!</a>
+                    <a href="./assets/page/contato.html" class="botao-cartao botao-doacao">Quero doar!</a>
                 </article>
             </div>
         </section>
@@ -142,28 +143,28 @@
         <!-- ========================================
              SEÇÃO: PORTAL DE BENEFÍCIOS
              ======================================== -->
-        <section class="secao-portal-beneficios">
-            <h2>Seu Portal Exclusivo</h2>
+        <section class="secao-portal-beneficios" aria-labelledby="titulo-portal-beneficios">
+            <h2 id="titulo-portal-beneficios">Seu Portal Exclusivo</h2>
             <p>
                 Caso trabalhe conosco, ao se cadastrar, você ganha acesso a um portal exclusivo para acompanhar o status
                 de todas as suas solicitações, interagir com nossa equipe e consultar seus relatórios de forma segura e 
-                organizada, certifique-se de aproveitar todos os recursos disponíveis e utilizar o seu <strong>código</strong> 
+                organizada. Certifique-se de aproveitar todos os recursos disponíveis e utilizar o seu <strong>código</strong> 
                 de inscrição da ONG para <strong>acessar o portal</strong>.
             </p>
             
             <!-- Lista de benefícios: UL para itens relacionados -->
-            <ul class="lista-beneficios">
-                <li>
-                    <i class="fa-solid fa-location-arrow"></i>
-                    <span><strong>Rastreamento:</strong> Acompanhe em tempo real.</span>
+            <ul class="lista-beneficios" role="list" aria-label="Benefícios do portal exclusivo">
+                <li role="listitem">
+                    <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
+                    <span><strong>Rastreamento:</strong> Acompanhe em tempo real o andamento de suas solicitações.</span>
                 </li>
-                <li>
-                    <i class="fa-solid fa-file"></i>
-                    <span><strong>Relatórios</strong> documentados em um só lugar.</span>
+                <li role="listitem">
+                    <i class="fa-solid fa-file" aria-hidden="true"></i>
+                    <span><strong>Relatórios:</strong> Documentos organizados e acessíveis em um só lugar.</span>
                 </li>
-                <li>
-                    <i class="fa-solid fa-bolt"></i>
-                    <span><strong>Agilidade:</strong> Respostas mais rápidas e diretas.</span>
+                <li role="listitem">
+                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                    <span><strong>Agilidade:</strong> Respostas mais rápidas e comunicação direta com nossa equipe.</span>
                 </li>
             </ul>
         </section>
@@ -172,7 +173,7 @@
     <!-- ========================================
          RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
          ======================================== -->
-    <footer class="rodape-principal">
+    <footer class="rodape-principal" role="contentinfo">
         <!-- Container principal: Organiza o layout do rodapé -->
         <section class="container-rodape">
             <!-- Logo e descrição da empresa -->
@@ -182,27 +183,27 @@
             </div>
             
             <!-- Navegação 1: Links principais -->
-            <nav class="informacoes-rodape">
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de navegação">
                 <h3>Navegação</h3>
                 <ul>
-                    <li><a href="#">Início</a></li>
+                    <li><a href="./index.html">Início</a></li>
                     <li><a href="./assets/page/quem-somos.html">Quem Somos</a></li>
                     <li><a href="./assets/page/sobre.html">Sobre</a></li>
                 </ul>
             </nav>
             
             <!-- Navegação 2: Suporte ao usuário -->
-            <nav class="informacoes-rodape">
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links de suporte">
                 <h3>Suporte</h3>
                 <ul>
                     <li><a href="./assets/page/faq.html">FAQ</a></li>
                     <li><a href="./assets/page/contato.html">Contato</a></li>
-                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="./assets/page/painel.html">Painel</a></li>
                 </ul>
             </nav>
             
             <!-- Navegação 3: Informações do projeto -->
-            <nav class="informacoes-rodape">
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links do projeto">
                 <h3>Projeto</h3>
                 <ul>
                     <li><a href="#">FIAP Challenge</a></li>
@@ -212,7 +213,7 @@
             </nav>
             
             <!-- Navegação 4: Aspectos legais -->
-            <nav class="informacoes-rodape">
+            <nav class="informacoes-rodape" role="navigation" aria-label="Links legais">
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="#">Termos de Uso</a></li>
@@ -223,36 +224,36 @@
         </section>
         
         <!-- Divisor visual entre seções do rodapé -->
-        <hr class="linha-divisoria-rodape">
+        <hr class="linha-divisoria-rodape" role="separator">
         
         <!-- Seção inferior: Redes sociais e copyright -->
         <section class="inferior-rodape">
             <!-- Navegação das redes sociais: aria-label para acessibilidade -->
-            <nav class="redes-sociais">
+            <nav class="redes-sociais" role="navigation" aria-label="Redes sociais">
                 <ul class="icones-sociais">
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="item-social">
                         <a href="#" class="link-icone" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
                 </ul>
