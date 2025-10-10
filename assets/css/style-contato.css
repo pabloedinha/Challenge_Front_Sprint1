@@ -1,0 +1,313 @@
+/* =========================
+   SEÇÃO CONTATO
+   ========================= */
+.secao-contato {
+    padding: 3rem 2rem;
+    background: #F4F4F9;
+}
+
+.container-contato {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho da Seção */
+.cabecalho-contato {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.titulo-secao-sobre {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.8rem;
+    color: #3A506B;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.subtitulo-contato {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #3A506B;
+    text-align: center;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid de Contatos */
+.grid-contatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.card-contato {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #3a506b14;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-contato:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px #3a506b26;
+}
+
+/* Ícones dos Cartões */
+.icone-contato {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    margin: 0 auto 1.5rem auto;
+}
+
+.card-contato.email .icone-contato {
+    background: #3a506b1a;
+}
+
+.card-contato.whatsapp .icone-contato {
+    background: #25d3661a;
+}
+
+.card-contato.localizacao .icone-contato {
+    background: #e884071a;
+}
+
+.icone-contato i {
+    font-size: 1.8rem;
+}
+
+.card-contato.email .icone-contato i { 
+    color: #3A506B; 
+}
+
+.card-contato.whatsapp .icone-contato i { 
+    color: #25d366; 
+}
+
+.card-contato.localizacao .icone-contato i { 
+    color: #e88407; 
+}
+
+/* Títulos e Textos dos Cartões */
+.card-contato h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: #3A506B;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.card-contato p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Informações de Contato */
+.info-contato {
+    margin-bottom: 1.5rem;
+}
+
+.link-contato {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3A506B;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.card-contato.email .link-contato:hover {
+    background: #3a506b1a;
+    color: #3A506B;
+}
+
+.card-contato.whatsapp .link-contato:hover {
+    background: #25d3661a;
+    color: #25d366;
+}
+
+.info-contato.endereco p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #3A506B;
+    margin: 0;
+}
+
+/* Horário de Funcionamento */
+.horario-funcionamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.horario-funcionamento i {
+    color: #96ac3f;
+}
+
+.horario-funcionamento span {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #3A506B;
+    font-weight: 500;
+}
+
+/* =========================
+   SEÇÃO MAPA
+   ========================= */
+.container-mapa {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #3a506b14;
+    margin-top: 2rem;
+}
+
+.titulo-mapa {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #3A506B;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subtitulo-mapa {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #3A506B;
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Wrapper do Mapa */
+.mapa-wrapper {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(58, 80, 107, 0.15);
+    margin-bottom: 2rem;
+}
+
+.mapa-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Informações do Mapa */
+.info-mapa {
+    margin-top: 2rem;
+}
+
+.detalhe-endereco h4 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #3A506B;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.detalhe-endereco ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.detalhe-endereco li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3A506B;
+    transition: all 0.3s;
+}
+
+.detalhe-endereco li:hover {
+    background: #96ac3f1a;
+    transform: translateX(5px);
+}
+
+.detalhe-endereco li i {
+    color: #96ac3f;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* =========================
+   ESTADOS DE FOCO (ACESSIBILIDADE)
+   ========================= */
+.link-contato:focus {
+    outline: 2px solid #96ac3f;
+    outline-offset: 2px;
+}
+
+.card-contato:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px #3a506b26;
+}
+
+/* =========================
+   MELHORIAS VISUAIS
+   ========================= */
+.card-contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.3s;
+}
+
+.card-contato.email::before {
+    background: linear-gradient(90deg, #3A506B, #5a7291);
+}
+
+.card-contato.whatsapp::before {
+    background: linear-gradient(90deg, #25d366, #128c7e);
+}
+
+.card-contato.localizacao::before {
+    background: linear-gradient(90deg, #e88407, #ff9500);
+}
+
+.card-contato:hover::before {
+    height: 6px;
+}
