@@ -14,7 +14,7 @@
 .titulo-secao-sobre {
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 2.8rem;
-    color: #3A506B;
+    color: #F4F4F9;
     text-align: center;
     margin-bottom: 2rem;
     position: relative;
@@ -452,6 +452,187 @@
     font-family: 'Open Sans', Arial, sans-serif;
     color: #3A506B;
     line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* =========================
+   SEÇÃO ROADMAP
+   ========================= */
+.secao-roadmap {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #3A506B 40%, #96ac3f 100%);
+    color: #F4F4F9;
+}
+
+.container-roadmap {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subtitulo-roadmap {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid das Sprints */
+.grid-roadmap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Card da Sprint */
+.card-sprint {
+    background: rgba(244, 244, 249, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(244, 244, 249, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.card-sprint:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(244, 244, 249, 0.3);
+}
+
+/* Header da Sprint */
+.sprint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sprint-numero {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F4F4F9;
+    color: #3A506B;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(244, 244, 249, 0.3);
+}
+
+.sprint-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.sprint-status.concluida {
+    background: #27ae60;
+    color: #F4F4F9;
+}
+
+.sprint-status.futura {
+    background: #96ac3f;
+    color: #F4F4F9;
+}
+
+/* Conteúdo da Sprint */
+.sprint-content h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: #F4F4F9;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.sprint-objetivo {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #F4F4F9;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Lista de Entregas */
+.sprint-entregas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sprint-entregas li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #F4F4F9;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Ícones das entregas */
+.sprint-concluida .sprint-entregas li i {
+    color: #27ae60;
+    font-size: 0.8rem;
+}
+
+.sprint-futura .sprint-entregas li i {
+    color: #96ac3f;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+/* Barra de Progresso */
+.progresso-roadmap {
+    background: rgba(244, 244, 249, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(244, 244, 249, 0.2);
+}
+
+.progresso-roadmap h4 {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #96ac3f;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.barra-progresso-roadmap {
+    width: 100%;
+    height: 10px;
+    background: rgba(244, 244, 249, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progresso-preenchido {
+    height: 100%;
+    background: linear-gradient(90deg, #96ac3f, #e88407);
+    border-radius: 10px;
+    transition: width 2s ease-out;
+}
+
+.texto-progresso {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #F4F4F9;
     opacity: 0.8;
     margin: 0;
 }
