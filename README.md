@@ -1,78 +1,329 @@
-# Sistema para a ONG Turma do Bem
+# 🚀 Sistema para a ONG Turma do Bem - Cod3X
 
-> Descrição do projeto [WIP].
+<div align="center">
 
------
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
+![Sprint](https://img.shields.io/badge/Sprint-1%2F4%20Concluídas-success?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progresso-25%25-blue?style=for-the-badge)
+
+**Plataforma de gestão inteligente para centralizar e otimizar atendimentos da ONG Turma do Bem**
+
+🌐 Demo ao Vivo • 📋 Documentação • 🎯 Roadmap • 👥 Equipe
+
+</div>
+
+---
+
+## 📖 Sobre o Projeto
+
+O **Cod3X** é uma solução tecnológica desenvolvida especificamente para a **ONG Turma do Bem**, focada em resolver o problema de dispersão de atendimentos em múltiplos canais de comunicação. 
+
+### 🎯 **Problema Identificado**
+A Turma do Bem recebe solicitações através de diversos canais (e-mail, WhatsApp, redes sociais), tornando difícil o controle, priorização e acompanhamento adequado dos atendimentos.
+
+### 💡 **Nossa Solução**
+Uma plataforma web inteligente que:
+- **Centraliza** todos os atendimentos em um local único
+- **Roteia automaticamente** solicitações para voluntários especializados
+- **Acompanha** o status de cada caso em tempo real
+- **Gera relatórios** gerenciais para tomada de decisões
+
+---
 
 ## 📋 Requisitos e Estrutura do Projeto
 
-Todas as diretrizes e requisitos especiais detalhados e solicitados no documento do Challenge foram aplicadas aqui.
+Todas as diretrizes e requisitos especiais detalhados no documento do Challenge foram rigorosamente aplicadas, garantindo conformidade total com as especificações técnicas e funcionais solicitadas.
 
-### Páginas Obrigatórias
+### 🌐 **Páginas Obrigatórias**
 
-O projeto contém as seguintes páginas principais, com navegação clara e funcional entre elas:
+O projeto contém as seguintes páginas principais, com navegação clara e funcional:
 
-  - 🏠 **Home (index):** A página inicial e principal ponto de entrada do site.
-  - 💡 **Sobre (About):** Seção dedicada a explicar o projeto, a ideia por trás dele, as tecnologias utilizadas e o roadmap futuro.
-  - ❓ **FAQ:** Uma página com perguntas frequentes para fornecer suporte rápido e eficaz aos usuários.
-  - 📞 **Contato:** Deve incluir informações de contato e um formulário para que os usuários possam se comunicar com a equipe.
-  - 👥 **Integrantes (Quem Somos):** Página com a apresentação da equipe de desenvolvimento.
+```
+📁 Estrutura de Páginas
+├── 🏠 Home (index.html)          → Página inicial e ponto de entrada
+├── 💡 Sobre (sobre.html)         → Projeto, tecnologias e roadmap
+├── ❓ FAQ (faq.html)             → Perguntas frequentes e suporte
+├── 📞 Contato (contato.html)     → Formulário e informações de contato
+└── 👥 Integrantes (equipe.html)  → Apresentação da equipe
+```
 
-### Demais Páginas do Projeto
+### 📱 **Páginas Complementares**
 
-  - Além das páginas obrigatórias, o projeto inclui mais algumas das páginas usadas para a aplicação da solução proposta, como por exemplo: [WIP].
+Além das páginas obrigatórias, o projeto inclui páginas específicas da solução:
 
------
+- **🔐 Login/Cadastro:** Sistema de autenticação para voluntários e administradores
+- **📊 Dashboard:** Painel gerencial com métricas e controles (futuro)
+- **💬 Chat:** Sistema de atendimento em tempo real (futuro)
+
+---
 
 ## 🎨 Design e Identidade Visual
 
-A consistência visual é fundamental para a experiência do usuário. As seguintes diretrizes foram seguidas e apresentadas no projeto [WIP]:
+A identidade visual foi cuidadosamente desenvolvida para transmitir **confiança**, **modernidade** e **acessibilidade**, valores fundamentais da Turma do Bem.
 
-#### Paleta de Cores [WIP]
+### 🎨 **Paleta de Cores**
 
-  - [Cor Primária: \#código\_hex]
-  - [Cor Secundária: \#código\_hex]
-  - [Cor de Destaque/Ação: \#código\_hex]
-  - [Cor de Texto: \#código\_hex]
+<div align="center">
 
-#### Estilo de Fonte [WIP]
+| Cor | Hex | Uso | Preview |
+|-----|-----|-----|---------|
+| **Azul Escuro** | `#3A506B` | Cor primária, textos principais | ![#3A506B](https://img.shields.io/badge/AZUL%20ESCURO-%233A506B) |
+| **Branco Creme** | `#F4F4F9` | Fundo principal, textos em destaque | ![#F4F4F9](https://img.shields.io/badge/BRANCO%20CREME-%23F4F4F9) |
+| **Verde Claro** | `#96ac3f` | Cor de destaque, sucessos | ![#96ac3f](https://img.shields.io/badge/VERDE%20CLARO-%2396ac3f) |
+| **Laranja** | `#e88407` | Cor de ação, botões importantes | ![#e88407](https://img.shields.io/badge/LARANJA-%23e88407) |
 
-  - **Títulos:** [Nome da Fonte], [Peso (ex: Bold, SemiBold)]
-  - **Corpo de Texto:** [Nome da Fonte], [Peso (ex: Regular)]
+</div>
 
-#### Elementos Visuais
+### ✍️ **Tipografia**
 
-  - Utilização de ícones, ilustrações e outras mídias que são coesos com a identidade visual do projeto, enriquecendo a interface e a experiência do usuário.
+- **🏷️ Títulos e Interface:** `Poppins` - Peso 600/700 (Modern e legível)
+- **📰 Cabeçalhos:** `Montserrat` - Peso 600/700 (Elegante e impactante)  
+- **📝 Corpo de Texto:** `Open Sans` - Peso 400/500 (Ótima legibilidade)
 
------
+### 🎭 **Elementos Visuais**
+
+- **🎨 Gradientes sutis** em botões e seções de destaque
+- **🎯 Ícones FontAwesome** para consistência visual
+- **💫 Animações suaves** com `cubic-bezier` para UX premium
+- **📱 Cards responsivos** com glassmorphism e sombras modernas
+
+---
 
 ## 💻 Diretrizes de Desenvolvimento Técnico
 
-### Estrutura e Navegação
+### 🏗️ **Arquitetura e Estrutura**
 
-  - **Componentes Essenciais:** Todas as páginas incluiram componentes consistentes como cabeçalhos, rodapés e barras de navegação.
-  - **Navegação Intuitiva:** A arquitetura de navegação foi desenvolvida para ser fluida e amigável, permitindo que o usuário encontre as informações que precisa com facilidade.
-  - **Consistência Visual:** Harmonia visual e estrutural em **todas** as páginas do site.
+```
+Challenge_Front_Sprint1/
+├── 📁 assets/
+│   ├── 🎨 css/
+│   │   ├── style.css           → Estilos globais e componentes
+│   │   ├── style-sobre.css     → Estilos específicos da página Sobre
+│   │   └── style-painel.css    → Estilos do dashboard (futuro)
+│   ├── 🧩 js/
+│   │   └── script.js (FUTURO)  → Funcionalidades JavaScript
+│   └── 🖼️ images/
+│       └── logo.png            → Recursos visuais
+├── 📄 pages/
+│   ├── sobre.html              → Página Sobre o Projeto
+│   ├── faq.html               → Perguntas Frequentes
+│   ├── contato.html           → Formulário de Contato
+│   └── equipe.html            → Apresentação da Equipe
+├── 🏠 index.html              → Página Principal
+└── 📋 README.md               → Documentação do Projeto
+```
 
-### Breakpoints e Responsividade (Desktop)
+### 🧭 **Navegação e UX**
 
-O layout para desktop foi desenvolvido considerando o seguinte breakpoint. A abordagem será **Desktop-First**.
+- **🧩 Componentes Consistentes:** Header, footer e navegação padronizados
+- **🎯 Navegação Intuitiva:** Arquitetura de informação clara e fluida
+- **🎨 Consistência Visual:** Harmonia em **todas** as páginas do site
+- **♿ Acessibilidade:** ARIA labels, contraste adequado e navegação por teclado
 
-  - **Dispositivos Grandes (Laptops/Desktops):**
-    ```css
-    @media (min-width: 992px) {
-      /* Estilos para telas a partir de 992px */
-    }
-    ```
+### 📱 **Responsividade e Breakpoint**
 
------
+Desenvolvido com abordagem **Desktop-First** e breakpoint estratégico:
+
+```css
+/* 🖥️ Desktop Grande (1300px+) */
+@media (min-width: 1350px) {
+  /* Layout expandido com barra de pesquisa */
+}
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+<div align="center">
+
+### **Frontend**
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### **Design & UI/UX**
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Font Awesome](https://img.shields.io/badge/Font%20Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+
+### **Futuras Implementações**
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+</div>
+
+---
+
+## 🗓️ Roadmap do Projeto
+
+<div align="center">
+
+| Sprint | Status | Título | Progresso |
+|:------:|:------:|--------|:---------:|
+| **1** | ✅ | **Fundação e Prototipagem** | 100% |
+| **2** | 🔄 | **Desenvolvimento e Aprofundamento** | 0% |
+| **3** | 🔄 | **Back-end e Integração** | 0% |
+| **4** | ⏳ | **Funcionalidades Avançadas** | 0% |
+
+</div>
+
+### 📋 **Detalhamento das Sprints**
+
+<details>
+<summary><strong>✅ Sprint 1: Fundação e Prototipagem (Concluída)</strong></summary>
+
+**🎯 Objetivo:** Planejar a solução, criar estrutura visual inicial e validar o conceito.
+
+**📦 Entregas:**
+- ✅ Documentação da visão do projeto e pitch
+- ✅ Site estático (versão desktop) com páginas principais
+- ✅ Modelagem conceitual do banco de dados (ER)
+- ✅ Modelagem de classes do sistema (UML)
+- ✅ Protótipo Python simulando funcionalidades chave
+- ✅ Modelagem inicial do Chatbot
+
+</details>
+
+<details>
+<summary><strong>🔄 Sprint 2: Desenvolvimento e Aprofundamento (Planejada)</strong></summary>
+
+**🎯 Objetivo:** Tornar o site interativo e responsivo, implementar lógica de negócio.
+
+**📦 Entregas:**
+- 🔄 Responsividade completa para mobile e tablet
+- 🔄 Interatividade com JavaScript (validação de formulários)
+- 🔄 Implementação das classes Java
+- 🔄 Modelo Lógico Relacional do banco de dados
+- 🔄 Business Model Canvas e Mapa de Empatia
+
+</details>
+
+<details>
+<summary><strong>🔄 Sprint 3: Back-end e Integração (Planejada)</strong></summary>
+
+**🎯 Objetivo:** Construir back-end, criar API e conectar front-end ao banco.
+
+**📦 Entregas Previstas:**
+- 🔄 API REST para gerenciar atendimentos e usuários
+- 🔄 Implementação física do banco (PostgreSQL/MySQL)
+- 🔄 Conexão da aplicação com banco de dados
+- 🔄 Páginas dinâmicas consumindo dados da API
+- 🔄 Sistema de login e autenticação
+
+</details>
+
+<details>
+<summary><strong>⏳ Sprint 4: Funcionalidades Avançadas (Futura)</strong></summary>
+
+**🎯 Objetivo:** Finalizar com integrações externas e preparar implantação.
+
+**📦 Entregas Previstas:**
+- ⏳ Integração com APIs Gmail e WhatsApp
+- ⏳ Dashboards gerenciais com gráficos dinâmicos
+- ⏳ Sistema de chat ao vivo na plataforma
+- ⏳ Testes completos de ponta-a-ponta
+- ⏳ Implantação em serviço de nuvem
+
+</details>
+
+---
+
+## 📊 Funcionalidades Principais
+
+### 🎯 **Centralizador de Atendimentos**
+- **📥 Recepção automática** de solicitações de múltiplos canais
+- **🏷️ Categorização inteligente** por tipo de necessidade
+- **📋 Interface unificada** para gerenciar todos os casos
+
+### 🔄 **Roteamento Inteligente**
+- **🎯 Direcionamento automático** baseado na especialização
+- **⚖️ Balanceamento de carga** entre voluntários
+- **⏰ Priorização** por urgência e complexidade
+
+### 📈 **Acompanhamento em Tempo Real**
+- **📊 Dashboard visual** com status de todos os atendimentos  
+- **🔔 Notificações automáticas** de mudanças de status
+- **⏱️ Timeline detalhada** de cada caso
+
+### 📊 **Relatórios Gerenciais**
+- **📈 Métricas de performance** da equipe
+- **📊 Análise de tendências** de solicitações
+- **📋 Relatórios customizáveis** para gestão
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### 📋 **Pré-requisitos**
+- Navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Servidor web local (opcional para desenvolvimento)
+
+### 🔧 **Instalação**
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/challenge-front-sprint1.git
+
+# Navegue para o diretório
+cd challenge-front-sprint1
+
+# Abra o arquivo index.html no navegador
+<summary>OU use o link para o nosso <strong>pages</strong>: url:</summary>
+```
+
+### 🌐 **Navegação**
+1. **🏠 Página Inicial:** Visão geral da solução e call-to-action
+2. **💡 Sobre:** Detalhes do projeto, tecnologias e roadmap
+3. **❓ FAQ:** Perguntas frequentes sobre a plataforma
+4. **📞 Contato:** Formulário para entrar em contato
+5. **👥 Equipe:** Conheça os desenvolvedores
+
+---
+
+## 🤝 Como Contribuir
+
+Contribuições são sempre bem-vindas! Siga os passos abaixo:
+
+1. **🍴 Faça um Fork** do projeto
+2. **🌿 Crie uma branch** para sua feature (`git checkout -b feature/nova-funcionalidade`)
+3. **💾 Commit suas mudanças** (`git commit -m 'Adiciona nova funcionalidade'`)
+4. **📤 Push para a branch** (`git push origin feature/nova-funcionalidade`)
+5. **🔄 Abra um Pull Request**
+
+---
 
 ## 👥 Equipe
 
-Este projeto foi desenvolvido pela seguinte equipe [WIP]:
+Este projeto foi desenvolvido com muito carinho pela equipe **Cod3X**:
+
+<div align="center">
 
 | Foto | Nome Completo | RM | Turma | GitHub | LinkedIn |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| \<img src="" width="80"\> | [Nome do Integrante] | [RM do Integrante] | [Turma] | [Link do GitHub](https://www.google.com/search?q=https://github.com/usuario) | [Link do LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/usuario) |
-| \<img src="" width="80"\> | [Nome do Integrante] | [RM do Integrante] | [Turma] | [Link do GitHub](https://www.google.com/search?q=https://github.com/usuario) | [Link do LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/usuario) |
-| \<img src="" width="80"\> | [Nome do Integrante] | [RM do Integrante] | [Turma] | [Link do GitHub](https://www.google.com/search?q=https://github.com/usuario) | [Link do LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/usuario) |
+|:----:|:-------------:|:--:|:-----:|:------:|:--------:|
+| <img src="img/integrante_1.jpeg" width="80" style="border-radius: 50%"> | **[Nome do Integrante 1]** | RM00000 | 1TDSPB | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/usuario1) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/usuario1) |
+| <img src="https://via.placeholder.com/80x80/96ac3f/FFFFFF?text=Dev" width="80" style="border-radius: 50%"> | **[Nome do Integrante 2]** | RM00000 | 1TDSPB | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/usuario2) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/usuario2) |
+| <img src="https://via.placeholder.com/80x80/e88407/FFFFFF?text=Dev" width="80" style="border-radius: 50%"> | **[Nome do Integrante 3]** | RM00000 | 1TDSPB | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/usuario3) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/usuario3) |
+
+</div>
+
+## 📞 Contato
+
+**🏢 Projeto:** Sistema para ONG Turma do Bem  
+**🎓 Instituição:** FIAP - Faculdade de Informática e Administração Paulista  
+**📚 Disciplina:** Challenge Front-End
+**📅 Período:** 1º Semestre 2024
+
+---
+
+<div align="center">
+
+**💡 Desenvolvido com dedicação para transformar vidas através da tecnologia**
+
+![FIAP](https://img.shields.io/badge/FIAP-FF6B35?style=for-the-badge&logoColor=white)
+![Turma do Bem](https://img.shields.io/badge/Turma%20do%20Bem-27AE60?style=for-the-badge&logoColor=white)
+
+⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
+
+</div>
