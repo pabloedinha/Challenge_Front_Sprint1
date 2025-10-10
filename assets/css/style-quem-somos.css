@@ -7,11 +7,12 @@
    ========================= */
 .secao-hero-quem-somos {
     background: linear-gradient(135deg,  #e88407 35%, #96AC3F 95%);
-    padding: 1rem 1rem 1rem 7rem;
+    padding: 2rem 2rem 1rem 2rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    gap: 2rem;
     min-height: 50vh;
 }
 
@@ -318,6 +319,7 @@
     font-family: 'Open Sans', Arial, sans-serif;
     color: #3A506B;
     line-height: 1.6;
+    opacity: 0.8;
 }
 
 .lista-valores i {
