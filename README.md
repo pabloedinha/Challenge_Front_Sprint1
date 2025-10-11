@@ -215,10 +215,13 @@ git clone https://github.com/seu-usuario/challenge-front-sprint1.git
 
 # Navegue para o diretório
 cd challenge-front-sprint1
-
-# Abra o arquivo index.html no navegador
-OU use o link para o nosso pages: url:
 ```
+### 💻 **Para acessar a versão online:**
+
+Ou, se preferir, acesse o site que está hospedado diretamente no GitHub Pages através do link abaixo:
+
+[Clique aqui para visitar nosso site hospedado](https://pabloedinha.github.io/Challenge_Front_Sprint1/index.html)
+
 ---
 
 ## 👥 Equipe
