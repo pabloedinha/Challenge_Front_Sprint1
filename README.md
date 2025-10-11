@@ -19,7 +19,7 @@
 O **Cod3X** é uma solução tecnológica desenvolvida especificamente para a **ONG Turma do Bem**, focada em resolver o problema de dispersão de atendimentos em múltiplos canais de comunicação. 
 
 ### 🎯 **Problema Identificado**
-A Turma do Bem recebe solicitações através de diversos canais (e-mail, WhatsApp, redes sociais), tornando difícil o controle, priorização e acompanhamento adequado dos atendimentos.
+A Turma do Bem recebe solicitações através de dois canais principais (Whatsapp e Gmail), tornando difícil o controle, priorização e acompanhamento adequado dos atendimentos.
 
 ### 💡 **Nossa Solução**
 Uma plataforma web inteligente que:
@@ -40,11 +40,11 @@ O projeto contém as seguintes páginas principais, com navegação clara e func
 
 ```
 📁 Estrutura de Páginas
-├── 🏠 Home (index.html)          → Página inicial e ponto de entrada
-├── 💡 Sobre (sobre.html)         → Projeto, tecnologias e roadmap
-├── ❓ FAQ (faq.html)             → Perguntas frequentes e suporte
-├── 📞 Contato (contato.html)     → Formulário e informações de contato
-└── 👥 Integrantes (equipe.html)  → Apresentação da equipe
+├── 🏠 Home (index.html)              → Página inicial e ponto de entrada
+├── 💡 Sobre (sobre.html)             → Projeto, tecnologias e roadmap
+├── ❓ FAQ (faq.html)                 → Perguntas frequentes e suporte
+├── 📞 Contato (contato.html)        → Formulário e informações de contato
+└── 👥 Quem Somos (quem-somos.html)  → Apresentação da equipe
 ```
 
 ### 📱 **Páginas Complementares**
@@ -91,28 +91,6 @@ A identidade visual foi cuidadosamente desenvolvida para transmitir **confiança
 
 ## 💻 Diretrizes de Desenvolvimento Técnico
 
-### 🏗️ **Arquitetura e Estrutura**
-
-```
-Challenge_Front_Sprint1/
-├── 📁 assets/
-│   ├── 🎨 css/
-│   │   ├── style.css           → Estilos globais e componentes
-│   │   ├── style-sobre.css     → Estilos específicos da página Sobre
-│   │   └── style-painel.css    → Estilos do dashboard (futuro)
-│   ├── 🧩 js/
-│   │   └── script.js (FUTURO)  → Funcionalidades JavaScript
-│   └── 🖼️ images/
-│       └── logo.png            → Recursos visuais
-├── 📄 pages/
-│   ├── sobre.html              → Página Sobre o Projeto
-│   ├── faq.html               → Perguntas Frequentes
-│   ├── contato.html           → Formulário de Contato
-│   └── equipe.html            → Apresentação da Equipe
-├── 🏠 index.html              → Página Principal
-└── 📋 README.md               → Documentação do Projeto
-```
-
 ### 🧭 **Navegação e UX**
 
 - **🧩 Componentes Consistentes:** Header, footer e navegação padronizados
@@ -139,7 +117,7 @@ Desenvolvido com abordagem **Desktop-First** e breakpoint estratégico:
 
 ### **Frontend**
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-E74D89?style=for-the-badge&logo=dribbble&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ### **Design & UI/UX**
@@ -229,37 +207,6 @@ Desenvolvido com abordagem **Desktop-First** e breakpoint estratégico:
 </details>
 
 ---
-
-## 📊 Funcionalidades Principais
-
-### 🎯 **Centralizador de Atendimentos**
-- **📥 Recepção automática** de solicitações de múltiplos canais
-- **🏷️ Categorização inteligente** por tipo de necessidade
-- **📋 Interface unificada** para gerenciar todos os casos
-
-### 🔄 **Roteamento Inteligente**
-- **🎯 Direcionamento automático** baseado na especialização
-- **⚖️ Balanceamento de carga** entre voluntários
-- **⏰ Priorização** por urgência e complexidade
-
-### 📈 **Acompanhamento em Tempo Real**
-- **📊 Dashboard visual** com status de todos os atendimentos  
-- **🔔 Notificações automáticas** de mudanças de status
-- **⏱️ Timeline detalhada** de cada caso
-
-### 📊 **Relatórios Gerenciais**
-- **📈 Métricas de performance** da equipe
-- **📊 Análise de tendências** de solicitações
-- **📋 Relatórios customizáveis** para gestão
-
----
-
-## 🚀 Como Executar o Projeto
-
-### 📋 **Pré-requisitos**
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Servidor web local (opcional para desenvolvimento)
-
 ### 🔧 **Instalação**
 
 ```bash
@@ -270,28 +217,8 @@ git clone https://github.com/seu-usuario/challenge-front-sprint1.git
 cd challenge-front-sprint1
 
 # Abra o arquivo index.html no navegador
-<summary>OU use o link para o nosso <strong>pages</strong>: url:</summary>
+OU use o link para o nosso pages: url:
 ```
-
-### 🌐 **Navegação**
-1. **🏠 Página Inicial:** Visão geral da solução e call-to-action
-2. **💡 Sobre:** Detalhes do projeto, tecnologias e roadmap
-3. **❓ FAQ:** Perguntas frequentes sobre a plataforma
-4. **📞 Contato:** Formulário para entrar em contato
-5. **👥 Equipe:** Conheça os desenvolvedores
-
----
-
-## 🤝 Como Contribuir
-
-Contribuições são sempre bem-vindas! Siga os passos abaixo:
-
-1. **🍴 Faça um Fork** do projeto
-2. **🌿 Crie uma branch** para sua feature (`git checkout -b feature/nova-funcionalidade`)
-3. **💾 Commit suas mudanças** (`git commit -m 'Adiciona nova funcionalidade'`)
-4. **📤 Push para a branch** (`git push origin feature/nova-funcionalidade`)
-5. **🔄 Abra um Pull Request**
-
 ---
 
 ## 👥 Equipe
@@ -305,25 +232,5 @@ Este projeto foi desenvolvido com muito carinho pela equipe **Cod3X**:
 | <img src="img/integrante_1.jpeg" width="80" style="border-radius: 50%"> | **[Nome do Integrante 1]** | RM00000 | 1TDSPB | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/usuario1) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/usuario1) |
 | <img src="https://via.placeholder.com/80x80/96ac3f/FFFFFF?text=Dev" width="80" style="border-radius: 50%"> | **[Nome do Integrante 2]** | RM00000 | 1TDSPB | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/usuario2) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/usuario2) |
 | <img src="https://via.placeholder.com/80x80/e88407/FFFFFF?text=Dev" width="80" style="border-radius: 50%"> | **[Nome do Integrante 3]** | RM00000 | 1TDSPB | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/usuario3) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/usuario3) |
-
-</div>
-
-## 📞 Contato
-
-**🏢 Projeto:** Sistema para ONG Turma do Bem  
-**🎓 Instituição:** FIAP - Faculdade de Informática e Administração Paulista  
-**📚 Disciplina:** Challenge Front-End
-**📅 Período:** 1º Semestre 2024
-
----
-
-<div align="center">
-
-**💡 Desenvolvido com dedicação para transformar vidas através da tecnologia**
-
-![FIAP](https://img.shields.io/badge/FIAP-FF6B35?style=for-the-badge&logoColor=white)
-![Turma do Bem](https://img.shields.io/badge/Turma%20do%20Bem-27AE60?style=for-the-badge&logoColor=white)
-
-⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
 
 </div>
